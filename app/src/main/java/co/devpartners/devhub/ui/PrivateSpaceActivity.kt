@@ -19,7 +19,6 @@ class PrivateSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListe
 
 
     var timepick = arrayOf("Hourly", "Daily", "Weekly")
-    val datepicker = CustomDatePickerDialog()
     var spinner: Spinner? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -56,7 +55,9 @@ class PrivateSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListe
                                                                                    , day ->
 
 
-            checkinDatePickerButton.text = "$year/$monthOfYear/$day"
+
+            checkinDatePickerButton.text = ""+year+"/"+(monthOfYear +1)+"/"+day
+
 
         }, year, month, day)
         datepick.show()
@@ -74,7 +75,7 @@ class PrivateSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListe
                                                                                    , day ->
 
 
-            checkoutDatePickerButton.text = "$year/$monthOfYear/$day"
+            checkoutDatePickerButton.text = ""+year+"/"+(monthOfYear +1)+"/"+day
         }, year, month, day)
         datepick.show()
     }
