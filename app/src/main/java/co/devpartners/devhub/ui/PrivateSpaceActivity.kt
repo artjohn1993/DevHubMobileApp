@@ -89,7 +89,14 @@ class PrivateSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListe
             cal.set(Calendar.HOUR_OF_DAY, hour)
             cal.set(Calendar.MINUTE, minute)
 
-            checkinTimePicker.text = SimpleDateFormat("HH:mm").format(cal.time)
+            var AM_PM: String
+            if(hour < 12){
+                AM_PM = "AM"
+            }else{
+                AM_PM ="PM"
+            }
+
+            checkinTimePicker.text = SimpleDateFormat("HH:mm").format(cal.time)+AM_PM
         }
 
         checkinTimePicker.setOnClickListener {
@@ -102,8 +109,14 @@ class PrivateSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListe
         val timeSetListener = TimePickerDialog.OnTimeSetListener { timePicker, hour, minute ->
             cal.set(Calendar.HOUR_OF_DAY, hour)
             cal.set(Calendar.MINUTE, minute)
+            var AM_PM: String
+            if(hour < 12){
+                AM_PM = "AM"
+            }else{
+                AM_PM ="PM"
+            }
 
-            checkoutTimePicker.text = SimpleDateFormat("HH:mm").format(cal.time)
+            checkoutTimePicker.text = SimpleDateFormat("HH:mm").format(cal.time)+AM_PM
         }
 
         checkoutTimePicker.setOnClickListener {
