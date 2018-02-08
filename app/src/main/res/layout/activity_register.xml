@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/devhub"
+    tools:context="co.devpartners.devhub.ui.RegisterActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryTransparent"
+      >
+
+        <ImageView
+            android:id="@+id/devHubLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_devhub_logo_main"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/bookNowText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/booknow"
+            android:textColor="@android:color/black"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/devHubLogo" />
+
+
+        <TextView
+            android:id="@+id/firstnameText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:text="@string/firstname_hint"
+            android:textColor="@android:color/black"
+            app:layout_constraintTop_toBottomOf="@id/bookNowText"
+            />
+
+        <EditText
+            android:id="@+id/firstnameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorEditText"
+            android:gravity="center"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="@+id/firstnameText"
+            app:layout_constraintStart_toStartOf="@+id/firstnameText"
+            app:layout_constraintTop_toBottomOf="@+id/firstnameText" />
+
+        <TextView
+            android:id="@+id/lastnameText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/lastname_hint"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="@+id/firstnameText"
+            app:layout_constraintStart_toStartOf="@+id/firstnameText"
+            app:layout_constraintTop_toBottomOf="@+id/firstnameEditText" />
+
+        <EditText
+            android:id="@+id/lastnameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorEditText"
+            android:gravity="center"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="@+id/firstnameText"
+            app:layout_constraintStart_toStartOf="@+id/firstnameText"
+            app:layout_constraintTop_toBottomOf="@+id/lastnameText" />
+
+        <TextView
+            android:id="@+id/emailText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/email_hint"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="@id/firstnameText"
+            app:layout_constraintStart_toStartOf="@id/firstnameText"
+            app:layout_constraintTop_toBottomOf="@id/lastnameEditText" />
+
+        <EditText
+            android:id="@+id/emailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorEditText"
+            android:gravity="center"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="@+id/firstnameText"
+            app:layout_constraintStart_toStartOf="@+id/firstnameText"
+            app:layout_constraintTop_toBottomOf="@id/emailText" />
+
+        <TextView
+            android:id="@+id/contactText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/contact_hint"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="@id/firstnameText"
+            app:layout_constraintStart_toStartOf="@id/firstnameText"
+            app:layout_constraintTop_toBottomOf="@id/emailEditText" />
+
+        <EditText
+            android:id="@+id/contactEditText"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorEditText"
+            android:gravity="center"
+            android:inputType="number|phone"
+            app:layout_constraintEnd_toEndOf="@+id/firstnameText"
+            app:layout_constraintStart_toStartOf="@+id/firstnameText"
+            app:layout_constraintTop_toBottomOf="@id/contactText" />
+
+
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorEditText"
+            android:text="@string/reserve_button"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/firstnameEditText"
+            app:layout_constraintStart_toStartOf="@id/firstnameEditText"
+            app:layout_constraintTop_toBottomOf="@+id/contactEditText" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

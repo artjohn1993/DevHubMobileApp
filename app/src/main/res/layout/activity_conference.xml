@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="co.devpartners.devhub.ui.ConferenceActivity"
+    android:padding="10dp"
+    >
+    <ImageView
+        android:id="@+id/conferenceSpaceLogoImage"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+
+        android:src="@drawable/grouppornwatching"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <TextView
+        android:id="@+id/conferenceTitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Conference/Meeting"
+        android:textSize="20dp"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="@id/conferenceSpaceLogoImage"
+        app:layout_constraintStart_toStartOf="@id/conferenceSpaceLogoImage"
+        app:layout_constraintTop_toBottomOf="@id/conferenceSpaceLogoImage"
+        />
+
+    <TextView
+        android:id="@+id/roomTypeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Room Type"
+        app:layout_constraintTop_toBottomOf="@id/conferenceTitleText"
+        android:layout_marginTop="10dp"
+        />
+
+    <Spinner
+        android:id="@+id/roomTypeSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorEditText"
+        android:spinnerMode="dialog"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/roomTypeText"
+        tools:textAlignment="center" />
+    <TextView
+        android:id="@+id/numberPersonText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No. of Persons"
+        app:layout_constraintTop_toBottomOf="@id/roomTypeSpinner"
+        android:layout_marginTop="10dp"
+        />
+    <EditText
+        android:id="@+id/numberPersonEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/numberPersonText"
+        android:background="@color/colorEditText"
+        android:padding="10dp"
+        android:inputType="number"
+        />
+
+    <TextView
+        android:id="@+id/scheduleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pick a Schedule"
+        app:layout_constraintTop_toBottomOf="@id/numberPersonEdit"
+        android:layout_marginTop="10dp"
+        />
+    <Spinner
+        android:id="@+id/scheduleSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorEditText"
+        android:spinnerMode="dialog"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scheduleText"
+        />
+    <Button
+        android:id="@+id/datePickerButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scheduleSpinner"
+        android:text="Open Calendar"
+        android:background="@color/colorEditText"
+        />
+
+
+
+
+</android.support.constraint.ConstraintLayout>

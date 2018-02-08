@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#00000000"
+    >
+
+    <Button
+        android:id="@+id/dialogCancelButton"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="X"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="#fff"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <com.applikeysolutions.cosmocalendar.view.CalendarView
+        android:id="@+id/calendar_view"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:orientation="vertical"
+        app:currentDayTextColor="@color/colorPrimaryDark"
+        app:selectedDayBackgroundColor="@color/colorPrimaryLight"
+        app:selectedDayBackgroundStartColor="@color/colorPrimary"
+        app:selectedDayBackgroundEndColor="@color/colorPrimaryDark"
+        app:layout_constraintTop_toBottomOf="@id/dialogCancelButton"
+
+        />
+
+
+        <Button
+            android:id="@+id/dialogConfirmButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dialog_button"
+            android:text="Confirm"
+            android:backgroundTint="@color/colorPrimaryDark"
+            app:layout_constraintTop_toBottomOf="@id/calendar_view"
+            android:textColor="#fff"
+            />
+
+
+
+
+</android.support.constraint.ConstraintLayout>

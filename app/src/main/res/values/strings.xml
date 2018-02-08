@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Dev Hub</string>
+    <string name="title_activity_sample">Sample</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_devhub_space">DevhubSpaceActivity</string>
+    <string name="title_activity_user_booking">UserBookingActivity</string>
+
+    <!---->
+
+    <string name="booknow">"Book Now!</string>
+    <string name="firstname_hint">"Firstname"</string>
+    <string name="lastname_hint">"Lastname"</string>
+    <string name="email_hint">"Email Address"</string>
+    <string name="contact_hint">"Contact Number"</string>
+    <string name="reserve_button">NEXT</string>
+    <string name="length_stay">Length of stay</string>
+    <string name="message_title">Message</string>
+    <string name="check_in">Check-in Time</string>
+    <string name="check_out">Check-out Time</string>
+    <string name="length_plan_hour">Hourly</string>
+    <string name="length_plan_daily">Daily</string>
+    <string name="length_plan_weekly">Weekly</string>
+    <string name="hint_message">Your message here.</string>
+
+    <!-- open space rates -->
+    <string name="openspace_title">Open Space</string>
+    <string name="openspace_hour_rate">Php 50/ hour</string>
+    <string name="openspace_day_rate">Php 300/ day</string>
+    <string name="openspace_week_rate">Php 1200/ week</string>
+    <string name="openspace_inclusions">Inclusive use of open desk or table space, internet and coffee.</string>
+
+    <!-- private space rates -->
+    <string name="privatespace_title">Private Space</string>
+    <string name="privatespace_hour_rate">Php 75/ hour</string>
+    <string name="privatespace_day_rate">Php 350/ day</string>
+    <string name="privatespace_week_rate">Php 1500/ week</string>
+
+    <!-- conference room rates -->
+    <string name="conference_title">Conference/Meeting</string>
+    <string name="conference_hour_rate">Php 300/ hour</string>
+    <string name="conference_capacity">(Up to 10-40 members)</string>
+    <string name="title_activity_type_space">TypeSpaceActivity</string>
+
+
+
+</resources>
