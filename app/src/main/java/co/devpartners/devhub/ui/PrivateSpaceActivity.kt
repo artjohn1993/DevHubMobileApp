@@ -1,6 +1,7 @@
 package co.devpartners.devhub.ui
 
 import android.app.DatePickerDialog
+import android.app.TimePickerDialog
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
@@ -10,6 +11,7 @@ import android.widget.Spinner
 import co.devpartners.devhub.R
 import co.devpartners.devhub.api.events.CustomDatePickerDialog
 import kotlinx.android.synthetic.main.activity_private_space.*
+import java.text.SimpleDateFormat
 import java.util.*
 
 class PrivateSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener{
@@ -56,10 +58,12 @@ class PrivateSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListe
 
             month = month +1
             checkinDatePickerButton.text = "$year/$monthOfYear/$day"
+
         }, year, month, day)
         datepick.show()
     }
-    fun checkoutdate(view:View) {
+    fun checkoutDate(view : View) {
+
         val calendar = Calendar.getInstance()
         calendar.add(Calendar.MONTH, +1)
         val day = calendar.get(Calendar.DAY_OF_MONTH)
@@ -68,14 +72,42 @@ class PrivateSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListe
 
         val datepick = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { view
                                                                                    , year
-
                                                                                    , monthOfYear
                                                                                    , day ->
 
-            month = month + 1
+            month = month +1
+
             checkoutDatePickerButton.text = "$year/$monthOfYear/$day"
         }, year, month, day)
         datepick.show()
+    }
 
+    fun checkintime(view: View) {
+        val cal = Calendar.getInstance()
+
+        val timeSetListener = TimePickerDialog.OnTimeSetListener { timePicker, hour, minute ->
+            cal.set(Calendar.HOUR_OF_DAY, hour)
+            cal.set(Calendar.MINUTE, minute)
+
+            checkinTimePicker.text = SimpleDateFormat("HH:mm").format(cal.time)
+        }
+
+        checkinTimePicker.setOnClickListener {
+            TimePickerDialog(this, timeSetListener, cal.get(Calendar.HOUR_OF_DAY), cal.get(Calendar.MINUTE), false).show()
+        }
+    }
+    fun checkouttime(view: View) {
+        val cal = Calendar.getInstance()
+
+        val timeSetListener = TimePickerDialog.OnTimeSetListener { timePicker, hour, minute ->
+            cal.set(Calendar.HOUR_OF_DAY, hour)
+            cal.set(Calendar.MINUTE, minute)
+
+            checkoutTimePicker.text = SimpleDateFormat("HH:mm").format(cal.time)
+        }
+
+        checkoutTimePicker.setOnClickListener {
+            TimePickerDialog(this, timeSetListener, cal.get(Calendar.HOUR_OF_DAY), cal.get(Calendar.MINUTE), false).show()
+        }
     }
 }
