@@ -24,7 +24,6 @@ class CustomDatePickerDialog : SelectDatePickerType(){
     lateinit var confirm : Button
 
     fun show(activity: Activity,type : DatePickerType){
-
         dialog = Dialog(activity)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
         dialog.setCancelable(false)
@@ -40,7 +39,7 @@ class CustomDatePickerDialog : SelectDatePickerType(){
         confirm.setOnClickListener {
             dialog.hide()
           val something = calendar.selectedDates
-            Toast.makeText(activity, "date $something", Toast.LENGTH_SHORT).show();
+            Toast.makeText(activity, "date $something", Toast.LENGTH_SHORT).show()
         }
         dialog.show()
     }

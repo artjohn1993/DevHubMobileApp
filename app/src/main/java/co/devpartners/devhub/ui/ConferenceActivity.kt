@@ -36,7 +36,6 @@ class ConferenceActivity : AppCompatActivity() {
 
     }
     fun checkRoomType(){
-
         when(scheduleSpinner.selectedItem.toString()){
             "Day" -> datepicker.show(this,DatePickerType.SINGLE)
             "Week" -> datepicker.show(this,DatePickerType.RANGE)
