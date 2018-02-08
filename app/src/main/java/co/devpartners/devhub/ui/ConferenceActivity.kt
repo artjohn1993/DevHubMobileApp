@@ -32,8 +32,6 @@ class ConferenceActivity : AppCompatActivity() {
         datePickerButton.setOnClickListener{
             checkRoomType()
         }
-
-
     }
     fun checkRoomType(){
         when(scheduleSpinner.selectedItem.toString()){
