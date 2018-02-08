@@ -114,20 +114,21 @@
                     android:layout_marginTop="8dp"
                     android:src="@drawable/clock"
                     app:layout_constraintBottom_toBottomOf="@id/checkinDatePickerButton"
-                    app:layout_constraintEnd_toStartOf="@id/timepickPicker"
+                    app:layout_constraintEnd_toStartOf="@id/checkinTimePicker"
                     app:layout_constraintStart_toEndOf="@id/checkinDatePickerButton"
                     app:layout_constraintTop_toBottomOf="@id/checkinTextView" />
 
-                <Button
-                    android:id="@+id/timepickPicker"
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/checkinTimePicker"
+                    android:layout_width="100dp"
                     android:layout_height="30dp"
                     android:layout_marginEnd="15dp"
+                    android:clickable="true"
                     android:background="@color/colorEditText"
                     android:gravity="center"
                     android:padding="5dp"
-                    android:hint="12:00"
-                    android:textColor="@android:color/black"
+                    android:onClick="checkintime"
+                    android:text="12:00"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/timeLogo"
                     app:layout_constraintTop_toTopOf="@id/timeLogo" />
@@ -164,7 +165,7 @@
                     android:padding="5dp"
                     android:background="@color/colorEditText"
                     android:gravity="center"
-                    android:onClick="checkoutdate"
+                    android:onClick="checkoutDate"
                     android:clickable="true"
                     android:text="yyyy/mm/dd"
                     android:textAllCaps="false"
@@ -181,20 +182,21 @@
                     android:layout_marginTop="8dp"
                     android:src="@drawable/clock"
                     app:layout_constraintBottom_toBottomOf="@id/checkoutDatePickerButton"
-                    app:layout_constraintEnd_toStartOf="@id/checkoutTimePickPicker"
+                    app:layout_constraintEnd_toStartOf="@id/checkoutTimePicker"
                     app:layout_constraintStart_toEndOf="@id/checkoutDatePickerButton"
                     app:layout_constraintTop_toBottomOf="@id/checkoutTextView" />
 
-                <Button
-                    android:id="@+id/checkoutTimePickPicker"
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/checkoutTimePicker"
+                    android:layout_width="100dp"
                     android:layout_height="30dp"
                     android:layout_marginEnd="15dp"
+                    android:clickable="true"
                     android:background="@color/colorEditText"
                     android:gravity="center"
                     android:padding="5dp"
-                    android:hint="12:00"
-                    android:textColor="@android:color/black"
+                    android:text="12:00"
+                    android:onClick="checkouttime"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/checkoutTimeLogo"
                     app:layout_constraintTop_toTopOf="@id/checkoutTimeLogo" />
