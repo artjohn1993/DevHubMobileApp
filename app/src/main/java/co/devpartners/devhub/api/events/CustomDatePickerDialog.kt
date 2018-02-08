@@ -9,6 +9,7 @@ import android.widget.CalendarView
 import co.devpartners.devhub.R
 import android.widget.TextView
 import android.widget.Toast
+import co.devpartners.devhub.api.model.DatePickerType
 import com.applikeysolutions.cosmocalendar.utils.SelectionType
 import kotlinx.android.synthetic.main.activity_conference.*
 import org.jetbrains.anko.selectedDateVerticalBarResource
@@ -17,12 +18,12 @@ import org.jetbrains.anko.selectedDateVerticalBarResource
 /**
  * Created by DEVPARTNERS SOFTWARE on 2/7/2018.
  */
-class CustomDatePickerDialog {
+class CustomDatePickerDialog : SelectDatePickerType(){
     lateinit var dialog : Dialog
     lateinit var cancel : Button
     lateinit var confirm : Button
 
-    fun show(activity: Activity){
+    fun show(activity: Activity,type : DatePickerType){
 
         dialog = Dialog(activity)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
@@ -32,7 +33,7 @@ class CustomDatePickerDialog {
         cancel = dialog.findViewById(R.id.dialogCancelButton)
         confirm = dialog.findViewById(R.id.dialogConfirmButton)
         val calendar = dialog.findViewById<com.applikeysolutions.cosmocalendar.view.CalendarView>(R.id.calendar_view)
-        calendar.setSelectionType(SelectionType.RANGE)
+        calendar.selectionType = select(type)
         cancel.setOnClickListener {
             dialog.hide()
         }
@@ -43,5 +44,6 @@ class CustomDatePickerDialog {
         }
         dialog.show()
     }
+
 }
 

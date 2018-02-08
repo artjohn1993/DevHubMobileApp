@@ -7,8 +7,10 @@ import android.support.annotation.RequiresApi
 import android.widget.ArrayAdapter
 import co.devpartners.devhub.R
 import co.devpartners.devhub.api.events.CustomDatePickerDialog
+import co.devpartners.devhub.api.model.DatePickerType
 import kotlinx.android.synthetic.main.activity_conference.*
 import kotlinx.android.synthetic.main.datepicker.*
+import org.jetbrains.anko.alert
 
 
 class ConferenceActivity : AppCompatActivity() {
@@ -28,12 +30,19 @@ class ConferenceActivity : AppCompatActivity() {
         scheduleSpinner.adapter = adapterSchedule
 
         datePickerButton.setOnClickListener{
-                    datepicker.show(this)
+            checkRoomType()
         }
 
 
     }
+    fun checkRoomType(){
 
+        when(scheduleSpinner.selectedItem.toString()){
+            "Day" -> datepicker.show(this,DatePickerType.SINGLE)
+            "Week" -> datepicker.show(this,DatePickerType.RANGE)
+            else -> datepicker.show(this,DatePickerType.MULTIPLE)
+        }
 
+    }
 
 }
