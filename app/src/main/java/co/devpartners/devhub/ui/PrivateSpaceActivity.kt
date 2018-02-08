@@ -55,7 +55,7 @@ class PrivateSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListe
                                                                                    , day ->
 
             month = month +1
-            //checkinDatePickerButton.text = "$year/$monthOfYear/$day"
+            checkinDatePickerButton.text = "$year/$monthOfYear/$day"
         }, year, month, day)
         datepick.show()
     }
@@ -73,7 +73,7 @@ class PrivateSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListe
                                                                                    , day ->
 
             month = month + 1
-            //checkoutDatePickerButton.text = "$year/$monthOfYear/$day"
+            checkoutDatePickerButton.text = "$year/$monthOfYear/$day"
         }, year, month, day)
         datepick.show()
 
