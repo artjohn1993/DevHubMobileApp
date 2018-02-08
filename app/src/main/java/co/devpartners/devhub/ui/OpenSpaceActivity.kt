@@ -12,6 +12,7 @@ import co.devpartners.devhub.api.events.CustomDatePickerDialog
 import kotlinx.android.synthetic.main.activity_open_space.*
 import java.text.SimpleDateFormat
 import java.util.*
+import java.util.Calendar.AM_PM
 import java.util.Calendar.MONTH
 
 class OpenSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener {
@@ -88,8 +89,13 @@ class OpenSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener
         val timeSetListener = TimePickerDialog.OnTimeSetListener { timePicker, hour, minute ->
             cal.set(Calendar.HOUR_OF_DAY, hour)
             cal.set(Calendar.MINUTE, minute)
-
-            checkinTimePicker.text = SimpleDateFormat("HH:mm").format(cal.time)
+            var AM_PM: String
+            if(hour < 12){
+                AM_PM = "AM"
+            }else{
+                AM_PM ="PM"
+            }
+            checkinTimePicker.text = SimpleDateFormat("HH:mm").format(cal.time) + AM_PM
         }
 
         checkinTimePicker.setOnClickListener {
@@ -102,8 +108,13 @@ class OpenSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener
         val timeSetListener = TimePickerDialog.OnTimeSetListener { timePicker, hour, minute ->
             cal.set(Calendar.HOUR_OF_DAY, hour)
             cal.set(Calendar.MINUTE, minute)
-
-            checkoutTimePicker.text = SimpleDateFormat("HH:mm").format(cal.time)
+            var AM_PM: String
+            if(hour < 12){
+                AM_PM = "AM"
+            }else{
+                AM_PM ="PM"
+            }
+            checkoutTimePicker.text = SimpleDateFormat("HH:mm").format(cal.time) + AM_PM
         }
 
         checkoutTimePicker.setOnClickListener {
