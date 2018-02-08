@@ -48,7 +48,6 @@ class OpenSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener
     fun checkinDate(view : View) {
 
         val calendar = Calendar.getInstance()
-        calendar.add(Calendar.MONTH, +1)
         val day = calendar.get(Calendar.DAY_OF_MONTH)
         var month = calendar.get(MONTH)
         val year = calendar.get(Calendar.YEAR)
@@ -58,7 +57,6 @@ class OpenSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener
                                                                                    , monthOfYear
                                                                                    , day ->
 
-            month = month +1
             checkinDatePickerButton.text = "$year/$monthOfYear/$day"
         }, year, month, day)
         datepick.show()
@@ -66,7 +64,6 @@ class OpenSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener
     fun checkoutDate(view : View) {
 
         val calendar = Calendar.getInstance()
-        calendar.add(Calendar.MONTH, +1)
         val day = calendar.get(Calendar.DAY_OF_MONTH)
         var month = calendar.get(Calendar.MONTH)
         val year = calendar.get(Calendar.YEAR)
@@ -76,7 +73,7 @@ class OpenSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener
                                                                                    , monthOfYear
                                                                                    , day ->
 
-            month = month +1
+
 
             checkoutDatePickerButton.text = "$year/$monthOfYear/$day"
         }, year, month, day)
