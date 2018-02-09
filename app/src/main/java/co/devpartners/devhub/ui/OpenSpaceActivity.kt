@@ -4,7 +4,6 @@ package co.devpartners.devhub.ui
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.view.WindowManager
 import android.widget.*
 import co.devpartners.devhub.R
 import co.devpartners.devhub.api.events.CheckInTimeDialog
@@ -24,7 +23,7 @@ class OpenSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_open_space)
-        this.window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
+
         spinner = this.spinnerView
         spinnerView.onItemSelectedListener = this
 
