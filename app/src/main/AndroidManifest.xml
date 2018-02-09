@@ -38,15 +38,17 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.SpaceTypeActivity" />
         </activity>
-        <activity android:name=".ui.ConferenceActivity"
-                android:parentActivityName=".ui.SpaceTypeActivity"
-            />
-        <activity android:name=".ui.PrivateSpaceActivity"
+        <activity
+            android:name=".ui.ConferenceActivity"
+            android:parentActivityName=".ui.SpaceTypeActivity" />
+        <activity
+            android:name=".ui.PrivateSpaceActivity"
             android:launchMode="singleTop">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.SpaceTypeActivity" />
         </activity>
+        <activity android:name=".ui.BookingActivity"></activity>
     </application>
 
 </manifest>

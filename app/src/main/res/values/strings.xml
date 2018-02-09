@@ -24,6 +24,7 @@
     <string name="length_plan_hour">Hourly</string>
     <string name="length_plan_daily">Daily</string>
     <string name="length_plan_weekly">Weekly</string>
+    <string name="reserve_space">RESERVE MY SPACE</string>
     <string name="hint_message">Your message here.</string>
 
     <!-- open space rates -->
