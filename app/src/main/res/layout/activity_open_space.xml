@@ -20,7 +20,7 @@
             >
 
                 <ImageView
-                    android:id="@+id/openSpaceLogo"
+                    android:id="@+id/privateSpaceLogo"
                     android:layout_width="90dp"
                     android:layout_height="90dp"
                     android:layout_marginEnd="8dp"
@@ -37,9 +37,9 @@
                     android:textColor="@android:color/black"
                     android:textSize="16sp"
                     android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="@id/openSpaceLogo"
-                    app:layout_constraintStart_toStartOf="@id/openSpaceLogo"
-                    app:layout_constraintTop_toBottomOf="@id/openSpaceLogo" />
+                    app:layout_constraintEnd_toEndOf="@id/privateSpaceLogo"
+                    app:layout_constraintStart_toStartOf="@id/privateSpaceLogo"
+                    app:layout_constraintTop_toBottomOf="@id/privateSpaceLogo" />
 
                 <TextView
                     android:id="@+id/lengthStayText"
@@ -56,7 +56,7 @@
                 <Spinner
                     android:id="@+id/spinnerView"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
                     android:layout_marginTop="4dp"
                     android:background="@color/colorEditText"
                     android:gravity="center"
@@ -107,9 +107,8 @@
                     android:gravity="center"
                     android:text="yyyy/mm/dd"
                     android:textAllCaps="false"
-                    app:layout_constraintBottom_toBottomOf="@id/dateLogo"
-                    app:layout_constraintEnd_toEndOf="@id/checkinTextView"
-                    app:layout_constraintStart_toEndOf="@id/dateLogo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/checkinTextView" />
 
 
@@ -138,9 +137,8 @@
                     android:gravity="center"
                     android:text="yyyy/mm/dd"
                     android:textAllCaps="false"
-                    app:layout_constraintBottom_toBottomOf="@id/checkoutDateLogo"
-                    app:layout_constraintEnd_toEndOf="@id/checkoutTextView"
-                    app:layout_constraintStart_toEndOf="@id/checkoutDateLogo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/checkoutTextView" />
 
                 <TextView

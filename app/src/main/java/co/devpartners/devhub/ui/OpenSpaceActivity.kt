@@ -24,8 +24,6 @@ class OpenSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_open_space)
 
-
-
         spinner = this.spinnerView
         spinnerView.onItemSelectedListener = this
 
