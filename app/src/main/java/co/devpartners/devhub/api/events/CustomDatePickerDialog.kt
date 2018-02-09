@@ -28,7 +28,7 @@ class CustomDatePickerDialog : SelectDatePickerType(){
     lateinit var dialog : Dialog
     lateinit var cancel : Button
     lateinit var confirm : Button
-
+    val checkin = CheckInTimeDialog()
     fun show(activity: Activity,type : DatePickerType){
         dialog = Dialog(activity)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
@@ -39,13 +39,17 @@ class CustomDatePickerDialog : SelectDatePickerType(){
         confirm = dialog.findViewById(R.id.dialogConfirmButton)
         val calendar = dialog.findViewById<com.applikeysolutions.cosmocalendar.view.CalendarView>(R.id.calendar_view)
         calendar.selectionType = select(type)
+
         cancel.setOnClickListener {
             dialog.hide()
         }
         confirm.setOnClickListener {
+            val selectedDate = calendar.selectedDates
             dialog.hide()
-          val something = calendar.selectedDates
-            Toast.makeText(activity, "date $something", Toast.LENGTH_SHORT).show()
+            if (!selectedDate.isEmpty())
+            checkin.show(activity)
+
+            //Toast.makeText(activity, "date $something", Toast.LENGTH_SHORT).show()
         }
         dialog.show()
     }
