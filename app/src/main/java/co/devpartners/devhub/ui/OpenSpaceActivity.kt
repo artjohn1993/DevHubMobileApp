@@ -48,12 +48,10 @@ class OpenSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener
         }
     }
     override fun onNothingSelected(adapterView: AdapterView<*>?) {
-
     }
     override fun onItemSelected(adapterView: AdapterView<*>?, view: View?, position: Int, p3: Long) {
 
     }
-
     fun checkRoomType() {
         when (spinnerView.selectedItem.toString()) {
 
