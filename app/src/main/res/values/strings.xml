@@ -44,7 +44,7 @@
     <string name="conference_hour_rate">Php 300/ hour</string>
     <string name="conference_capacity">(Up to 10-40 members)</string>
     <string name="title_activity_type_space">TypeSpaceActivity</string>
-
+    <string name="select">Select</string>
 
 
 </resources>
