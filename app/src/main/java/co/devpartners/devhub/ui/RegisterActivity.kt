@@ -18,7 +18,7 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
         supportActionBar?.hide()
-        Sequent.origin(registerLayout).duration(500).flow(Direction.FORWARD).anim(this, Animation.FADE_IN_DOWN).start()
+        //Sequent.origin(registerLayout).duration(500).flow(Direction.FORWARD).anim(this, Animation.FADE_IN_DOWN).start()
         nextButton.setOnClickListener {
           startActivity<SpaceTypeActivity>()
         }
