@@ -1,25 +1,23 @@
 package co.devpartners.devhub.ui
 
-import android.annotation.SuppressLint
-import android.app.DatePickerDialog
-import android.app.TimePickerDialog
+
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
 import co.devpartners.devhub.R
+import co.devpartners.devhub.api.events.CheckInTimeDialog
 import co.devpartners.devhub.api.events.CustomDatePickerDialog
 import co.devpartners.devhub.api.model.DatePickerType
 import kotlinx.android.synthetic.main.activity_open_space.*
-import java.text.SimpleDateFormat
-import java.util.*
-import java.util.Calendar.MONTH
+
 
 class OpenSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener {
 
     val datepicker = CustomDatePickerDialog()
     var timepick = arrayOf("Hourly", "Daily", "Weekly")
     var spinner: Spinner? = null
+    val timepicker = CheckInTimeDialog()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,6 +33,9 @@ class OpenSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinnerView!!.adapter = adapter
 
+        datePickerButton.setOnClickListener{
+            checkRoomType()
+        }
     }
 
     override fun onNothingSelected(adapterView: AdapterView<*>?) {
@@ -44,7 +45,18 @@ class OpenSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener
     override fun onItemSelected(adapterView: AdapterView<*>?, view: View?, position: Int, p3: Long) {
 
     }
+
+    fun checkRoomType() {
+        when (spinnerView.selectedItem.toString()) {
+
+            "Hourly" -> timepicker.show(this)
+            "Day" -> datepicker.show(this, DatePickerType.SINGLE)
+            "Week" -> datepicker.show(this, DatePickerType.RANGE)
+            else -> datepicker.show(this, DatePickerType.MULTIPLE)
+        }
+    }
 }
+
 
 
 
