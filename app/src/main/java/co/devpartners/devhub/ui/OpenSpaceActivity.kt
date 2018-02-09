@@ -39,7 +39,7 @@ class OpenSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener
             checkRoomType()
         }
         saveButton.setOnClickListener {
-            Toast.makeText(this,"Saving a Space wait a moment.",Toast.LENGTH_SHORT)
+            Toast.makeText(this,"Saving a Space wait a moment.",Toast.LENGTH_SHORT).show()
 
             Handler().postDelayed({
                 startActivity<BookingActivity>()
