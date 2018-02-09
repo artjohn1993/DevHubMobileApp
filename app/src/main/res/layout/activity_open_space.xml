@@ -8,179 +8,146 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/devhub"
-    tools:context="co.devpartners.devhub.ui.OpenSpaceActivity">
-
-
-        <android.support.constraint.ConstraintLayout
+    tools:context="co.devpartners.devhub.ui.OpenSpaceActivity"
+    android:padding="10dp">
+        <ImageView
+            android:id="@+id/privateSpaceLogo"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@drawable/openarms"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+                 />
+        <TextView
+            android:id="@+id/privateSpaceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/openspace_title"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/privateSpaceLogo"
+            />
+        <TextView
+            android:id="@+id/lengthStayText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/length_stay"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/privateSpaceText" />
+        <Spinner
+            android:id="@+id/spinnerView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/yawaonLayout"
+            android:layout_height="wrap_content"
+            android:background="@color/colorEditText"
+            android:spinnerMode="dialog"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
             android:padding="10dp"
-            android:background="@color/colorPrimaryTransparent"
-            >
-
-                <ImageView
-                    android:id="@+id/privateSpaceLogo"
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginStart="8dp"
-                    android:src="@drawable/openarms"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
-
-                <TextView
-                    android:id="@+id/privateSpaceText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/openspace_title"
-                    android:textColor="@android:color/black"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="@id/privateSpaceLogo"
-                    app:layout_constraintStart_toStartOf="@id/privateSpaceLogo"
-                    app:layout_constraintTop_toBottomOf="@id/privateSpaceLogo" />
-
-                <TextView
-                    android:id="@+id/lengthStayText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/length_stay"
-                    android:visibility="visible"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/privateSpaceText" />
-
-
-                <Spinner
-                    android:id="@+id/spinnerView"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="4dp"
-                    android:background="@color/colorEditText"
-                    android:gravity="center"
-                    android:spinnerMode="dialog"
-                    android:textAlignment="center"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/lengthStayText" />
-
-                <TextView
-                    android:id="@+id/scheduleText"
-                    android:text="Pick a Schedule"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintStart_toStartOf="@id/lengthStayText"
-                    app:layout_constraintTop_toBottomOf="@id/spinnerView"
-                    app:layout_constraintEnd_toEndOf="parent"/>
-                <Button
-                    android:id="@+id/datePickerButton"
-                    android:layout_width="match_parent"
-                    android:background="@color/colorEditText"
-                    android:layout_height="wrap_content"
-                    android:text="Open Schedule"
-                    android:gravity="center"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/scheduleText"
-                    />
-                <TextView
-                    android:id="@+id/checkinTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/check_in"
-                    app:layout_constraintEnd_toEndOf="@id/lengthStayText"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/datePickerButton" />
-
-                <TextView
-                    android:id="@+id/checkinDatePickerButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginTop="8dp"
-                    android:padding="5dp"
-                    android:background="@color/colorEditText"
-                    android:gravity="center"
-                    android:text="yyyy/mm/dd"
-                    android:textAllCaps="false"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/checkinTextView" />
-
-
-                <TextView
-                    android:id="@+id/checkoutTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/check_out"
-                    app:layout_constraintEnd_toEndOf="@id/checkinTextView"
-                    app:layout_constraintStart_toStartOf="@+id/checkinTextView"
-                    app:layout_constraintTop_toBottomOf="@id/checkinDatePickerButton" />
-
-
-
-                <TextView
-                    android:id="@+id/checkoutDatePickerButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginTop="8dp"
-                    android:padding="5dp"
-                    android:background="@color/colorEditText"
-                    android:gravity="center"
-                    android:text="yyyy/mm/dd"
-                    android:textAllCaps="false"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/checkoutTextView" />
-
-                <TextView
-                    android:id="@+id/messageTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginTop="12dp"
-                    android:text="@string/message_title"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.028"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/checkoutDatePickerButton" />
-
-                <EditText
-                    android:id="@+id/messageEditText"
-                    android:layout_width="match_parent"
-                    android:layout_height="92dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@color/colorEditText"
-                    android:gravity="center"
-                    android:hint="@string/hint_message"
-                    android:inputType="text"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/messageTextView" />
-
-                <Button
-                    android:id="@+id/saveButton"
-                    android:text="SAVE"
-                    android:background="@color/colorPrimary"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="20dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/messageEditText" />
-        </android.support.constraint.ConstraintLayout>
+            app:layout_constraintTop_toBottomOf="@id/lengthStayText" />
+        <TextView
+            android:id="@+id/scheduleText"
+            android:text="Pick a Schedule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/lengthStayText"
+            app:layout_constraintTop_toBottomOf="@id/spinnerView"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <Button
+            android:id="@+id/datePickerButton"
+            android:layout_width="match_parent"
+            android:background="@color/colorEditText"
+            android:layout_height="wrap_content"
+            android:text="Open Schedule"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/scheduleText"
+            />
+        <TextView
+            android:id="@+id/checkinTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/check_in"
+            app:layout_constraintEnd_toEndOf="@id/lengthStayText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/datePickerButton" />
+        <TextView
+            android:id="@+id/checkinDatePickerButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="10dp"
+            android:background="@color/colorEditText"
+            android:gravity="center"
+            android:text="yyyy/mm/dd"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/checkinTextView" />
+        <TextView
+            android:id="@+id/checkoutTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/check_out"
+            app:layout_constraintEnd_toEndOf="@id/checkinTextView"
+            app:layout_constraintStart_toStartOf="@+id/checkinTextView"
+            app:layout_constraintTop_toBottomOf="@id/checkinDatePickerButton" />
+        <TextView
+            android:id="@+id/checkoutDatePickerButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="10dp"
+            android:background="@color/colorEditText"
+            android:gravity="center"
+            android:text="yyyy/mm/dd"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/checkoutTextView" />
+        <TextView
+            android:id="@+id/messageTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/message_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.028"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/checkoutDatePickerButton" />
+        <EditText
+            android:id="@+id/messageEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:gravity="top|left"
+            android:lines="5"
+            android:padding="10dp"
+            android:scrollHorizontally="false"
+            app:layout_constraintTop_toBottomOf="@id/messageTextView"
+            android:background="@color/colorEditText"
+            />
+        <Button
+            android:id="@+id/saveButton"
+            android:text="SAVE"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/messageEditText" />
 </android.support.constraint.ConstraintLayout>
 </ScrollView>

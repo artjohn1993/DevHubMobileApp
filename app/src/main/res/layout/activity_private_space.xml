@@ -7,17 +7,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/devhub"
-    tools:context="co.devpartners.devhub.ui.PrivateSpaceActivity">
+    tools:context="co.devpartners.devhub.ui.PrivateSpaceActivity"
+    android:padding="10dp">
 
-
-        <android.support.constraint.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/yawaonLayout"
-            android:padding="10dp"
-            android:background="@color/colorPrimaryTransparent"
-            >
 
             <ImageView
                 android:id="@+id/privateSpaceLogo"
@@ -56,14 +48,12 @@
             <Spinner
                 android:id="@+id/spinnerView"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginTop="4dp"
+                android:layout_height="wrap_content"
                 android:background="@color/colorEditText"
-                android:gravity="center"
                 android:spinnerMode="dialog"
-                android:textAlignment="center"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:padding="10dp"
                 app:layout_constraintTop_toBottomOf="@id/lengthStayText" />
 
             <TextView
@@ -98,12 +88,10 @@
             <TextView
                 android:id="@+id/checkinDatePickerButton"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginStart="10dp"
+                android:layout_height="wrap_content"
                 android:background="@color/colorEditText"
                 android:gravity="center"
-                android:padding="5dp"
+                android:padding="10dp"
                 android:text="yyyy/mm/dd"
                 android:textAllCaps="false"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -128,11 +116,9 @@
             <TextView
                 android:id="@+id/checkoutDatePickerButton"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:padding="5dp"
+                android:padding="10dp"
                 android:background="@color/colorEditText"
                 android:gravity="center"
                 android:text="yyyy/mm/dd"
@@ -156,17 +142,14 @@
             <EditText
                 android:id="@+id/messageEditText"
                 android:layout_width="match_parent"
-                android:layout_height="92dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:background="@color/colorEditText"
-                android:gravity="center"
-                android:hint="@string/hint_message"
-                android:inputType="text"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/messageTextView" />
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:gravity="top|left"
+                android:lines="5"
+                android:padding="10dp"
+                android:scrollHorizontally="false"
+                app:layout_constraintTop_toBottomOf="@id/messageTextView"
+                android:background="@color/colorPrimary"/>
 
             <Button
                 android:id="@+id/saveButton"
@@ -176,10 +159,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="20dp"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="50dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/messageEditText" />
         </android.support.constraint.ConstraintLayout>
-</android.support.constraint.ConstraintLayout>
+
 </ScrollView>
