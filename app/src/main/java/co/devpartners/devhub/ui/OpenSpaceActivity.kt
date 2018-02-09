@@ -3,6 +3,7 @@ package co.devpartners.devhub.ui
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.view.View
 import android.widget.*
 import co.devpartners.devhub.R
@@ -10,6 +11,8 @@ import co.devpartners.devhub.api.events.CheckInTimeDialog
 import co.devpartners.devhub.api.events.CustomDatePickerDialog
 import co.devpartners.devhub.api.model.DatePickerType
 import kotlinx.android.synthetic.main.activity_open_space.*
+import org.jetbrains.anko.startActivity
+import org.jetbrains.anko.toast
 
 
 class OpenSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener {
@@ -34,12 +37,18 @@ class OpenSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener
         datePickerButton.setOnClickListener{
             checkRoomType()
         }
-    }
+        saveButton.setOnClickListener {
+            Toast.makeText(this,"Saving a Space wait a moment.",Toast.LENGTH_SHORT)
 
+            Handler().postDelayed({
+                startActivity<BookingActivity>()
+                finish()
+            },3000)
+        }
+    }
     override fun onNothingSelected(adapterView: AdapterView<*>?) {
 
     }
-
     override fun onItemSelected(adapterView: AdapterView<*>?, view: View?, position: Int, p3: Long) {
 
     }

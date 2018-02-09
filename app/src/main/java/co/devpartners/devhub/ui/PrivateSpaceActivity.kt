@@ -1,20 +1,20 @@
 package co.devpartners.devhub.ui
 
-import android.app.DatePickerDialog
-import android.app.TimePickerDialog
 import android.os.Bundle
+import android.os.Handler
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
+import android.widget.Toast
 import co.devpartners.devhub.R
 import co.devpartners.devhub.api.events.CheckInTimeDialog
 import co.devpartners.devhub.api.events.CustomDatePickerDialog
 import co.devpartners.devhub.api.model.DatePickerType
 import kotlinx.android.synthetic.main.activity_private_space.*
-import java.text.SimpleDateFormat
-import java.util.*
+import org.jetbrains.anko.startActivity
+
 
 class PrivateSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener{
 
@@ -37,6 +37,14 @@ class PrivateSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListe
 
         datePickerButton.setOnClickListener{
             checkRoomType()
+        }
+        saveButton.setOnClickListener {
+            Toast.makeText(this,"Saving a Space wait a moment.", Toast.LENGTH_SHORT)
+
+            Handler().postDelayed({
+                startActivity<BookingActivity>()
+                finish()
+            },3000)
         }
     }
 

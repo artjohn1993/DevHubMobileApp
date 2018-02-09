@@ -26,6 +26,15 @@
     <string name="length_plan_weekly">Weekly</string>
     <string name="reserve_space">RESERVE MY SPACE</string>
     <string name="hint_message">Your message here.</string>
+    <string name="name_text">Name: Shin Chan</string>
+    <string name="contact_text">Contact: 092212121121</string>
+    <string name="email_text">Email: shinchan_sipat@gmail.com</string>
+    <string name="space_text">Space: No Space in her heart :(</string>
+    <string name="rate_text">Rate: 50 pang kape</string>
+    <string name="period_text">Period: 1 week, delayed</string>
+    <string name="duration_text">Duration: 1hrs</string>
+    <string name="bill_text">Total Bill: 4560 (disconnection notice)</string>
+    <string name="remarks_text">Remarks:</string>
 
     <!-- open space rates -->
     <string name="openspace_title">Open Space</string>
