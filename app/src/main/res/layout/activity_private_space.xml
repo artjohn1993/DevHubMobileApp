@@ -98,15 +98,15 @@
                 android:id="@+id/checkinDatePickerButton"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:layout_marginTop="8dp"
-                android:padding="5dp"
+                android:layout_marginStart="10dp"
                 android:background="@color/colorEditText"
                 android:gravity="center"
+                android:padding="5dp"
                 android:text="yyyy/mm/dd"
                 android:textAllCaps="false"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/checkinTextView" />
 
@@ -136,9 +136,8 @@
                 android:gravity="center"
                 android:text="yyyy/mm/dd"
                 android:textAllCaps="false"
-                app:layout_constraintBottom_toBottomOf="@id/checkoutDateLogo"
-                app:layout_constraintEnd_toEndOf="@id/checkoutTextView"
-                app:layout_constraintStart_toEndOf="@id/checkoutDateLogo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/checkoutTextView" />
 
             <TextView
