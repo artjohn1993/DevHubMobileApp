@@ -48,7 +48,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.SpaceTypeActivity" />
         </activity>
-        <activity android:name=".ui.BookingActivity"></activity>
+        <activity android:name=".ui.BookingActivity"/>
+        <activity android:name=".api.events.Success"/>
     </application>
 
 </manifest>
