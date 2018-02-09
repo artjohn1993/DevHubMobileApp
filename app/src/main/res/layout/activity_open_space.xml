@@ -49,7 +49,6 @@
                     android:textColor="@android:color/black"
                     android:textStyle="bold"
                     android:visibility="visible"
-                    app:layout_constraintEnd_toStartOf="@+id/openSpaceLogo"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/privateSpaceText" />
 
@@ -79,60 +78,25 @@
                     app:layout_constraintTop_toBottomOf="@id/spinnerView" />
 
 
-                <ImageView
-                    android:id="@+id/dateLogo"
-                    android:layout_width="30dp"
-                    android:layout_height="28dp"
-                    android:layout_marginStart="8dp"
-                    android:src="@drawable/calendar"
-                    app:layout_constraintEnd_toStartOf="@id/checkinDatePickerButton"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@id/checkinDatePickerButton" />
 
                 <TextView
                     android:id="@+id/checkinDatePickerButton"
                     android:clickable="true"
-                    android:layout_width="100dp"
+                    android:layout_width="match_parent"
                     android:layout_height="30dp"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
                     android:layout_marginTop="8dp"
                     android:padding="5dp"
                     android:background="@color/colorEditText"
                     android:gravity="center"
                     android:text="yyyy/mm/dd"
-                    android:onClick="checkinDate"
                     android:textAllCaps="false"
                     app:layout_constraintBottom_toBottomOf="@id/dateLogo"
                     app:layout_constraintEnd_toEndOf="@id/checkinTextView"
                     app:layout_constraintStart_toEndOf="@id/dateLogo"
                     app:layout_constraintTop_toBottomOf="@id/checkinTextView" />
 
-                <ImageView
-                    android:id="@+id/timeLogo"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="35dp"
-                    android:layout_marginTop="8dp"
-                    android:src="@drawable/clock"
-                    app:layout_constraintBottom_toBottomOf="@id/checkinDatePickerButton"
-                    app:layout_constraintEnd_toStartOf="@id/checkinTimePicker"
-                    app:layout_constraintStart_toEndOf="@id/checkinDatePickerButton"
-                    app:layout_constraintTop_toBottomOf="@id/checkinTextView" />
-
-                <TextView
-                    android:id="@+id/checkinTimePicker"
-                    android:layout_width="100dp"
-                    android:layout_height="30dp"
-                    android:layout_marginEnd="15dp"
-                    android:clickable="true"
-                    android:background="@color/colorEditText"
-                    android:gravity="center"
-                    android:padding="5dp"
-                    android:onClick="checkintime"
-                    android:text="12:00"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/timeLogo"
-                    app:layout_constraintTop_toTopOf="@id/timeLogo" />
 
                 <TextView
                     android:id="@+id/checkoutTextView"
@@ -147,26 +111,18 @@
                     app:layout_constraintStart_toStartOf="@+id/checkinTextView"
                     app:layout_constraintTop_toBottomOf="@id/checkinDatePickerButton" />
 
-                <ImageView
-                    android:id="@+id/checkoutDateLogo"
-                    android:layout_width="30dp"
-                    android:layout_height="28dp"
-                    android:layout_marginStart="8dp"
-                    android:src="@drawable/calendar"
-                    app:layout_constraintEnd_toStartOf="@id/checkoutDatePickerButton"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@id/checkoutDatePickerButton" />
+
 
                 <TextView
                     android:id="@+id/checkoutDatePickerButton"
-                    android:layout_width="100dp"
+                    android:layout_width="match_parent"
                     android:layout_height="30dp"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
                     android:layout_marginTop="8dp"
                     android:padding="5dp"
                     android:background="@color/colorEditText"
                     android:gravity="center"
-                    android:onClick="checkoutDate"
                     android:clickable="true"
                     android:text="yyyy/mm/dd"
                     android:textAllCaps="false"
@@ -174,33 +130,6 @@
                     app:layout_constraintEnd_toEndOf="@id/checkoutTextView"
                     app:layout_constraintStart_toEndOf="@id/checkoutDateLogo"
                     app:layout_constraintTop_toBottomOf="@id/checkoutTextView" />
-
-                <ImageView
-                    android:id="@+id/checkoutTimeLogo"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="35dp"
-                    android:layout_marginTop="8dp"
-                    android:src="@drawable/clock"
-                    app:layout_constraintBottom_toBottomOf="@id/checkoutDatePickerButton"
-                    app:layout_constraintEnd_toStartOf="@id/checkoutTimePicker"
-                    app:layout_constraintStart_toEndOf="@id/checkoutDatePickerButton"
-                    app:layout_constraintTop_toBottomOf="@id/checkoutTextView" />
-
-                <TextView
-                    android:id="@+id/checkoutTimePicker"
-                    android:layout_width="100dp"
-                    android:layout_height="30dp"
-                    android:layout_marginEnd="15dp"
-                    android:clickable="true"
-                    android:background="@color/colorEditText"
-                    android:gravity="center"
-                    android:padding="5dp"
-                    android:text="12:00"
-                    android:onClick="checkouttime"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/checkoutTimeLogo"
-                    app:layout_constraintTop_toTopOf="@id/checkoutTimeLogo" />
 
                 <TextView
                     android:id="@+id/messageTextView"
