@@ -160,9 +160,8 @@
             android:background="@color/colorEditText"
             android:text="@string/reserve_button"
             android:textStyle="normal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@id/firstnameEditText"
-            app:layout_constraintStart_toStartOf="@id/firstnameEditText"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/contactEditText" />
     </android.support.constraint.ConstraintLayout>
 </android.support.constraint.ConstraintLayout>
