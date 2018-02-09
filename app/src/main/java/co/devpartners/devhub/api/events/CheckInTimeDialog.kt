@@ -21,6 +21,7 @@ class CheckInTimeDialog {
 
         select.setOnClickListener {
             dialog.hide()
+            CheckOutTimeDialog().show(activity)
         }
         dialog.show()
     }
