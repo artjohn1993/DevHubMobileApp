@@ -26,15 +26,14 @@
         android:persistentDrawingCache="none|animation|scrolling"
         android:soundEffectsEnabled="true"
         android:timePickerMode="clock"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/checkinTimeText"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkinTimeText" />
     <Button
         android:id="@+id/selectCheckInTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Select"
+        android:text="Select Time In"
         android:background="@color/colorPrimaryDark"
         app:layout_constraintTop_toBottomOf="@id/checkinTimePicker"
         android:textColor="#fff"

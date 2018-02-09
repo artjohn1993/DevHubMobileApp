@@ -14,7 +14,7 @@
         android:textAlignment="center"
         android:textColor="#fff"
         android:textSize="25sp"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TimePicker
         android:id="@+id/checkoutTimePicker"
@@ -32,8 +32,9 @@
         android:id="@+id/selectCheckOutTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Select"
+        android:text="Select Time Out"
         android:background="@color/colorPrimaryDark"
         app:layout_constraintTop_toBottomOf="@id/checkoutTimePicker"
+        android:textColor="#fff"
         />
 </android.support.constraint.ConstraintLayout>
