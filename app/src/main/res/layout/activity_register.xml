@@ -4,15 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/devhub"
-    tools:context="co.devpartners.devhub.ui.RegisterActivity">
+    android:id="@+id/registerLayout"
+    android:background="@drawable/gradient_background"
+    tools:context="co.devpartners.devhub.ui.RegisterActivity"
+    >
 
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/registerLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/colorPrimaryTransparent"
-      >
+
 
         <ImageView
             android:id="@+id/devHubLogo"
@@ -33,12 +30,13 @@
             android:layout_marginTop="20dp"
             android:gravity="center"
             android:text="@string/booknow"
-            android:textColor="@android:color/black"
+            android:textColor="#000"
             android:textSize="21sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/devHubLogo" />
+            app:layout_constraintTop_toBottomOf="@id/devHubLogo"
+            />
 
 
         <TextView
@@ -49,7 +47,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:text="@string/firstname_hint"
-            android:textColor="@android:color/black"
+            android:textColor="#fff"
             app:layout_constraintTop_toBottomOf="@id/bookNowText"
             />
 
@@ -60,10 +58,12 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:background="@color/colorEditText"
+            android:background="#40000000"
             android:gravity="center"
             android:inputType="text"
+            android:textColor="#fff"
             app:layout_constraintEnd_toEndOf="@+id/firstnameText"
+            app:layout_constraintHorizontal_bias="0.25"
             app:layout_constraintStart_toStartOf="@+id/firstnameText"
             app:layout_constraintTop_toBottomOf="@+id/firstnameText" />
 
@@ -75,7 +75,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="10dp"
             android:text="@string/lastname_hint"
-            android:textColor="@android:color/black"
+            android:textColor="#fff"
             app:layout_constraintEnd_toEndOf="@+id/firstnameText"
             app:layout_constraintStart_toStartOf="@+id/firstnameText"
             app:layout_constraintTop_toBottomOf="@+id/firstnameEditText" />
@@ -87,7 +87,8 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:background="@color/colorEditText"
+            android:background="#40000000"
+            android:textColor="#fff"
             android:gravity="center"
             android:inputType="text"
             app:layout_constraintEnd_toEndOf="@+id/firstnameText"
@@ -102,7 +103,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="10dp"
             android:text="@string/email_hint"
-            android:textColor="@android:color/black"
+            android:textColor="#fff"
             app:layout_constraintEnd_toEndOf="@id/firstnameText"
             app:layout_constraintStart_toStartOf="@id/firstnameText"
             app:layout_constraintTop_toBottomOf="@id/lastnameEditText" />
@@ -114,10 +115,12 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:background="@color/colorEditText"
+            android:background="#40000000"
+            android:textColor="#fff"
             android:gravity="center"
             android:inputType="textEmailAddress"
             app:layout_constraintEnd_toEndOf="@+id/firstnameText"
+            app:layout_constraintHorizontal_bias="0.25"
             app:layout_constraintStart_toStartOf="@+id/firstnameText"
             app:layout_constraintTop_toBottomOf="@id/emailText" />
 
@@ -129,7 +132,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="10dp"
             android:text="@string/contact_hint"
-            android:textColor="@android:color/black"
+            android:textColor="#fff"
             app:layout_constraintEnd_toEndOf="@id/firstnameText"
             app:layout_constraintStart_toStartOf="@id/firstnameText"
             app:layout_constraintTop_toBottomOf="@id/emailEditText" />
@@ -141,7 +144,8 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:background="@color/colorEditText"
+            android:background="#40000000"
+            android:textColor="#fff"
             android:gravity="center"
             android:inputType="number|phone"
             app:layout_constraintEnd_toEndOf="@+id/firstnameText"
@@ -157,11 +161,11 @@
             android:layout_marginEnd="30dp"
             android:layout_marginStart="30dp"
             android:layout_marginTop="20dp"
-            android:background="@color/colorEditText"
+            android:background="@color/colorPrimary"
             android:text="@string/reserve_button"
             android:textStyle="normal"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/contactEditText" />
     </android.support.constraint.ConstraintLayout>
-</android.support.constraint.ConstraintLayout>
+
