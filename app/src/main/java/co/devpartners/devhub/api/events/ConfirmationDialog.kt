@@ -2,16 +2,12 @@ package co.devpartners.devhub.api.events
 
 
 import android.app.Activity
-import android.app.AlertDialog
 import android.app.Dialog
 import android.view.Window
 import android.widget.Button
 import co.devpartners.devhub.R
 import android.support.v7.app.AppCompatActivity
-import co.devpartners.devhub.ui.SpaceTypeActivity
-import kotlinx.android.synthetic.main.activity_booking.*
-import org.jetbrains.anko.alert
-import org.jetbrains.anko.startActivity
+
 
 
 /**
