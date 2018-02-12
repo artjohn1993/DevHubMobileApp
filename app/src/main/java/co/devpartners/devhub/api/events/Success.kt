@@ -5,9 +5,7 @@ import android.app.Dialog
 import android.os.Handler
 import android.support.v7.app.AppCompatActivity
 import android.view.Window
-import android.widget.Button
 import co.devpartners.devhub.R
-import kotlinx.android.synthetic.main.activity_booking.*
 
 
 /**
