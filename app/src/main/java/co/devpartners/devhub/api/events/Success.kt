@@ -5,13 +5,11 @@ import android.app.Dialog
 import android.os.Bundle
 import android.os.Handler
 import android.support.v7.app.AppCompatActivity
-
 import android.view.Window
 import android.widget.Button
 import co.devpartners.devhub.R
 import co.devpartners.devhub.ui.BookingActivity
-import co.devpartners.devhub.ui.MainActivity
-import org.jetbrains.anko.startActivity
+
 
 
 /**
@@ -31,6 +29,7 @@ class Success: AppCompatActivity() {
         Handler().postDelayed({
             dialog.hide()
         }, 2500)
+
 
     }
 

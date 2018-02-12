@@ -3,20 +3,19 @@ package co.devpartners.devhub.api.events
 
 import android.app.Activity
 import android.app.Dialog
-import android.support.v4.content.ContextCompat.startActivity
 import android.view.Window
 import android.widget.Button
-import android.widget.Toast
 import co.devpartners.devhub.R
-import co.devpartners.devhub.ui.MainActivity
-import java.util.logging.Handler
+import android.os.Handler
+import android.support.v7.app.AppCompatActivity
+import co.devpartners.devhub.ui.SpaceTypeActivity
 import org.jetbrains.anko.startActivity
 
 
 /**
  * Created by Dev_03 on 2/12/2018.
  */
-class ConfirmationDialog{
+class ConfirmationDialog: AppCompatActivity(){
     lateinit var dialog : Dialog
     lateinit var select : Button
     lateinit var back : Button
