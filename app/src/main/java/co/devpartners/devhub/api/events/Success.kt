@@ -15,7 +15,6 @@ import kotlinx.android.synthetic.main.activity_booking.*
  */
 class Success: AppCompatActivity() {
     lateinit var dialog: Dialog
-    lateinit var select: Button
     fun show(activity: Activity) {
         dialog = Dialog(activity)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
@@ -26,6 +25,7 @@ class Success: AppCompatActivity() {
 
         Handler().postDelayed({
             dialog.hide()
+            finish()
         }, 2500)
 
 

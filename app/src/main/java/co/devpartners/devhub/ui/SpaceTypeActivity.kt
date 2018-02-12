@@ -71,7 +71,7 @@ class SpaceTypeActivity : AppCompatActivity() {
 
             }
             null -> {
-                alert("Please select space type"){
+                alert("Please confirm space type"){
                     title = "Information"
                 }.show()
             }

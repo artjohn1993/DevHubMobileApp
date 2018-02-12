@@ -6,10 +6,8 @@ import android.app.Dialog
 import android.view.Window
 import android.widget.Button
 import co.devpartners.devhub.R
-import android.os.Handler
 import android.support.v7.app.AppCompatActivity
-import co.devpartners.devhub.ui.SpaceTypeActivity
-import org.jetbrains.anko.startActivity
+import kotlinx.android.synthetic.main.activity_booking.*
 
 
 /**
@@ -17,7 +15,7 @@ import org.jetbrains.anko.startActivity
  */
 class ConfirmationDialog: AppCompatActivity(){
     lateinit var dialog : Dialog
-    lateinit var select : Button
+    lateinit var confirm: Button
     lateinit var back : Button
     fun show(activity: Activity){
         dialog = Dialog(activity)
@@ -25,19 +23,17 @@ class ConfirmationDialog: AppCompatActivity(){
         dialog.setCancelable(false)
         dialog.setContentView(R.layout.confirmation_layout)
         back = dialog.findViewById(R.id.backButton)
-        select= dialog.findViewById(R.id.continueButton)
+        confirm = dialog.findViewById(R.id.continueButton)
 
 
         back.setOnClickListener {
             dialog.hide()
         }
-        select.setOnClickListener {
+        confirm.setOnClickListener {
             dialog.hide()
             Success().show(activity)
         }
         dialog.show()
-
-
     }
 
 }
