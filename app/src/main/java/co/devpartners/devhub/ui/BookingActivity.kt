@@ -19,7 +19,7 @@ class BookingActivity : AppCompatActivity() {
         reserveButton.setOnClickListener {
             confirmDialog()
 
-        }
+    }
     }
     fun confirmDialog() {
         confirm.show(this)

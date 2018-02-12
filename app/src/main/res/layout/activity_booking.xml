@@ -1,191 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/devhub"
-    tools:context="co.devpartners.devhub.ui.BookingActivity">
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/bookingLayout"
-        android:layout_width="248dp"
-        android:layout_height="360dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/colorPrimaryTransparent"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/summaryTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:gravity="center"
-            android:text="Booking Summary"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@id/bookingLayout"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@id/bookingLayout"
-            app:layout_constraintTop_toTopOf="@id/bookingLayout" />
-
-        <TextView
-            android:id="@+id/nameTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/name_text"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/summaryTextView"
-            app:layout_constraintVertical_bias="0.159" />
-
-        <TextView
-            android:id="@+id/contactTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/contact_text"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@id/nameTextView"
-            app:layout_constraintEnd_toEndOf="@id/nameTextView"
-            app:layout_constraintTop_toBottomOf="@id/nameTextView"
-            />
-
-        <TextView
-            android:id="@+id/emailTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/email_text"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@id/nameTextView"
-            app:layout_constraintEnd_toEndOf="@id/nameTextView"
-            app:layout_constraintTop_toBottomOf="@id/contactTextView"
-            />
-
-        <TextView
-            android:id="@+id/spaceTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/space_text"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@id/nameTextView"
-            app:layout_constraintEnd_toEndOf="@id/nameTextView"
-            app:layout_constraintTop_toBottomOf="@id/emailTextView"
-            />
-
-        <TextView
-            android:id="@+id/rateTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/rate_text"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@id/nameTextView"
-            app:layout_constraintEnd_toEndOf="@id/nameTextView"
-            app:layout_constraintTop_toBottomOf="@id/spaceTextView"
-            />
-
-        <TextView
-            android:id="@+id/periodTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/period_text"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@id/nameTextView"
-            app:layout_constraintEnd_toEndOf="@id/nameTextView"
-            app:layout_constraintTop_toBottomOf="@id/rateTextView"
-            />
-
-        <TextView
-            android:id="@+id/durationTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/duration_text"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@id/nameTextView"
-            app:layout_constraintEnd_toEndOf="@id/nameTextView"
-            app:layout_constraintTop_toBottomOf="@id/periodTextView"
-            />
-
-        <TextView
-            android:id="@+id/billTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/bill_text"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@id/nameTextView"
-            app:layout_constraintEnd_toEndOf="@id/nameTextView"
-            app:layout_constraintTop_toBottomOf="@id/durationTextView"
-            />
-
-        <TextView
-            android:id="@+id/remarksTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/remarks_text"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@id/nameTextView"
-            app:layout_constraintEnd_toEndOf="@id/nameTextView"
-            app:layout_constraintTop_toBottomOf="@id/billTextView"
-            />
-
-
-    </android.support.constraint.ConstraintLayout>
-    <Button
-        android:id="@+id/reserveButton"
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:text="@string/reserve_space"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        app:layout_constraintTop_toBottomOf="@id/bookingLayout"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        />
-</android.support.constraint.ConstraintLayout>
+        tools:context="co.devpartners.devhub.ui.BookingActivity">
+
+        <LinearLayout
+            android:id="@+id/headerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="vertical"
+            android:padding="50dp">
+
+            <ImageView
+                android:id="@+id/devHubLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_devhub_logo_main" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                android:text="Booking Summary"
+                android:textColor="#fff"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/spaceTypeLogo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/profile_image"
+            android:padding="20dp"
+            android:src="@drawable/grouppornwatching"
+            android:tint="#000"
+            app:layout_constraintBottom_toBottomOf="@id/headerLayout"
+            app:layout_constraintLeft_toLeftOf="@id/headerLayout"
+            app:layout_constraintRight_toRightOf="@id/headerLayout"
+            app:layout_constraintTop_toBottomOf="@id/headerLayout" />
+
+        <LinearLayout
+            android:id="@+id/reserveInfoLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:padding="20dp"
+            app:layout_constraintTop_toBottomOf="@id/spaceTypeLogo">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Name : John Doe" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Contact Number : 09123456789" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Email :johndoe@gmail.com" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Space :Conference / Meeting" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Rate: Php 300 / (hour)" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Room Type: Conference" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Number of Guests: 10" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Period :Tue, Feb 13 2018 12:00 AM - Wed, Feb 14 2018 12:00 AM" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Bill :Php 7200" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Message :" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/reserveButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorEditText"
+            android:text="Reserve"
+            app:layout_constraintTop_toBottomOf="@id/reserveInfoLayout" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
