@@ -28,6 +28,7 @@ class PrivateSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListe
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_private_space)
         this.window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
+        this.overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left)
         spinner = this.spinnerView
         spinnerView.onItemSelectedListener = this
 

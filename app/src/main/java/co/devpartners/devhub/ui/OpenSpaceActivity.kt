@@ -29,6 +29,7 @@ class OpenSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_open_space)
         this.window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
+        this.overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left)
         spinner = this.spinnerView
         spinnerView.onItemSelectedListener = this
 
