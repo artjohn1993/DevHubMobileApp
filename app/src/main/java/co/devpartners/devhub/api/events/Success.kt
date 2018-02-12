@@ -28,18 +28,4 @@ class Success: AppCompatActivity() {
 
 
     }
-
-
-        /*: AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.success_layout)
-
-        supportActionBar?.hide()
-            Handler().postDelayed({
-                startActivity<MainActivity>()
-                finish()
-            },3000)
-
-        }*/
-    }
+}

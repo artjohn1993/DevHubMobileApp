@@ -4,11 +4,8 @@ import android.annotation.SuppressLint
 import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v7.view.ActionMode
-import android.view.MenuItem
 import android.widget.ImageView
 import android.widget.RelativeLayout
-import android.widget.Toast
 import co.devpartners.devhub.R
 import kotlinx.android.synthetic.main.activity_space_type.*
 import org.jetbrains.anko.alert
