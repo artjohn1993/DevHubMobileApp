@@ -9,6 +9,7 @@ import android.view.WindowManager
 import android.widget.*
 import co.devpartners.devhub.R
 import co.devpartners.devhub.api.events.CheckInTimeDialog
+import co.devpartners.devhub.api.events.ConfirmationDialog
 import co.devpartners.devhub.api.events.CustomDatePickerDialog
 import co.devpartners.devhub.api.model.DatePickerType
 import kotlinx.android.synthetic.main.activity_open_space.*
