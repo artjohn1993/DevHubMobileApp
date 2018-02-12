@@ -30,7 +30,7 @@ class Success: AppCompatActivity() {
 
         Handler().postDelayed({
             dialog.hide()
-        }, 1500)
+        }, 2500)
 
     }
 
