@@ -123,6 +123,7 @@
         android:background="@color/colorEditText"
         />
     <Button
+        android:id="@+id/conferenceNextButtton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorEditText"

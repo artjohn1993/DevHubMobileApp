@@ -14,6 +14,7 @@ import co.devpartners.devhub.api.model.DatePickerType
 import kotlinx.android.synthetic.main.activity_conference.*
 import kotlinx.android.synthetic.main.datepicker.*
 import org.jetbrains.anko.alert
+import org.jetbrains.anko.startActivity
 
 
 class ConferenceActivity : AppCompatActivity() {
@@ -36,6 +37,10 @@ class ConferenceActivity : AppCompatActivity() {
 
         datePickerButton.setOnClickListener{
             checkRoomType()
+        }
+        conferenceNextButtton.setOnClickListener {
+            startActivity<BookingActivity>()
+            finish()
         }
     }
 
