@@ -15,6 +15,7 @@ class BookingActivity : AppCompatActivity() {
 
         reserveButton.setOnClickListener {
             confirmDialog()
+            reserveButton.isEnabled = false
         }
     }
     fun confirmDialog() {

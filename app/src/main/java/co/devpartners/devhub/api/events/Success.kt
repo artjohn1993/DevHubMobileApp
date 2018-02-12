@@ -2,14 +2,12 @@ package co.devpartners.devhub.api.events
 
 import android.app.Activity
 import android.app.Dialog
-import android.os.Bundle
 import android.os.Handler
 import android.support.v7.app.AppCompatActivity
 import android.view.Window
 import android.widget.Button
 import co.devpartners.devhub.R
-import co.devpartners.devhub.ui.BookingActivity
-
+import kotlinx.android.synthetic.main.activity_booking.*
 
 
 /**
