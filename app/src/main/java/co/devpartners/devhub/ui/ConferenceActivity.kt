@@ -4,8 +4,10 @@ import android.os.Build
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.annotation.RequiresApi
+import android.view.MenuItem
 import android.view.WindowManager
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import co.devpartners.devhub.R
 import co.devpartners.devhub.api.events.CustomDatePickerDialog
 import co.devpartners.devhub.api.model.DatePickerType
@@ -23,6 +25,7 @@ class ConferenceActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_conference)
+        this.overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left)
         this.window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
@@ -35,6 +38,7 @@ class ConferenceActivity : AppCompatActivity() {
             checkRoomType()
         }
     }
+
     fun checkRoomType(){
         when(scheduleSpinner.selectedItem.toString()){
             
