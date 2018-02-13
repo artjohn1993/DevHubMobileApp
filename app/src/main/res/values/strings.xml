@@ -37,6 +37,7 @@
     <string name="remarks_text">Remarks:</string>
     <string name="confirmation_text">Are you sure you want to be booked in this space?</string>
 
+    <!---->
 
     <!-- open space rates -->
     <string name="openspace_title">Open Space</string>

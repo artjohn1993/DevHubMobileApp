@@ -25,7 +25,5 @@ class Success: AppCompatActivity() {
             dialog.hide()
             finish()
         }, 2500)
-
-
     }
 }
