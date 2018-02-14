@@ -19,8 +19,8 @@ import org.jetbrains.anko.startActivity
 
 class ConferenceActivity : AppCompatActivity() {
     val datepicker = CustomDatePickerDialog()
-    var roomType = arrayOf("Conference","Meeting")
-    var schedule = arrayOf("Day","Week")
+    var roomType = arrayOf("Room Type","Conference","Meeting")
+    var schedule = arrayOf("Pick a schedule","Day","Week")
 
     @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
