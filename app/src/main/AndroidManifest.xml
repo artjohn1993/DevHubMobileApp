@@ -24,7 +24,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.MainActivity" />
         </activity>
-        <activity android:name=".ui.SpaceTypeActivity" />
+
+        <activity android:name=".ui.SpaceTypeActivity"
+                    android:launchMode="singleTop">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.RegisterActivity" />
+        </activity>
+
         <activity
             android:name=".ui.OpenSpaceActivity"
             android:launchMode="singleTop">
@@ -32,6 +39,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.SpaceTypeActivity" />
         </activity>
+
         <activity
             android:name=".ui.ConferenceActivity"
             android:parentActivityName=".ui.SpaceTypeActivity" />
@@ -42,6 +50,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.SpaceTypeActivity" />
         </activity>
+
         <activity
             android:name=".ui.BookingActivity"
             android:launchMode="singleTop">
