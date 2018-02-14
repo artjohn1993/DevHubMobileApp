@@ -18,7 +18,7 @@ import org.jetbrains.anko.startActivity
 class OpenSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener {
 
     val datepicker = CustomDatePickerDialog()
-    var timepick = arrayOf("Hourly", "Daily", "Weekly")
+    var timepick = arrayOf("Length of Stay","Hourly", "Daily", "Weekly")
     var spinner: Spinner? = null
     val timepicker = CheckInTimeDialog()
 

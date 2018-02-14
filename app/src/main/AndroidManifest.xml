@@ -36,7 +36,7 @@
             android:name=".ui.OpenSpaceActivity"
             android:launchMode="singleTop">
             <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
+               android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.SpaceTypeActivity" />
         </activity>
 
@@ -59,10 +59,7 @@
                 android:value=".ui.SpaceTypeActivity" />
         </activity>
         <activity android:name=".api.events.Success" />
-        <activity
-            android:name=".ui.SummaryActivity"
-            android:label="@string/title_activity_summary"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+
     </application>
 
 </manifest>
