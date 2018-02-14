@@ -27,7 +27,7 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
         supportActionBar?.hide()
-        Sequent.origin(registerLayout).duration(500).anim(this, Animation.FADE_IN_LEFT).start()
+        Sequent.origin(registerLayout).duration(400).anim(this, Animation.FADE_IN_LEFT).start()
 
           firstName = findViewById(R.id.firstnameEditText)
           lastName = findViewById(R.id.lastnameEditText)
