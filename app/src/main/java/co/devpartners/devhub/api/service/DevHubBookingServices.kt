@@ -9,6 +9,6 @@ import retrofit2.http.Path
 interface DevHubBookingServices {
     @GET("users/{usersId}.json")
     fun getUsers(@Path("userId")userId:String)
-    @GET("users/{firstname}.json")
-    fun getFirstname(@Path("firstname")firstname:String)
+    @GET("users/{firstName}.json")
+    fun getFirstname(@Path("firstName")firstname:String)
 }
