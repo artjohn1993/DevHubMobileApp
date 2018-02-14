@@ -34,7 +34,7 @@ class RegisterActivity : AppCompatActivity() {
           emailAddress = findViewById(R.id.emailEditText)
           contactNumber = findViewById(R.id.contactEditText)
 
-        var save = findViewById<Button>(R.id.saveButton)
+        var save = findViewById<Button>(R.id.nextButton)
 
         save.setOnClickListener({
             var firstname: String = firstName.text.toString()
@@ -47,12 +47,8 @@ class RegisterActivity : AppCompatActivity() {
             intent.putExtra("LASTNAME",lastname)
             intent.putExtra("EMAIL",emailadd)
             intent.putExtra("CONTACT",contact)
-
-            startActivity(intent)
+            startActivity<SpaceTypeActivity>()
         })
 
-        nextButton.setOnClickListener {
-            startActivity<SpaceTypeActivity>()
-        }
     }
 }

@@ -41,6 +41,7 @@ class OpenSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener
         saveButton.setOnClickListener {
             Toast.makeText(this,"Saving a Space wait a moment.",Toast.LENGTH_SHORT).show()
 
+            startActivity(intent)
             Handler().postDelayed({
                 startActivity<BookingActivity>()
                 finish()

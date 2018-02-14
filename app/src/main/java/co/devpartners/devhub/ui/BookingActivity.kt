@@ -26,9 +26,7 @@ class BookingActivity : AppCompatActivity() {
         val contact = intentObject.getStringExtra("CONTACT")
 
         val firstnameText = findViewById<TextView>(R.id.firstnameTextView)
-        firstnameText.text = " $firstname"
-        val lastnameText = findViewById<TextView>(R.id.lastnameTextView)
-        lastnameText.text = " $lastname"
+        firstnameText.text = " $firstname $lastname"
         val emailaddText = findViewById<TextView>(R.id.emailTextView)
         emailaddText.text = " $emailadd"
         val contactText = findViewById<TextView>(R.id.contactTextView)
