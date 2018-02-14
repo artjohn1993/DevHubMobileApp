@@ -208,7 +208,7 @@
             android:layout_marginStart="20dp"
             android:background="@color/colorEditText"
             android:text="Reserve"
-            app:layout_constraintBottom_toBottomOf="@id/bookingLayout"
+            app:layout_constraintTop_toBottomOf="@id/reserveInfoLayout"
             android:layout_marginBottom="50dp"
             />
 
