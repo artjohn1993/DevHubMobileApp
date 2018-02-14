@@ -38,14 +38,9 @@ class OpenSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener
         datePickerButton.setOnClickListener{
             checkRoomType()
         }
-        saveButton.setOnClickListener {
-            Toast.makeText(this,"Saving a Space wait a moment.",Toast.LENGTH_SHORT).show()
-
-            startActivity(intent)
-            Handler().postDelayed({
-                startActivity<BookingActivity>()
+        nextButton.setOnClickListener {
+                startActivity<RegisterActivity>()
                 finish()
-            },3000)
         }
     }
     override fun onNothingSelected(adapterView: AdapterView<*>?) {
