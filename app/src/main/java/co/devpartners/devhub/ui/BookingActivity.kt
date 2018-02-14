@@ -1,5 +1,6 @@
 package co.devpartners.devhub.ui
 
+import android.annotation.SuppressLint
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
@@ -9,29 +10,29 @@ import kotlinx.android.synthetic.main.activity_booking.*
 
 class BookingActivity : AppCompatActivity() {
 
-    internal var firstName: String? = null
-    internal var lastName: String? = null
-    internal var emailAdd: String? = null
-    internal var contact: String? = null
+
 
     val confirm = ConfirmationDialog()
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_booking)
 
-        firstName = intent.getStringExtra("FIRSTNAME")
-        lastName = intent.getStringExtra("LASTNAME")
-        emailAdd = intent.getStringExtra("EMAIL")
-        contact = intent.getStringExtra("CONTACT")
+        val intentObject = intent
+
+        val firstname = intentObject.getStringExtra("FIRSTNAME")
+        val lastname = intentObject.getStringExtra("LASTNAME")
+        val emailadd = intentObject.getStringExtra("EMAIL")
+        val contact = intentObject.getStringExtra("CONTACT")
 
         val firstnameText = findViewById<TextView>(R.id.firstnameTextView)
-        firstnameText.text = ""+firstName
+        firstnameText.text = " $firstname"
         val lastnameText = findViewById<TextView>(R.id.lastnameTextView)
-        lastnameText.text = ""+lastName
+        lastnameText.text = " $lastname"
         val emailaddText = findViewById<TextView>(R.id.emailTextView)
-        emailaddText.text = ""+emailAdd
+        emailaddText.text = " $emailadd"
         val contactText = findViewById<TextView>(R.id.contactTextView)
-        contactText.text = ""+contact
+        contactText.text = " $contact"
 
         reserveButton.setOnClickListener {
             confirmDialog()
