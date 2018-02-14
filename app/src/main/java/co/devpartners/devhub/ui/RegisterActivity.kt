@@ -3,6 +3,7 @@ package co.devpartners.devhub.ui
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -11,8 +12,7 @@ import com.fujiyuu75.sequent.Animation
 
 import com.fujiyuu75.sequent.Sequent
 import kotlinx.android.synthetic.main.activity_register.*
-import org.jetbrains.anko.alert
-import org.jetbrains.anko.startActivity
+
 
 
 class RegisterActivity : AppCompatActivity() {
@@ -37,6 +37,7 @@ class RegisterActivity : AppCompatActivity() {
         var save = findViewById<Button>(R.id.nextButton)
 
         save.setOnClickListener({
+
             var firstname: String = firstName.text.toString()
             var lastname: String = lastName.text.toString()
             var emailadd: String = emailAddress.text.toString()
@@ -47,7 +48,10 @@ class RegisterActivity : AppCompatActivity() {
             intent.putExtra("LASTNAME",lastname)
             intent.putExtra("EMAIL",emailadd)
             intent.putExtra("CONTACT",contact)
-            startActivity<SpaceTypeActivity>()
+
+
+                startActivity(intent)
+
         })
 
     }

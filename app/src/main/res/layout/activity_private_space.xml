@@ -152,7 +152,7 @@
                 android:background="@color/colorPrimary"/>
 
             <Button
-                android:id="@+id/saveButton"
+                android:id="@+id/nextButton"
                 android:text="SAVE"
                 android:background="@color/colorPrimary"
                 android:layout_width="match_parent"
