@@ -25,12 +25,7 @@
                 android:value=".ui.MainActivity" />
         </activity>
         <activity
-            android:name=".ui.SpaceTypeActivity"
-            android:launchMode="singleTop">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ui.RegisterActivity" />
-        </activity>
+            android:name=".ui.SpaceTypeActivity"/>
         <activity
             android:name=".ui.OpenSpaceActivity"
             android:launchMode="singleTop">
