@@ -22,8 +22,9 @@ class SpaceTypeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_space_type)
-
-        supportActionBar?.hide()
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
+//        supportActionBar?.hide()
 
         this.overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left)
         openSpaceLayout.setOnClickListener {

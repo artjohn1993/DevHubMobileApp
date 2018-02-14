@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         bookButton.setOnClickListener{
-            startActivity<SpaceTypeActivity>()
+            startActivity<RegisterActivity>()
             finish()
         }
     }

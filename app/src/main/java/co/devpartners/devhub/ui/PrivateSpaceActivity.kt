@@ -40,7 +40,7 @@ class PrivateSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListe
             checkRoomType()
         }
         nextButton.setOnClickListener {
-                startActivity<RegisterActivity>()
+                startActivity<BookingActivity>()
                 finish()
         }
     }

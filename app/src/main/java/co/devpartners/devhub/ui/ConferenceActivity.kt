@@ -39,7 +39,7 @@ class ConferenceActivity : AppCompatActivity() {
             checkRoomType()
         }
         conferenceNextButtton.setOnClickListener {
-            startActivity<RegisterActivity>()
+            startActivity<BookingActivity>()
             finish()
         }
     }

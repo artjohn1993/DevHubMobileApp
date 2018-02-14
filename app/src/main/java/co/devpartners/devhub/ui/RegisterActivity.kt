@@ -12,7 +12,7 @@ import com.fujiyuu75.sequent.Animation
 
 import com.fujiyuu75.sequent.Sequent
 import kotlinx.android.synthetic.main.activity_register.*
-
+import org.jetbrains.anko.startActivity
 
 
 class RegisterActivity : AppCompatActivity() {
@@ -34,23 +34,23 @@ class RegisterActivity : AppCompatActivity() {
           emailAddress = findViewById(R.id.emailEditText)
           contactNumber = findViewById(R.id.contactEditText)
 
-        var save = findViewById<Button>(R.id.nextButton)
-
-        save.setOnClickListener({
-
-            var firstname: String = firstName.text.toString()
-            var lastname: String = lastName.text.toString()
-            var emailadd: String = emailAddress.text.toString()
-            var contact: String = contactNumber.text.toString()
-
-            val intent = Intent(applicationContext,BookingActivity::class.java)
-            intent.putExtra("FIRSTNAME",firstname)
-            intent.putExtra("LASTNAME",lastname)
-            intent.putExtra("EMAIL",emailadd)
-            intent.putExtra("CONTACT",contact)
 
 
-                startActivity(intent)
+        nextButton.setOnClickListener({
+            startActivity<SpaceTypeActivity>()
+//            var firstname: String = firstName.text.toString()
+//            var lastname: String = lastName.text.toString()
+//            var emailadd: String = emailAddress.text.toString()
+//            var contact: String = contactNumber.text.toString()
+//
+//            val intent = Intent(applicationContext,BookingActivity::class.java)
+//            intent.putExtra("FIRSTNAME",firstname)
+//            intent.putExtra("LASTNAME",lastname)
+//            intent.putExtra("EMAIL",emailadd)
+//            intent.putExtra("CONTACT",contact)
+//
+//
+//                startActivity(intent)
 
         })
 

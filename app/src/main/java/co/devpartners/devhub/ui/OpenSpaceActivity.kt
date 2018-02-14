@@ -39,7 +39,7 @@ class OpenSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener
             checkRoomType()
         }
         nextButton.setOnClickListener {
-                startActivity<RegisterActivity>()
+                startActivity<BookingActivity>()
                 finish()
         }
     }

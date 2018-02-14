@@ -58,6 +58,7 @@
     <string name="conference_capacity">(Up to 10-40 members)</string>
     <string name="title_activity_type_space">TypeSpaceActivity</string>
     <string name="select">Select</string>
+    <string name="title_activity_summary">SummaryActivity</string>
 
 
 </resources>
