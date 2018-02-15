@@ -32,7 +32,7 @@ class CustomDatePickerDialog : SelectDatePickerType(){
     fun show(activity: Activity,type : DatePickerType){
         dialog = Dialog(activity)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-        dialog.setCancelable(false)
+        dialog.setCancelable(true)
         dialog.setContentView(R.layout.datepicker)
 
         cancel = dialog.findViewById(R.id.dialogCancelButton)
