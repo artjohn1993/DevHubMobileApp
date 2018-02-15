@@ -40,7 +40,6 @@ class RegisterActivity : AppCompatActivity() {
 
             Handler().postDelayed({
                 startActivity<SpaceTypeActivity>()
-                finish()
             },400)
 
 //            var firstname: String = firstName.text.toString()
