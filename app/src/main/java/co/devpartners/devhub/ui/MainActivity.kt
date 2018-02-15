@@ -2,6 +2,7 @@ package co.devpartners.devhub.ui
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import co.devpartners.devhub.R
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.startActivity
@@ -14,8 +15,11 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         bookButton.setOnClickListener{
-            startActivity<RegisterActivity>()
-            finish()
+
+            Handler().postDelayed({
+                startActivity<RegisterActivity>()
+                finish()
+            },500)
         }
     }
 }

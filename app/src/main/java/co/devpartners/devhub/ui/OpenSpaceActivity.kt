@@ -39,8 +39,10 @@ class OpenSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener
             checkRoomType()
         }
         nextButton.setOnClickListener {
+            Handler().postDelayed({
                 startActivity<BookingActivity>()
                 finish()
+            },500)
         }
     }
     override fun onNothingSelected(adapterView: AdapterView<*>?) {

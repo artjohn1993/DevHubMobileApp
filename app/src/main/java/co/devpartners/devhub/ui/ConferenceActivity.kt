@@ -3,6 +3,7 @@ package co.devpartners.devhub.ui
 import android.os.Build
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.support.annotation.RequiresApi
 import android.view.MenuItem
 import android.view.WindowManager
@@ -39,8 +40,10 @@ class ConferenceActivity : AppCompatActivity() {
             checkRoomType()
         }
         conferenceNextButtton.setOnClickListener {
-            startActivity<BookingActivity>()
-            finish()
+            Handler().postDelayed({
+                startActivity<BookingActivity>()
+                finish()
+            },500)
         }
     }
 

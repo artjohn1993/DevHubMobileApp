@@ -40,8 +40,10 @@ class PrivateSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListe
             checkRoomType()
         }
         nextButton.setOnClickListener {
+            Handler().postDelayed({
                 startActivity<BookingActivity>()
                 finish()
+            },500)
         }
     }
 

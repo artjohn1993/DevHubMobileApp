@@ -3,10 +3,12 @@ package co.devpartners.devhub.ui
 import android.annotation.SuppressLint
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.widget.TextView
 import co.devpartners.devhub.R
 import co.devpartners.devhub.api.events.ConfirmationDialog
 import kotlinx.android.synthetic.main.activity_booking.*
+import org.jetbrains.anko.startActivity
 
 class BookingActivity : AppCompatActivity() {
 
@@ -33,7 +35,10 @@ class BookingActivity : AppCompatActivity() {
         contactText.text = " $contact"
 
         reserveButton.setOnClickListener {
-            confirmDialog()
+            Handler().postDelayed({
+                confirmDialog()
+            },500)
+
         }
     }
     fun confirmDialog() {

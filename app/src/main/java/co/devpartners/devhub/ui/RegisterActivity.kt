@@ -37,7 +37,12 @@ class RegisterActivity : AppCompatActivity() {
 
 
         nextButton.setOnClickListener({
-            startActivity<SpaceTypeActivity>()
+
+            Handler().postDelayed({
+                startActivity<SpaceTypeActivity>()
+                finish()
+            },500)
+
 //            var firstname: String = firstName.text.toString()
 //            var lastname: String = lastName.text.toString()
 //            var emailadd: String = emailAddress.text.toString()
