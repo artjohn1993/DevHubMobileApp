@@ -64,6 +64,7 @@
         android:id="@+id/numberPersonEdit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="Number of person"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:background="@color/colorEditText"
