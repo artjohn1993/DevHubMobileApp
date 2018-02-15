@@ -12,7 +12,7 @@
     </item>
     <item
         android:id="@android:id/background"
-        android:drawable="@color/colorEditText"
+        android:drawable="@color/colorPrimaryLight"
        >
         <shape>
     <corners
