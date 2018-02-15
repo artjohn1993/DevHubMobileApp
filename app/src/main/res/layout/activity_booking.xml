@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <android.support.constraint.ConstraintLayout
@@ -11,7 +11,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:id="@+id/bookingLayout"
         tools:context="co.devpartners.devhub.ui.BookingActivity">
 
@@ -60,118 +60,71 @@
             android:id="@+id/reserveInfoLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="8dp"
             android:orientation="vertical"
             android:padding="20dp"
             app:layout_constraintTop_toBottomOf="@id/headerLayout">
 
             <TextView
+                android:id="@+id/nameReservedText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:text="Name:"
                 />
-            <TextView
-                android:id="@+id/firstnameTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:text="John Doe" />
-
 
             <TextView
+                android:id="@+id/numberReservedText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:text="Contact Number:"
                 />
 
-            <TextView
-                android:id="@+id/contactTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:text="09123456789" />
 
             <TextView
+                android:id="@+id/emailReservedText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:text="Email:" />
 
-            <TextView
-                android:id="@+id/emailTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:text="johndoe@gmail.com" />
 
             <TextView
+                android:id="@+id/spaceTypeReservedText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:text="Space:" />
 
-            <TextView
-                android:id="@+id/spaceTypeTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:text="Conference / Meeting" />
 
             <TextView
+                android:id="@+id/rateReservedText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:text="Rate:" />
 
-            <TextView
-                android:id="@+id/rateTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:text="Php 300 / (hour)" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:text="Room Type:" />
-
-            <TextView
-                android:id="@+id/roomTypeTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:text="Conference" />
-
-            <TextView
+                android:id="@+id/numberGuestReservedText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:text="Number of Guests:" />
 
-            <TextView
-                android:id="@+id/guestNumberTxtView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:text="10" />
 
             <TextView
+                android:id="@+id/periodReservedText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:text="Period:" />
 
-            <TextView
-                android:id="@+id/periodTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:text="Tue, Feb 13 2018 12:00 AM - Wed, Feb 14 2018 12:00 AM" />
+
 
             <TextView
+                android:id="@+id/billReservedText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
@@ -179,24 +132,13 @@
 
 
             <TextView
-                android:id="@+id/billTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:text="Php 7200" />
-
-            <TextView
+                android:id="@+id/messageReservedText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:text="Message :" />
 
-            <TextView
-                android:id="@+id/messsageTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:text="" />
+
         </LinearLayout>
 
         <Button

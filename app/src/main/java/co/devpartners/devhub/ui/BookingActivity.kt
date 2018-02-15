@@ -26,13 +26,22 @@ class BookingActivity : AppCompatActivity() {
         val lastname = intentObject.getStringExtra("LASTNAME")
         val emailadd = intentObject.getStringExtra("EMAIL")
         val contact = intentObject.getStringExtra("CONTACT")
+        val spaceType = intentObject.getStringExtra("SPACE")
+        val rate = intentObject.getStringExtra("RATE")
+        val guests = intentObject.getStringExtra("GUESTS")
+        val period = intentObject.getStringExtra("PERIOD")
+        val bill = intentObject.getStringExtra("BILL")
+        val message = intentObject.getStringExtra("MESSAGE")
 
-        val firstnameText = findViewById<TextView>(R.id.firstnameTextView)
-        firstnameText.text = " $firstname $lastname"
-        val emailaddText = findViewById<TextView>(R.id.emailTextView)
-        emailaddText.text = " $emailadd"
-        val contactText = findViewById<TextView>(R.id.contactTextView)
-        contactText.text = " $contact"
+        nameReservedText.text = "Name : $firstname $lastname"
+        numberReservedText.text = "Contact Number : $contact"
+        emailReservedText.text = "Email : $emailadd"
+        spaceTypeReservedText.text = "Space : $spaceType"
+        rateReservedText.text = "Rate : $rate"
+        numberGuestReservedText.text = "Number of Guests: $guests"
+        periodReservedText.text = "Period : $period"
+        billReservedText.text = "Bill : $bill"
+        messageReservedText.text = "Message : $message"
 
         reserveButton.setOnClickListener {
             Handler().postDelayed({
