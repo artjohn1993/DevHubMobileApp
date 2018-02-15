@@ -11,6 +11,8 @@
         </shape>
     </item>
     <item
+        android:id="@android:id/background"
+        android:drawable="@color/colorEditText"
        >
         <shape>
     <corners

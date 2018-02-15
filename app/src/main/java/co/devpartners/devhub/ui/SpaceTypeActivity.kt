@@ -51,14 +51,16 @@ class SpaceTypeActivity : AppCompatActivity() {
     fun selected(layout : RelativeLayout?, image : ImageView?){
 
         if(preImage != null && prevLayout != null){
-            preImage!!.setColorFilter(Color.argb(0, 255, 255, 255))
+//            preImage!!.setColorFilter(R.color.colorPrimary)
+//            preImage!!.setColorFilter(Color.argb(0, 255, 255, 255))
             prevLayout!!.setBackgroundResource(R.drawable.button_border)
         }
 
         preImage = image
         prevLayout = layout
         layout?.setBackgroundResource(R.drawable.ripple_effect_border)
-        image?.setColorFilter(R.color.colorPrimary)
+//        layout?.setBackgroundColor(R.color.colorPrimary)
+//        image?.setColorFilter(R.color.colorPrimary)
 
 //        image?.setColorFilter(Color.argb(255, 255, 255, 255))
     }
