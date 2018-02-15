@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -29,27 +33,21 @@
         android:layout_height="wrap_content"
         android:text="Conference/Meeting"
         android:textSize="20dp"
+        android:layout_marginTop="8dp"
         android:textColor="@color/colorAccent"
         app:layout_constraintEnd_toEndOf="@id/conferenceSpaceLogoImage"
         app:layout_constraintStart_toStartOf="@id/conferenceSpaceLogoImage"
         app:layout_constraintTop_toBottomOf="@id/conferenceSpaceLogoImage"
         />
 
-    <View
-        android:id="@+id/roomTypeText"
-        android:layout_width="wrap_content"
-        android:layout_height="1dp"
-        android:background="@android:color/transparent"
-        app:layout_constraintTop_toBottomOf="@id/conferenceTitleText"
-        android:layout_marginTop="10dp"
-        />
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/roomTypeSpinnerContainer"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
-        app:layout_constraintTop_toBottomOf="@id/roomTypeText"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/conferenceTitleText"
         android:background="@color/colorPrimary"
         >
     <Spinner
@@ -60,14 +58,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         tools:textAlignment="textStart" />
     </RelativeLayout>
-    <View
-        android:id="@+id/numberPersonText"
-        android:layout_width="wrap_content"
-        android:layout_height="1dp"
-        android:background="@android:color/transparent"
-        app:layout_constraintTop_toBottomOf="@id/roomTypeSpinnerContainer"
-        android:layout_marginTop="10dp"
-        />
+
 
     <EditText
         android:id="@+id/numberPersonEdit"
@@ -76,27 +67,21 @@
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:background="@color/colorEditText"
+        android:layout_marginTop="8dp"
         android:inputType="number"
         android:padding="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/numberPersonText" />
+        app:layout_constraintTop_toBottomOf="@id/roomTypeSpinnerContainer" />
 
-    <View
-        android:id="@+id/scheduleText"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:text="Pick a Schedule"
-        app:layout_constraintTop_toBottomOf="@id/numberPersonEdit"
-        android:layout_marginTop="10dp"
-        />
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/scheduleSpinnerContainer"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
-        app:layout_constraintTop_toBottomOf="@id/scheduleText"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/numberPersonEdit"
         android:background="@color/colorPrimary"
         >
     <Spinner
@@ -121,14 +106,7 @@
         android:textAlignment="textStart"
         android:background="@color/colorEditText"
         />
-    <View
-        android:id="@+id/messageTextView"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@android:color/transparent"
-        android:text="Message"
-        android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@id/datePickerButton"/>
+
     <EditText
         android:id="@+id/messageEditText"
         android:layout_width="match_parent"
@@ -140,10 +118,11 @@
         android:gravity="top|left"
         android:lines="4"
         android:padding="10dp"
+        android:layout_marginTop="8dp"
         android:scrollHorizontally="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/messageTextView"
+        app:layout_constraintTop_toBottomOf="@id/datePickerButton"
         android:background="@color/colorEditText"
         />
 
@@ -154,8 +133,10 @@
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/ripple_effect"
         android:text="Next"
+        app:layout_constraintTop_toBottomOf="@id/messageEditText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -163,3 +144,4 @@
 
 
 </android.support.constraint.ConstraintLayout>
+</ScrollView>
