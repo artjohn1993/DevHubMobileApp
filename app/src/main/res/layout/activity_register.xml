@@ -40,132 +40,99 @@
             />
 
 
-
-        <EditText
-            android:id="@+id/firstnameEditText"
-            android:hint="Firstname"
-            android:padding="5dp"
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginBottom="8dp"
-            android:background="#40000000"
-            android:inputType="text"
-            android:textColor="#fff"
+            android:layout_height="wrap_content"
+            android:id="@+id/firstnameEditTextLayout"
             app:layout_constraintTop_toBottomOf="@id/bookNowText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:textColorHint="#cecbcb"
-            />
-
-        <View
-            android:id="@+id/view1"
-            android:hint="Firstname"
-            android:padding="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
             android:layout_marginEnd="16dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="16dp"
-            android:background="@android:color/transparent"
-            android:inputType="text"
-            android:textColor="#fff"
-            app:layout_constraintTop_toBottomOf="@id/firstnameEditText"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:textColorHint="#cecbcb"
+            android:layout_marginTop="16dp"
+            android:textColorHint="#000"
+            >
+            <EditText
+                android:id="@+id/firstnameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="Firstname"
+                android:textColor="#fff"
+                android:theme="@style/EditTextThemeDark"
             />
+        </android.support.design.widget.TextInputLayout>
 
 
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lastnameEditTextLayout"
+        app:layout_constraintTop_toBottomOf="@id/firstnameEditTextLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:textColorHint="#000"
+        android:hint="Lastname"
+        >
         <EditText
             android:id="@+id/lastnameEditText"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:background="#40000000"
-            android:hint="Lastname"
+            android:layout_height="wrap_content"
             android:inputType="text"
-            android:padding="5dp"
             android:textColor="#fff"
-            android:textColorHint="#cecbcb"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view1" />
-        <View
-            android:id="@+id/view2"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:background="@android:color/transparent"
-            android:hint="Email Address"
-            android:inputType="textEmailAddress"
-            android:padding="5dp"
-            android:textColor="#fff"
-            android:textColorHint="#cecbcb"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.25"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/lastnameEditText" />
+            android:theme="@style/EditTextThemeDark"
+            />
+    </android.support.design.widget.TextInputLayout>
 
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/emailEditTextLayout"
+        app:layout_constraintTop_toBottomOf="@id/lastnameEditTextLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:textColorHint="#000"
+        android:hint="Email"
+        >
         <EditText
             android:id="@+id/emailEditText"
             android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:background="#40000000"
-            android:hint="Email Address"
+            android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
-            android:padding="5dp"
             android:textColor="#fff"
-            android:textColorHint="#cecbcb"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.25"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/view2" />
+            android:theme="@style/EditTextThemeDark"
+            />
+    </android.support.design.widget.TextInputLayout>
 
-        <View
-            android:id="@+id/view3"
-            android:hint="Contact Number"
-            android:padding="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:background="@android:color/transparent"
-            android:textColor="#fff"
-            android:textColorHint="#cecbcb"
-            android:inputType="number|phone"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/emailEditText" />
-
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/contactEditTextLayout"
+        app:layout_constraintTop_toBottomOf="@id/emailEditTextLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:textColorHint="#000"
+        android:hint="Contact Number"
+        >
         <EditText
             android:id="@+id/contactEditText"
-            android:hint="Contact Number"
-            android:padding="5dp"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:background="#40000000"
+            android:layout_height="wrap_content"
+            android:inputType="number"
             android:textColor="#fff"
-            android:textColorHint="#cecbcb"
-            android:inputType="number|phone"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/view3" />
-
+            android:theme="@style/EditTextThemeDark"
+            />
+    </android.support.design.widget.TextInputLayout>
 
         <Button
             android:id="@+id/nextButton"

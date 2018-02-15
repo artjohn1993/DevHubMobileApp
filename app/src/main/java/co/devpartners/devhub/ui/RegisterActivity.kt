@@ -4,6 +4,7 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.view.WindowManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -25,13 +26,25 @@ class RegisterActivity : AppCompatActivity() {
         setContentView(R.layout.activity_register)
         supportActionBar?.hide()
         Sequent.origin(registerLayout).duration(400).anim(this, Animation.FADE_IN_LEFT).start()
+        this.overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left)
+        this.window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
 
 
         nextButton.setOnClickListener({
 
-            Handler().postDelayed({
-                startActivity<SpaceTypeActivity>()
-            },400)
+            if(isEditTextEmpty(firstnameEditText) || isEditTextEmpty(lastnameEditText) || isEditTextEmpty(emailEditText) || isEditTextEmpty(contactEditText)) {
+
+                if (isEditTextEmpty(firstnameEditText)) firstnameEditTextLayout.error = "Please fill up firstname"
+                else if (isEditTextEmpty(lastnameEditText)) lastnameEditTextLayout.error = "Please fill up lastname"
+                else if (isEditTextEmpty(emailEditText)) emailEditTextLayout.error = "Please fill up email"
+                else if (isEditTextEmpty(contactEditText)) contactEditTextLayout.error = "Please fill up contact number"
+            }
+            else{
+                Handler().postDelayed({
+                    startActivity<SpaceTypeActivity>()
+                },400)
+            }
+
 
 //            val firstname: String = firstnameEditText.text.toString()
 //            val lastname: String = lastnameEditText.text.toString()
@@ -48,6 +61,17 @@ class RegisterActivity : AppCompatActivity() {
 //                startActivity(intent)
 
         })
-
+    }
+    fun isEditTextEmpty(text : EditText) : Boolean{
+        if(text.text.toString() == "") return true
+        else{
+            firstnameEditTextLayout.error = null
+            lastnameEditTextLayout.error = null
+            emailEditTextLayout.error = null
+            contactEditTextLayout.error = null
+            return false
+        }
     }
 }
+
+
