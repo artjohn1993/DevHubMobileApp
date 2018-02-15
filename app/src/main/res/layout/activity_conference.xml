@@ -57,10 +57,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:spinnerMode="dialog"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        tools:textAlignment="center" />
+        tools:textAlignment="textStart" />
     </RelativeLayout>
     <View
         android:id="@+id/numberPersonText"
@@ -105,8 +103,6 @@
         android:id="@+id/scheduleSpinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
         android:spinnerMode="dialog"
         />
     </RelativeLayout>
