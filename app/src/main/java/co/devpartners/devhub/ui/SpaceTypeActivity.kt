@@ -30,14 +30,18 @@ class SpaceTypeActivity : AppCompatActivity() {
         openSpaceLayout.setOnClickListener {
             selectedSpace = ActivityType.OpenSpaceActivity
             selected(openSpaceLayout,openSpaceImage)
+
         }
         privateSpaceLayout.setOnClickListener {
             selectedSpace = ActivityType.PrivateActivity
             selected(privateSpaceLayout,privateSpaceLogoImage)
+
+
         }
         conferenceSpaceLayout.setOnClickListener {
             selectedSpace = ActivityType.ConferenceActivity
             selected(conferenceSpaceLayout,conferenceSpaceLogoImage)
+
         }
 
         nextButton.setOnClickListener {
@@ -52,7 +56,7 @@ class SpaceTypeActivity : AppCompatActivity() {
 
         if(preImage != null && prevLayout != null){
 
-//            preImage!!.setColorFilter(Color.argb(0, 255, 255, 255))
+//            preImage!!.setColorFilter(Color.argb(255, 255, 255, 255))
             prevLayout!!.setBackgroundResource(R.drawable.button_border)
         }
 
