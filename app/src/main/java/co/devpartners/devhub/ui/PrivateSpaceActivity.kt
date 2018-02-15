@@ -58,7 +58,7 @@ class PrivateSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListe
     fun checkRoomType() {
         when (spinnerView.selectedItem.toString()) {
 
-            "Length of Stay" -> Toast.makeText(this, "Please select your length of stay.",Toast.LENGTH_SHORT).show()
+            "Length of Stay" -> Toast.makeText(this, "Please identify your length of stay.",Toast.LENGTH_SHORT).show()
             "Hourly" -> timepicker.show(this)
             "Day" -> datepicker.show(this, DatePickerType.SINGLE)
             "Week" -> datepicker.show(this, DatePickerType.RANGE)

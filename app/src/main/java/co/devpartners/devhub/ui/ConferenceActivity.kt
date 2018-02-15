@@ -49,7 +49,8 @@ class ConferenceActivity : AppCompatActivity() {
 
     fun checkRoomType(){
         when(scheduleSpinner.selectedItem.toString()){
-            
+
+            "Pick a schedule" -> Toast.makeText(this,"Please pick date schedule or week.",Toast.LENGTH_SHORT).show()
             "Day" -> datepicker.show(this,DatePickerType.SINGLE)
             "Week" -> datepicker.show(this,DatePickerType.RANGE)
             else -> datepicker.show(this,DatePickerType.MULTIPLE)
