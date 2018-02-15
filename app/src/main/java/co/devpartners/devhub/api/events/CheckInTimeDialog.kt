@@ -15,7 +15,7 @@ class CheckInTimeDialog {
     fun show(activity: Activity){
         dialog = Dialog(activity)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-        dialog.setCancelable(false)
+        dialog.setCancelable(true)
         dialog.setContentView(R.layout.checkin_layout)
         select = dialog.findViewById(R.id.selectCheckInTime)
 

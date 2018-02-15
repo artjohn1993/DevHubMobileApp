@@ -20,7 +20,7 @@ class ConfirmationDialog: AppCompatActivity(){
     fun show(activity: Activity){
         dialog = Dialog(activity)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-        dialog.setCancelable(false)
+        dialog.setCancelable(true)
         dialog.setContentView(R.layout.confirmation_layout)
         back = dialog.findViewById(R.id.backButton)
         confirm = dialog.findViewById(R.id.continueButton)

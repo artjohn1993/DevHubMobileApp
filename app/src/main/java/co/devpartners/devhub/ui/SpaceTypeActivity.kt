@@ -51,7 +51,7 @@ class SpaceTypeActivity : AppCompatActivity() {
     fun selected(layout : RelativeLayout?, image : ImageView?){
 
         if(preImage != null && prevLayout != null){
-//            preImage!!.setColorFilter(R.color.colorPrimary)
+
 //            preImage!!.setColorFilter(Color.argb(0, 255, 255, 255))
             prevLayout!!.setBackgroundResource(R.drawable.button_border)
         }
@@ -60,8 +60,6 @@ class SpaceTypeActivity : AppCompatActivity() {
         prevLayout = layout
         layout?.setBackgroundResource(R.drawable.ripple_effect_border)
 //        layout?.setBackgroundColor(R.color.colorPrimary)
-//        image?.setColorFilter(R.color.colorPrimary)
-
 //        image?.setColorFilter(Color.argb(255, 255, 255, 255))
     }
     fun nextPage(){
