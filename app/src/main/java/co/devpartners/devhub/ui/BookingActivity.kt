@@ -37,7 +37,7 @@ class BookingActivity : AppCompatActivity() {
         reserveButton.setOnClickListener {
             Handler().postDelayed({
                 confirmDialog()
-            },500)
+            },400)
 
         }
     }

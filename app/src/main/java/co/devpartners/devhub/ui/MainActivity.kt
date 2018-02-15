@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
             Handler().postDelayed({
                 startActivity<RegisterActivity>()
                 finish()
-            },500)
+            },400)
         }
     }
 }

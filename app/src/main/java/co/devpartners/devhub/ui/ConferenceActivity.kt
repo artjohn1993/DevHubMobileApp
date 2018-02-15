@@ -43,7 +43,7 @@ class ConferenceActivity : AppCompatActivity() {
             Handler().postDelayed({
                 startActivity<BookingActivity>()
                 finish()
-            },500)
+            },400)
         }
     }
 

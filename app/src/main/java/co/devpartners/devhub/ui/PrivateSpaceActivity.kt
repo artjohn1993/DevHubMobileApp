@@ -43,7 +43,7 @@ class PrivateSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListe
             Handler().postDelayed({
                 startActivity<BookingActivity>()
                 finish()
-            },500)
+            },400)
         }
     }
 

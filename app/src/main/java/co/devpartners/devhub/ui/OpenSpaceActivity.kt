@@ -42,7 +42,7 @@ class OpenSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener
             Handler().postDelayed({
                 startActivity<BookingActivity>()
                 finish()
-            },500)
+            },400)
         }
     }
     override fun onNothingSelected(adapterView: AdapterView<*>?) {
