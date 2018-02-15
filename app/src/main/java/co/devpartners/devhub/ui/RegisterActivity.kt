@@ -18,22 +18,13 @@ import org.jetbrains.anko.startActivity
 class RegisterActivity : AppCompatActivity() {
 
 
-    lateinit var firstName:EditText
-    lateinit var lastName:EditText
-    lateinit var emailAddress:EditText
-    lateinit var contactNumber:EditText
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
         supportActionBar?.hide()
         Sequent.origin(registerLayout).duration(400).anim(this, Animation.FADE_IN_LEFT).start()
-
-          firstName = findViewById(R.id.firstnameEditText)
-          lastName = findViewById(R.id.lastnameEditText)
-          emailAddress = findViewById(R.id.emailEditText)
-          contactNumber = findViewById(R.id.contactEditText)
-
 
 
         nextButton.setOnClickListener({
@@ -42,10 +33,10 @@ class RegisterActivity : AppCompatActivity() {
                 startActivity<SpaceTypeActivity>()
             },400)
 
-//            var firstname: String = firstName.text.toString()
-//            var lastname: String = lastName.text.toString()
-//            var emailadd: String = emailAddress.text.toString()
-//            var contact: String = contactNumber.text.toString()
+//            val firstname: String = firstnameEditText.text.toString()
+//            val lastname: String = lastnameEditText.text.toString()
+//            val emailadd: String = emailEditText.text.toString()
+//            val contact: String = contactEditText.text.toString()
 //
 //            val intent = Intent(applicationContext,BookingActivity::class.java)
 //            intent.putExtra("FIRSTNAME",firstname)
