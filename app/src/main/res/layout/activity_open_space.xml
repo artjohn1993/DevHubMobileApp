@@ -55,8 +55,8 @@
             android:id="@+id/spinnerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:spinnerMode="dialog"
-            android:padding="10dp"
+            android:hint="Length of Stay"
+            android:padding="5dp"
            />
 
         </RelativeLayout>
@@ -66,6 +66,7 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginTop="16dp"
+
             android:background="@android:color/transparent"
             app:layout_constraintStart_toStartOf="@id/lengthStayText"
             app:layout_constraintTop_toBottomOf="@id/spinnerLayout"
@@ -80,7 +81,7 @@
             android:textAllCaps="false"
             android:padding="10dp"
             android:textAlignment="textStart"
-            android:text="Pick Schedule"
+            android:hint="Pick Schedule"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/scheduleText"
@@ -103,7 +104,6 @@
             android:layout_marginEnd="16dp"
             android:padding="10dp"
             android:background="@color/colorEditText"
-
             android:hint="Check-in Time"
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
@@ -129,17 +129,17 @@
             android:layout_marginTop="8dp"
             android:padding="10dp"
             android:background="@color/colorEditText"
-            android:text="Check-out Time"
+            android:hint="Check-out Time"
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/checkoutTextView" />
         <View
-            android:id="@+id/messageTextView"
+            android:id="@+id/view3"
             android:layout_width="wrap_content"
             android:layout_height="1dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="16dp"
             android:background="@android:color/transparent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.028"
@@ -157,7 +157,7 @@
             android:lines="4"
             android:padding="10dp"
             android:scrollHorizontally="false"
-            app:layout_constraintTop_toBottomOf="@id/messageTextView"
+            app:layout_constraintTop_toBottomOf="@id/view3"
             android:background="@color/colorEditText"
             />
 

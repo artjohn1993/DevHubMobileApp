@@ -20,7 +20,7 @@ import org.jetbrains.anko.startActivity
 class PrivateSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener{
 
     val datepicker = CustomDatePickerDialog()
-    var timepick = arrayOf("Hourly", "Daily", "Weekly")
+    var timepick = arrayOf("Length of Stay", "Hourly", "Daily", "Weekly")
     var spinner: Spinner? = null
     val timepicker = CheckInTimeDialog()
 
@@ -56,6 +56,7 @@ class PrivateSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListe
     fun checkRoomType() {
         when (spinnerView.selectedItem.toString()) {
 
+            "Length of Stay" -> Toast.makeText(this, "Please select your length of stay.",Toast.LENGTH_SHORT).show()
             "Hourly" -> timepicker.show(this)
             "Day" -> datepicker.show(this, DatePickerType.SINGLE)
             "Week" -> datepicker.show(this, DatePickerType.RANGE)
