@@ -47,17 +47,22 @@ class BookingActivity : AppCompatActivity() {
         messageReservedText.text = "Message : $message"
 
         reserveButton.setOnClickListener {
-//            Handler().postDelayed({
-//                confirmDialog()
-//            },400)
-            val snackbar : Snackbar = Snackbar.make(findViewById(android.R.id.content),"Reserved",Snackbar.LENGTH_SHORT)
-            val snackView = snackbar.view
-            snackView.setBackgroundColor(this.resources.getColor(R.color.colorSuccess))
-            snackbar.show()
+            showSuccess()
         }
     }
     fun confirmDialog() {
         confirm.show(this)
+    }
+    fun showSuccess(){
+        val snackbar : Snackbar = Snackbar.make(findViewById(android.R.id.content),"Reserved",Snackbar.LENGTH_LONG)
+        snackbar.setAction(R.string.confirm_summary,View.OnClickListener { backToMain() })
+        val snackView = snackbar.view
+        snackView.setBackgroundColor(this.resources.getColor(R.color.colorSuccess))
+        snackbar.show()
+    }
+    fun backToMain(){
+        startActivity<MainActivity>()
+        finish()
     }
 }
 
