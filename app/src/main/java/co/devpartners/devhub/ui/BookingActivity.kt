@@ -50,7 +50,7 @@ class BookingActivity : AppCompatActivity() {
 //            Handler().postDelayed({
 //                confirmDialog()
 //            },400)
-            val snackbar : Snackbar = Snackbar.make(findViewById(android.R.id.content),"Reserved",Snackbar.LENGTH_LONG)
+            val snackbar : Snackbar = Snackbar.make(findViewById(android.R.id.content),"Reserved",Snackbar.LENGTH_SHORT)
             val snackView = snackbar.view
             snackView.setBackgroundColor(this.resources.getColor(R.color.colorSuccess))
             snackbar.show()

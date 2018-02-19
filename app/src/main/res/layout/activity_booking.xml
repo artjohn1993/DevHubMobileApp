@@ -4,15 +4,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
-    <android.support.constraint.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    >
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/bookingLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/bookingLayout"
         tools:context="co.devpartners.devhub.ui.BookingActivity">
 
         <LinearLayout
@@ -25,17 +25,18 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
+
             <ImageView
                 android:id="@+id/spaceTypeLogo"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
                 android:background="@drawable/profile_image"
                 android:padding="20dp"
                 android:src="@drawable/meetinglogo"
-                android:tint="#000"
-                android:layout_gravity="center"
-                android:layout_margin="10dp"
-                />
+                android:tint="#000" />
+
             <ImageView
                 android:id="@+id/devHubLogo"
                 android:layout_width="wrap_content"
@@ -55,7 +56,6 @@
         </LinearLayout>
 
 
-
         <LinearLayout
             android:id="@+id/reserveInfoLayout"
             android:layout_width="match_parent"
@@ -70,16 +70,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:text="Name:"
-                />
+                android:text="Name:" />
 
             <TextView
                 android:id="@+id/numberReservedText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:text="Contact Number:"
-                />
+                android:text="Contact Number:" />
 
 
             <TextView
@@ -122,7 +120,6 @@
                 android:text="Period:" />
 
 
-
             <TextView
                 android:id="@+id/billReservedText"
                 android:layout_width="wrap_content"
@@ -145,16 +142,16 @@
             android:id="@+id/reserveButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/ripple_effect"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginTop="42dp"
             android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/ripple_effect"
             android:text="Reserve"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/reserveInfoLayout"
             app:layout_constraintBottom_toBottomOf="parent"
-            />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/reserveInfoLayout" />
 
     </android.support.constraint.ConstraintLayout>
     </ScrollView>
