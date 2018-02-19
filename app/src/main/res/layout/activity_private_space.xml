@@ -55,9 +55,10 @@
             android:id="@+id/spinnerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="5dp"
+            android:spinnerMode="dialog"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:textAlignment="textStart"
             />
-
     </RelativeLayout>
     <View
         android:id="@+id/scheduleText"

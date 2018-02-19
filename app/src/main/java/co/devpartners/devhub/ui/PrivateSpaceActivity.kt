@@ -32,7 +32,7 @@ class PrivateSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListe
         spinner = this.spinnerView
         spinnerView.onItemSelectedListener = this
 
-        val adapter = ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, timepick)
+        val adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, timepick)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinnerView!!.adapter = adapter
 
