@@ -7,4 +7,7 @@
     //added colors
     <color name="colorPrimaryTransparent">#ccfff3e0</color>
     <color name="colorEditText">#ffab00</color>
+
+    <color name="colorSuccess">#4CAF50</color>
+    <color name="colorFailed">#F44336</color>
 </resources>

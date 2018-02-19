@@ -4,6 +4,9 @@ import android.annotation.SuppressLint
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.support.design.widget.Snackbar
+import android.view.Gravity
+import android.view.View
 import android.widget.TextView
 import co.devpartners.devhub.R
 import co.devpartners.devhub.api.events.ConfirmationDialog
@@ -44,13 +47,18 @@ class BookingActivity : AppCompatActivity() {
         messageReservedText.text = "Message : $message"
 
         reserveButton.setOnClickListener {
-            Handler().postDelayed({
-                confirmDialog()
-            },400)
-
+//            Handler().postDelayed({
+//                confirmDialog()
+//            },400)
+            val snackbar : Snackbar = Snackbar.make(findViewById(android.R.id.content),"Reserved",Snackbar.LENGTH_LONG)
+            val snackView = snackbar.view
+            snackView.setBackgroundColor(this.resources.getColor(R.color.colorSuccess))
+            snackbar.show()
         }
     }
     fun confirmDialog() {
         confirm.show(this)
     }
 }
+
+
