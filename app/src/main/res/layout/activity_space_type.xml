@@ -6,18 +6,28 @@
     android:layout_height="match_parent"
     tools:context="co.devpartners.devhub.ui.SpaceTypeActivity">
 
-
-
+    <ImageView
+        android:id="@+id/devHubLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_devhub_logo_spacetype_main"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
     <RelativeLayout
         android:id="@+id/openSpaceLayout"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="108dp"
         android:background="@drawable/button_border"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        >
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/openSpaceImage"
@@ -26,13 +36,14 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginStart="24dp"
-            android:tint="@color/colorPrimaryDark"
-            android:src="@drawable/openlogo" />
+            android:src="@drawable/openlogo"
+            android:tint="@color/colorPrimary" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
             android:layout_marginRight="20dp"
             android:layout_toEndOf="@+id/openSpaceImage"
             android:text="@string/openspace_title"
@@ -42,9 +53,12 @@
 
     <RelativeLayout
         android:id="@+id/privateSpaceLayout"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
         android:background="@drawable/button_border"
         app:layout_constraintEnd_toEndOf="@+id/openSpaceLayout"
         app:layout_constraintStart_toStartOf="@+id/openSpaceLayout"
@@ -57,13 +71,14 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginStart="24dp"
-            android:tint="@color/colorPrimaryDark"
+            android:tint="@color/colorPrimary"
             android:src="@drawable/privatelogo" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
             android:layout_marginRight="20dp"
             android:layout_toEndOf="@+id/privateSpaceLogoImage"
             android:text="@string/privatespace_title"
@@ -73,9 +88,13 @@
 
     <RelativeLayout
         android:id="@+id/conferenceSpaceLayout"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
         android:background="@drawable/button_border"
         app:layout_constraintEnd_toEndOf="@+id/openSpaceLayout"
         app:layout_constraintStart_toStartOf="@+id/openSpaceLayout"
@@ -87,14 +106,16 @@
             android:layout_height="90dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="24dp"
-            android:tint="@color/colorPrimaryDark"
+            android:layout_marginStart="70dp"
+            android:tint="@color/colorPrimary"
             android:src="@drawable/meetinglogo" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
             android:layout_marginRight="20dp"
             android:layout_toEndOf="@+id/conferenceSpaceLogoImage"
             android:text="@string/conference_title"
@@ -109,6 +130,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
+        android:layout_marginTop="8dp"
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
@@ -116,6 +138,7 @@
         android:text="NEXT"
         android:textColor="@android:color/black"
         android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/conferenceSpaceLayout"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
