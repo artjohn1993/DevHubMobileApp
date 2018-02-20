@@ -1,71 +1,87 @@
 package co.devpartners.devhub.ui
 
-import android.annotation.SuppressLint
-import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
-import android.widget.RelativeLayout
 import co.devpartners.devhub.R
 import kotlinx.android.synthetic.main.activity_space_type.*
 import org.jetbrains.anko.alert
 import org.jetbrains.anko.startActivity
+import com.basel.DualButton.DualButton
+
+
 
 class SpaceTypeActivity : AppCompatActivity() {
     companion object {
         var selectedSpace : ActivityType? = null
-        var prevLayout : RelativeLayout? = null
+        var prevButton : com.basel.DualButton.DualButton? = null
         var preImage : ImageView? = null
     }
 
-    @SuppressLint("ResourceAsColor")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_space_type)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
 //        supportActionBar?.hide()
-
         this.overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left)
-        openSpaceLayout.setOnClickListener {
-            selectedSpace = ActivityType.OpenSpaceActivity
-            selected(openSpaceLayout,openSpaceImage)
 
+        openSpace.setDualClickListener(object : DualButton.OnDualClickListener {
+            override fun onClickFirst(btn: Button) {
+                switch(openSpace)
+                selectedSpace = ActivityType.OpenSpaceActivity
+
+            }
+
+            override fun onClickSecond(btn: Button) {
+                setNull()
+            }
+        })
+        privateSpace.setDualClickListener(object : DualButton.OnDualClickListener {
+            override fun onClickFirst(btn: Button) {
+                switch(privateSpace)
+                selectedSpace = ActivityType.PrivateActivity
+            }
+
+            override fun onClickSecond(btn: Button) {
+                setNull()
+            }
+        })
+        nextButton.setOnClickListener {
+            nextPage()
         }
-        privateSpaceLayout.setOnClickListener {
-            selectedSpace = ActivityType.PrivateActivity
-            selected(privateSpaceLayout,privateSpaceLogoImage)
+        conferenceSpace.setDualClickListener(object : DualButton.OnDualClickListener {
+            override fun onClickFirst(btn: Button) {
+                switch(conferenceSpace)
+                selectedSpace = ActivityType.ConferenceActivity
+            }
 
-
-        }
-        conferenceSpaceLayout.setOnClickListener {
-            selectedSpace = ActivityType.ConferenceActivity
-            selected(conferenceSpaceLayout,conferenceSpaceLogoImage)
-
-        }
-
+            override fun onClickSecond(btn: Button) {
+                setNull()
+            }
+        })
         nextButton.setOnClickListener {
             nextPage()
         }
 
     }
-
-
-    @SuppressLint("ResourceAsColor")
-    fun selected(layout : RelativeLayout?, image : ImageView?){
-
-        if(preImage != null && prevLayout != null){
-
-//            preImage!!.setColorFilter(Color.argb(255, 255, 255, 255))
-            prevLayout!!.setBackgroundResource(R.drawable.button_border)
+    fun switch(prev : com.basel.DualButton.DualButton){
+        if(prevButton == null){
+            prevButton = prev
+        }
+        else{
+            prevButton!!.onClicked()
+            prevButton = prev
         }
 
-        preImage = image
-        prevLayout = layout
-        layout?.setBackgroundResource(R.drawable.ripple_effect_border)
-//        layout?.setBackgroundColor(R.color.colorPrimary)
-//        image?.setColorFilter(Color.argb(255, 255, 255, 255))
     }
+    fun setNull(){
+        prevButton = null
+        selectedSpace = null
+    }
+
     fun nextPage(){
         when(selectedSpace){
             ActivityType.OpenSpaceActivity -> {
