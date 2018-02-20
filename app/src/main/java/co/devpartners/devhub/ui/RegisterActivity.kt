@@ -27,36 +27,10 @@ class RegisterActivity : AppCompatActivity() {
 
 
         nextButton.setOnClickListener({
-
-            if(isEditTextEmpty(firstnameEditText) || isEditTextEmpty(lastnameEditText) || isEditTextEmpty(usernameEditText) || isEditTextEmpty(contactEditText)) {
-
-                if (isEditTextEmpty(firstnameEditText)) firstnameEditTextLayout.error = "Please fill up firstname"
-                else if (isEditTextEmpty(lastnameEditText)) lastnameEditTextLayout.error = "Please fill up lastname"
-                else if (isEditTextEmpty(usernameEditText)) emailEditTextLayout.error = "Please fill up email"
-                else if (isEditTextEmpty(contactEditText)) contactEditTextLayout.error = "Please fill up contact number"
-            }
-            else{
                 Handler().postDelayed({
                     startActivity<SpaceTypeActivity>()
                 },400)
-            }
-
-
-//            val firstname: String = firstnameEditText.text.toString()
-//            val lastname: String = lastnameEditText.text.toString()
-//            val emailadd: String = emailEditText.text.toString()
-//            val contact: String = contactEditText.text.toString()
-//
-//            val intent = Intent(applicationContext,BookingActivity::class.java)
-//            intent.putExtra("FIRSTNAME",firstname)
-//            intent.putExtra("LASTNAME",lastname)
-//            intent.putExtra("EMAIL",emailadd)
-//            intent.putExtra("CONTACT",contact)
-//
-//
-//                startActivity(intent)
-
-        })
+    })
     }
     fun isEditTextEmpty(text : EditText) : Boolean{
         if(text.text.toString() == "") return true
