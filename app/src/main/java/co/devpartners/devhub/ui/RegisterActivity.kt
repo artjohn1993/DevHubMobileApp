@@ -1,13 +1,10 @@
 package co.devpartners.devhub.ui
 
-import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.view.WindowManager
-import android.widget.Button
 import android.widget.EditText
-import android.widget.Toast
 import co.devpartners.devhub.R
 import com.fujiyuu75.sequent.Animation
 
@@ -24,7 +21,6 @@ class RegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
-        supportActionBar?.hide()
         Sequent.origin(registerLayout).duration(400).anim(this, Animation.FADE_IN_LEFT).start()
         this.overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left)
         this.window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
@@ -32,11 +28,11 @@ class RegisterActivity : AppCompatActivity() {
 
         nextButton.setOnClickListener({
 
-            if(isEditTextEmpty(firstnameEditText) || isEditTextEmpty(lastnameEditText) || isEditTextEmpty(emailEditText) || isEditTextEmpty(contactEditText)) {
+            if(isEditTextEmpty(firstnameEditText) || isEditTextEmpty(lastnameEditText) || isEditTextEmpty(usernameEditText) || isEditTextEmpty(contactEditText)) {
 
                 if (isEditTextEmpty(firstnameEditText)) firstnameEditTextLayout.error = "Please fill up firstname"
                 else if (isEditTextEmpty(lastnameEditText)) lastnameEditTextLayout.error = "Please fill up lastname"
-                else if (isEditTextEmpty(emailEditText)) emailEditTextLayout.error = "Please fill up email"
+                else if (isEditTextEmpty(usernameEditText)) emailEditTextLayout.error = "Please fill up email"
                 else if (isEditTextEmpty(contactEditText)) contactEditTextLayout.error = "Please fill up contact number"
             }
             else{

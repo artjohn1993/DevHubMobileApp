@@ -56,6 +56,14 @@
                 android:value=".ui.SpaceTypeActivity" />
         </activity>
         <activity android:name=".api.events.Success" />
+        <activity android:name=".ui.LoginActivity" />
+        <activity
+            android:name=".ui.AccountRegisterActivity"
+            android:launchMode="singleTop">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.LoginActivity" />
+        </activity>
     </application>
 
 </manifest>
