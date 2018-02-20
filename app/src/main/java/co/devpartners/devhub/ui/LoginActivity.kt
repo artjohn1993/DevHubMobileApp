@@ -17,12 +17,12 @@ class LoginActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         submitButton.setOnClickListener {
-            if (usernameEditText.text.toString() == "" && passwordEditText.text.toString() == ""){
+//            if (usernameEditText.text.toString() == "" && passwordEditText.text.toString() == ""){
                 startActivity<MainActivity>()
                 finish()
-            }else{
-                Toast.makeText(this,"Invalid username or password.",Toast.LENGTH_SHORT).show()
-            }
+//            }else{
+//                Toast.makeText(this,"Invalid username or password.",Toast.LENGTH_SHORT).show()
+//            }
         }
         createAccountTextView.setOnClickListener {
             startActivity<AccountRegisterActivity>()
