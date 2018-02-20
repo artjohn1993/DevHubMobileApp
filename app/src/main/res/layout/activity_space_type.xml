@@ -19,7 +19,7 @@
     <com.basel.DualButton.DualButton
         android:id="@+id/privateSpace"
         app:textFirst="PRIVATE SPACE"
-        app:textSecond="PRIVATE SPACE"
+        app:textSecond="PRIVATE SPACE SELECTED"
         app:textColorFirst="#000"
         app:textColorSecond="#fff"
         app:backgroundColorFirst="@color/colorPrimary"
@@ -39,7 +39,7 @@
     <com.basel.DualButton.DualButton
         android:id="@+id/openSpace"
         app:textFirst="OPEN SPACE"
-        app:textSecond="OPEN SPACE"
+        app:textSecond="OPEN SPACE SELECTED"
         app:textColorFirst="#000"
         app:textColorSecond="#fff"
         app:backgroundColorFirst="@color/colorPrimary"
@@ -47,7 +47,7 @@
         app:drawableLeftFirst="@drawable/openspace"
         app:drawableStartSecond="@drawable/check2"
         android:layout_width="match_parent"
-        app:duration="400"
+        app:duration="300"
         android:layout_height="110dp"
         android:layout_marginTop="8dp"
         android:layout_marginStart="16dp"
@@ -59,7 +59,7 @@
     <com.basel.DualButton.DualButton
         android:id="@+id/conferenceSpace"
         app:textFirst="CONFERENCE / MEETING"
-        app:textSecond="CONFERENCE / MEETING"
+        app:textSecond="CONFERENCE / MEETING SELECTED"
         app:textColorFirst="#000"
         app:textColorSecond="#fff"
         app:drawableStartFirst="@drawable/conference"
