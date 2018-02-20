@@ -11,7 +11,9 @@
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorPrimaryTransparent">
+        android:background="@color/colorPrimaryTransparent"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="81dp">
 
         <ImageView
             android:id="@+id/devHubLogo"
@@ -30,13 +32,13 @@
             app:layout_constraintVertical_bias="0.094" />
 
 
-
         <EditText
             android:id="@+id/usernameEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:layout_marginStart="16dp"
+            android:layout_marginTop="132dp"
             android:hint="Username or Email"
             android:inputType="text"
             android:paddingLeft="10dp"
@@ -44,20 +46,20 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/devHubLogo" />
+
         <EditText
             android:id="@+id/passwordEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
             android:hint="Password"
             android:inputType="textPassword"
             android:paddingLeft="10dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/usernameEditText"
-            />
+            app:layout_constraintTop_toBottomOf="@id/usernameEditText" />
 
         <Button
             android:id="@+id/submitButton"
