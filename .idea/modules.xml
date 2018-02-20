@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/DevHub.iml" filepath="$PROJECT_DIR$/DevHub.iml" />
+      <module fileurl="file://D:\DevPartnersMobile\DevHubMobileApp3\DevHubMobileApp\DevHub.iml" filepath="D:\DevPartnersMobile\DevHubMobileApp3\DevHubMobileApp\DevHub.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DevHubMobileApp.iml" filepath="$PROJECT_DIR$/DevHubMobileApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://D:\DevPartnersMobile\DevHubMobileApp3\DevHubMobileApp\app\app.iml" filepath="D:\DevPartnersMobile\DevHubMobileApp3\DevHubMobileApp\app\app.iml" />
     </modules>
   </component>
 </project>
