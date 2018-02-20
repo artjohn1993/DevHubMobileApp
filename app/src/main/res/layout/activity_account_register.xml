@@ -111,7 +111,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:textColorHint="#000"
-        android:hint="Email"
+        android:hint="Email or Username"
         >
         <EditText
             android:id="@+id/usernameEditText"
