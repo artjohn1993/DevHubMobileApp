@@ -5,14 +5,14 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import co.devpartners.devhub.R
-import kotlinx.android.synthetic.main.activity_login_.*
+import kotlinx.android.synthetic.main.activity_login.*
 import org.jetbrains.anko.startActivity
 
 class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login_)
+        setContentView(R.layout.activity_login)
         supportActionBar?.hide()
 
         submitButton.setOnClickListener {
