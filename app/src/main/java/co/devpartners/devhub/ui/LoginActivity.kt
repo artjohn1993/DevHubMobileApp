@@ -17,7 +17,7 @@ class LoginActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         submitButton.setOnClickListener {
-            if (usernameEditText.text.toString() == null && passwordEditText.text.toString() == null){
+            if (usernameEditText.text.toString() == "" && passwordEditText.text.toString() == ""){
                 startActivity<MainActivity>()
                 finish()
             }else{
