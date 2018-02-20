@@ -65,5 +65,4 @@
                 android:value=".ui.LoginActivity" />
         </activity>
     </application>
-
 </manifest>
