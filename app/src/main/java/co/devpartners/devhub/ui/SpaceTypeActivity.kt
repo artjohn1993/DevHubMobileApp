@@ -57,7 +57,6 @@ class SpaceTypeActivity : AppCompatActivity() {
                 switch(conferenceSpace)
                 selectedSpace = ActivityType.ConferenceActivity
             }
-
             override fun onClickSecond(btn: Button) {
                 setNull()
             }
@@ -65,7 +64,6 @@ class SpaceTypeActivity : AppCompatActivity() {
         nextButton.setOnClickListener {
             nextPage()
         }
-
     }
     fun switch(prev : com.basel.DualButton.DualButton){
         if(prevButton == null){
@@ -75,13 +73,11 @@ class SpaceTypeActivity : AppCompatActivity() {
             prevButton!!.onClicked()
             prevButton = prev
         }
-
     }
     fun setNull(){
         prevButton = null
         selectedSpace = null
     }
-
     fun nextPage(){
         when(selectedSpace){
             ActivityType.OpenSpaceActivity -> {
@@ -106,5 +102,4 @@ class SpaceTypeActivity : AppCompatActivity() {
         PrivateActivity,
         ConferenceActivity
     }
-
 }

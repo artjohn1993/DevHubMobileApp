@@ -74,4 +74,3 @@ class PrivateSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListe
         }
     }
 }
-

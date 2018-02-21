@@ -65,5 +65,3 @@ class BookingActivity : AppCompatActivity() {
         finish()
     }
 }
-
-

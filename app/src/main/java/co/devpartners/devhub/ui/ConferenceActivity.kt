@@ -65,7 +65,5 @@ class ConferenceActivity : AppCompatActivity() {
             "Day" ->  datePickerButton.textColor = Color.BLACK
             "Week" -> datePickerButton.textColor = Color.BLACK
         }
-
     }
 }
-

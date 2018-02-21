@@ -21,7 +21,6 @@ class AccountRegisterActivity : AppCompatActivity() {
                     startActivity<SpaceTypeActivity>()
                     finish()
                 }, 1400)
-
         })
     }
     fun isEditTextEmpty(text : EditText) : Boolean{

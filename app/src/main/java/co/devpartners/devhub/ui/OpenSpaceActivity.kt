@@ -71,7 +71,3 @@ class OpenSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener
         }
     }
 }
-
-
-
-
