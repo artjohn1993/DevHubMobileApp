@@ -69,9 +69,7 @@ class OpenSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener
             "Week" -> datePickerButton.textColor = Color.BLACK
             "Hourly" -> datePickerButton.textColor = Color.BLACK
         }
-
     }
-
 }
 
 

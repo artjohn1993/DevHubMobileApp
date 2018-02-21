@@ -1,5 +1,6 @@
 package co.devpartners.devhub.ui
 
+import android.graphics.Color
 import android.os.Bundle
 import android.os.Handler
 import android.support.v7.app.AppCompatActivity
@@ -15,6 +16,7 @@ import co.devpartners.devhub.api.events.CustomDatePickerDialog
 import co.devpartners.devhub.api.model.DatePickerType
 import kotlinx.android.synthetic.main.activity_private_space.*
 import org.jetbrains.anko.startActivity
+import org.jetbrains.anko.textColor
 
 
 class PrivateSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener{
@@ -63,6 +65,12 @@ class PrivateSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListe
             "Day" -> datepicker.show(this, DatePickerType.SINGLE)
             "Week" -> datepicker.show(this, DatePickerType.RANGE)
             else -> datepicker.show(this, DatePickerType.MULTIPLE)
+        }
+        when(spinnerView.selectedItem.toString()){
+            "Length of Stay" -> datePickerButton.textColor = Color.RED
+            "Day" ->  datePickerButton.textColor = Color.BLACK
+            "Week" -> datePickerButton.textColor = Color.BLACK
+            "Hourly" -> datePickerButton.textColor = Color.BLACK
         }
     }
 }
