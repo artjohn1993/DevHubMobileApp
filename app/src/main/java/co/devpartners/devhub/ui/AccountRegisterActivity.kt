@@ -17,20 +17,11 @@ class AccountRegisterActivity : AppCompatActivity() {
 
         registerButton.setOnClickListener({
 
-            if (isEditTextEmpty(firstnameEditText) || isEditTextEmpty(lastnameEditText) || isEditTextEmpty(usernameEditText) || isEditTextEmpty(contactEditText)) {
-
-                if (isEditTextEmpty(firstnameEditText)) firstnameEditTextLayout.error = "Please fill up firstname"
-                 if (isEditTextEmpty(lastnameEditText)) lastnameEditTextLayout.error = "Please fill up lastname"
-                 if (isEditTextEmpty(usernameEditText)) emailEditTextLayout.error = "Please fill up email"
-                 if (isEditTextEmpty(contactEditText)) contactEditTextLayout.error = "Please fill up contact number"
-                 if (isEditTextEmpty(passwordEditText)) passwordEditTextLayout.error = "Please fill up password"
-            } else {
                 Handler().postDelayed({
-                    Toast.makeText(this,"Account has been register.",Toast.LENGTH_SHORT).show()
-                    startActivity<LoginActivity>()
+                    startActivity<SpaceTypeActivity>()
                     finish()
                 }, 1400)
-            }
+
         })
     }
     fun isEditTextEmpty(text : EditText) : Boolean{
