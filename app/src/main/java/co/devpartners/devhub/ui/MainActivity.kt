@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         bookButton.setOnClickListener{
 
             Handler().postDelayed({
-                startActivity<RegisterActivity>()
+                startActivity<AccountRegisterActivity>()
             },450)
         }
     }
