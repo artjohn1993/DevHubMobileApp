@@ -72,6 +72,7 @@
             app:layout_constraintEnd_toEndOf="parent"/>
         <Button
             android:id="@+id/datePickerButton"
+            android:clickable="true"
             android:layout_width="match_parent"
             android:background="@color/colorEditText"
             android:layout_marginTop="8dp"

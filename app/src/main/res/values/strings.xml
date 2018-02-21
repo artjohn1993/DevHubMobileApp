@@ -29,7 +29,7 @@
     <string name="remarks_text">Remarks:</string>
     <string name="confirmation_text">Are you sure you want to be booked in this space?</string>
     <string name="devhub_text1">The #1 coworking space in Davao City</string>
-    <string name="create_account">dont have account yet? <font fgcolor="#ffffff">Create one.</font></string>
+    <string name="create_account">dont have account yet? <font fgcolor="#ffab00">Create one.</font></string>
     <string name="register_acount">Register Now!</string>
     <string name="register_button">Register</string>
     <string name="password_register">Password</string>

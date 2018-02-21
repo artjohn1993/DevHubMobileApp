@@ -88,6 +88,7 @@
         >
     <Spinner
         android:id="@+id/scheduleSpinner"
+        android:text ="Pick a schedule"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:spinnerMode="dialog"

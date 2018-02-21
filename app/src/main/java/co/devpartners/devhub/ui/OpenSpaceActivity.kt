@@ -1,9 +1,12 @@
 package co.devpartners.devhub.ui
 
 
+import android.graphics.Color
+import android.graphics.ColorFilter
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.provider.CalendarContract
 import android.view.View
 import android.view.WindowManager
 import android.widget.*
@@ -13,6 +16,7 @@ import co.devpartners.devhub.api.events.CustomDatePickerDialog
 import co.devpartners.devhub.api.model.DatePickerType
 import kotlinx.android.synthetic.main.activity_open_space.*
 import org.jetbrains.anko.startActivity
+import org.jetbrains.anko.textColor
 
 
 class OpenSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener {
@@ -37,6 +41,7 @@ class OpenSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener
 
         datePickerButton.setOnClickListener{
             checkRoomType()
+
         }
         nextButton.setOnClickListener {
             Handler().postDelayed({
@@ -52,14 +57,21 @@ class OpenSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener
     }
     fun checkRoomType() {
         when (spinnerView.selectedItem.toString()) {
-
             "Length of Stay" -> Toast.makeText(this, "Please identify your length of stay.",Toast.LENGTH_SHORT).show()
             "Hourly" -> timepicker.show(this)
             "Day" -> datepicker.show(this, DatePickerType.SINGLE)
             "Week" -> datepicker.show(this, DatePickerType.RANGE)
             else -> datepicker.show(this, DatePickerType.MULTIPLE)
         }
+        when(spinnerView.selectedItem.toString()){
+            "Length of Stay" -> datePickerButton.textColor = Color.RED
+            "Day" ->  datePickerButton.textColor = Color.BLACK
+            "Week" -> datePickerButton.textColor = Color.BLACK
+            "Hourly" -> datePickerButton.textColor = Color.BLACK
+        }
+
     }
+
 }
 
 
