@@ -19,37 +19,47 @@
         <activity android:name=".ui.MainActivity" />
         <activity
             android:name=".ui.RegisterActivity"
-            android:launchMode="singleTop">
+            android:launchMode="singleTop"
+            android:label="Register"
+            >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.MainActivity" />
         </activity>
         <activity
             android:name=".ui.SpaceTypeActivity"
-            android:launchMode="singleTop">
+            android:launchMode="singleTop"
+            android:label="Space Type"
+            >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.RegisterActivity" />
         </activity>
         <activity
             android:name=".ui.OpenSpaceActivity"
-            android:launchMode="singleTop">
+            android:launchMode="singleTop"
+            android:label="Open Space"
+            >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.SpaceTypeActivity" />
         </activity>
         <activity
             android:name=".ui.ConferenceActivity"
+            android:label="Conference"
             android:parentActivityName=".ui.SpaceTypeActivity" />
         <activity
             android:name=".ui.PrivateSpaceActivity"
-            android:launchMode="singleTop">
+            android:launchMode="singleTop"
+            android:label="Private Space"
+            >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.SpaceTypeActivity" />
         </activity>
         <activity
             android:name=".ui.BookingActivity"
+            android:label="Booking Summary"
             android:launchMode="singleTop">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
