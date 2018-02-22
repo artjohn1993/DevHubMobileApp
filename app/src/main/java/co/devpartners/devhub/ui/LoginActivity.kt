@@ -3,6 +3,8 @@ package co.devpartners.devhub.ui
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.transition.Visibility
+import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.Toast
@@ -14,15 +16,17 @@ import org.jetbrains.anko.startActivity
 class LoginActivity : AppCompatActivity() {
 
     var uptodown : Animation? = null
+    var fade_in : Animation? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(activity_userlogin)
         supportActionBar?.hide()
 
         uptodown = AnimationUtils.loadAnimation(this,R.anim.uptodown)
+        fade_in = AnimationUtils.loadAnimation(this,R.anim.fade_in)
 
         devHubLogo.animation = uptodown
-        loginLayout.animation = uptodown
+        loginLayout.animation = fade_in
 
         submitButton.setOnClickListener {
                 startActivity<SpaceTypeActivity>()
