@@ -59,4 +59,21 @@
     <string name="title_activity_summary">SummaryActivity</string>
 
     <string name="confirm_summary">Confirm</string>
+
+    <string-array name="roomType">
+        <item>Room Type</item>
+        <item>Conference</item>
+        <item>Meeting</item>
+    </string-array>
+    <string-array name="schedule">
+        <item>Pick a schedule</item>
+        <item>Day</item>
+        <item>Week</item>
+    </string-array>
+    <string-array name="schedule2">
+        <item>Pick a schedule</item>
+        <item>Hourly</item>
+        <item>Daily</item>
+        <item>Weekly</item>
+    </string-array>
 </resources>

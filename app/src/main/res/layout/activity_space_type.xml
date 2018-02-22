@@ -20,6 +20,7 @@
        android:layout_height="wrap_content"
        app:layout_constraintBottom_toBottomOf="parent"
        app:menu="@menu/main_menu"
+       android:background="#F0F0F0"
        />
 
 </android.support.constraint.ConstraintLayout>
