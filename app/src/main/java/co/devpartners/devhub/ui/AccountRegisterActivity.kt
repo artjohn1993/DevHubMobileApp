@@ -3,6 +3,8 @@ package co.devpartners.devhub.ui
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import android.widget.EditText
 import android.widget.Toast
 import co.devpartners.devhub.R
@@ -11,9 +13,17 @@ import org.jetbrains.anko.startActivity
 
 class AccountRegisterActivity : AppCompatActivity() {
 
+    var uptodown : Animation? = null
+    var fade_in : Animation? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_account_register)
+
+        uptodown = AnimationUtils.loadAnimation(this,R.anim.uptodown)
+        fade_in = AnimationUtils.loadAnimation(this,R.anim.fade_in)
+
+        devHubLogo.animation = uptodown
+        bookNowText.animation = fade_in
 
         registerButton.setOnClickListener({
 

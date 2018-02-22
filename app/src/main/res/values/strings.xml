@@ -59,4 +59,5 @@
     <string name="title_activity_summary">SummaryActivity</string>
 
     <string name="confirm_summary">Confirm</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

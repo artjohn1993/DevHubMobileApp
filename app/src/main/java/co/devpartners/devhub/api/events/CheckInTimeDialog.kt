@@ -17,7 +17,7 @@ class CheckInTimeDialog {
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
         dialog.setCancelable(true)
         dialog.setContentView(R.layout.checkin_layout)
-        select = dialog.findViewById(R.id.selectCheckInTime)
+        select = dialog.findViewById<Button>(R.id.selectCheckInTime)
 
         select.setOnClickListener {
             dialog.hide()
