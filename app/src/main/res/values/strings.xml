@@ -59,5 +59,25 @@
     <string name="title_activity_summary">SummaryActivity</string>
 
     <string name="confirm_summary">Confirm</string>
+<<<<<<< HEAD
     <string name="title_activity_maps">Map</string>
+=======
+
+    <string-array name="roomType">
+        <item>Room Type</item>
+        <item>Conference</item>
+        <item>Meeting</item>
+    </string-array>
+    <string-array name="schedule">
+        <item>Pick a schedule</item>
+        <item>Day</item>
+        <item>Week</item>
+    </string-array>
+    <string-array name="schedule2">
+        <item>Pick a schedule</item>
+        <item>Hourly</item>
+        <item>Daily</item>
+        <item>Weekly</item>
+    </string-array>
+>>>>>>> de8736ba995a3933824d3d99e5f181c4841dd9e1
 </resources>
