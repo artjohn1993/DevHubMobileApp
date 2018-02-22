@@ -52,7 +52,7 @@
             android:background="@color/colorPrimary"
             >
             <Spinner
-                android:id="@+id/roomTypeSpinner"
+                android:id="@+id/roomTypeSpinner1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:spinnerMode="dialog"
@@ -90,7 +90,7 @@
             android:background="@color/colorPrimary"
             >
             <Spinner
-                android:id="@+id/scheduleSpinner"
+                android:id="@+id/scheduleSpinner1"
                 android:text ="Pick a schedule"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -100,7 +100,7 @@
                 />
         </RelativeLayout>
         <Button
-            android:id="@+id/datePickerButton"
+            android:id="@+id/datePickerButton1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -130,15 +130,15 @@
             android:lines="4"
             android:padding="10dp"
             android:scrollHorizontally="false"
-            app:layout_constraintBottom_toTopOf="@+id/conferenceNextButtton"
+            app:layout_constraintBottom_toTopOf="@+id/conferenceNextButtton1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/datePickerButton"
+            app:layout_constraintTop_toBottomOf="@id/datePickerButton1"
             app:layout_constraintVertical_bias="0.0" />
 
         <Button
-            android:id="@+id/conferenceNextButtton"
+            android:id="@+id/conferenceNextButtton1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
