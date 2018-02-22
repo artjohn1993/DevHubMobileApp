@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.view.MenuItem
+import android.view.WindowManager
 import android.widget.Button
 import android.widget.ImageView
 import co.devpartners.devhub.R
@@ -55,9 +56,8 @@ class SpaceTypeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_space_type)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setDisplayShowHomeEnabled(true)
-
+        this.window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
+        
         navigationBottom.setOnNavigationItemSelectedListener(selectedItem)
         val fragment1 = OpenFragment()
         val fragmentTransaction1 = supportFragmentManager.beginTransaction()
