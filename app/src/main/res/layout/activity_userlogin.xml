@@ -45,39 +45,54 @@
         app:layout_constraintTop_toBottomOf="@id/view1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
-        <EditText
-            android:id="@+id/usernameEditText"
+
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/firstnameEditTextLayout"
+            app:layout_constraintTop_toBottomOf="@id/bookNowText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             android:layout_marginEnd="16dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:hint="Username or Email"
-            android:inputType="text"
-            android:paddingLeft="10dp"
             android:textColorHint="@android:color/white"
-            android:textColor="@android:color/white"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            >
+            <EditText
+                android:id="@+id/firstnameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="Username or Email"
 
-            />
+                android:textColor="@android:color/white"
+                android:theme="@style/EditTextThemeDark"
+                />
+        </android.support.design.widget.TextInputLayout>
 
-        <EditText
-            android:id="@+id/passwordEditText"
+
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/passwordLayout"
+            app:layout_constraintTop_toBottomOf="@id/firstnameEditTextLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             android:layout_marginEnd="16dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
-            android:hint="Password"
             android:textColorHint="@android:color/white"
-            android:textColor="@android:color/white"
-            android:inputType="textPassword"
-            android:paddingLeft="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/usernameEditText" />
-
+            android:hint="Password"
+            >
+            <EditText
+                android:id="@+id/lastnameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColor="@android:color/white"
+                android:theme="@style/EditTextThemeDark"
+                />
+        </android.support.design.widget.TextInputLayout>
         <Button
             android:id="@+id/submitButton"
             android:layout_width="match_parent"
@@ -91,7 +106,7 @@
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/passwordEditText" />
+            app:layout_constraintTop_toBottomOf="@+id/passwordLayout" />
 
     <TextView
         android:layout_width="wrap_content"
