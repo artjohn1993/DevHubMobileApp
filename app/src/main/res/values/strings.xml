@@ -28,7 +28,7 @@
     <string name="remarks_text">Remarks:</string>
     <string name="confirmation_text">Are you sure you want to be booked in this space?</string>
     <string name="devhub_text1">The #1 coworking space in Davao City</string>
-    <string name="create_account">dont have account yet? <font fgcolor="#ffab00">Create one.</font></string>
+    <string name="create_account">dont have account yet?<font fgcolor="#fff">Create one.</font></string>
     <string name="register_acount">Register Now!</string>
     <string name="register_button">Register</string>
     <string name="password_register">Password</string>
@@ -55,7 +55,7 @@
     <string name="conference_hour_rate">Php 300/ hour</string>
     <string name="conference_capacity">(Up to 10-40 members)</string>
     <string name="title_activity_type_space">TypeSpaceActivity</string>
-    <string name="select"><u><font fgcolor="#0000ff">Find Us.</font></u></string>
+    <string name="select"><u>Find Us.</u></string>
     <string name="title_activity_summary">SummaryActivity</string>
 
     <string name="confirm_summary">Confirm</string>
