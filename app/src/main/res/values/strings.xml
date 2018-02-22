@@ -50,7 +50,7 @@
     <string name="privatespace_day_rate">Php 350/ day</string>
     <string name="privatespace_week_rate">Php 1500/ week</string>
 
-    <!-- conference room rates -->
+    <!-- conference room Rates -->
     <string name="conference_title">Conference/Meeting</string>
     <string name="conference_hour_rate">Php 300/ hour</string>
     <string name="conference_capacity">(Up to 10-40 members)</string>
