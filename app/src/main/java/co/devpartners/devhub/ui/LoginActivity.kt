@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import co.devpartners.devhub.R
-import co.devpartners.devhub.R.layout.activity_userlogin
 import co.devpartners.devhub.api.service.Maps
 import kotlinx.android.synthetic.main.activity_userlogin.*
 import org.jetbrains.anko.startActivity
@@ -17,7 +16,7 @@ class LoginActivity : AppCompatActivity() {
     var fade_in : Animation? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(activity_userlogin)
+        setContentView(R.layout.activity_userlogin)
         supportActionBar?.hide()
 
         uptodown = AnimationUtils.loadAnimation(this,R.anim.uptodown)
