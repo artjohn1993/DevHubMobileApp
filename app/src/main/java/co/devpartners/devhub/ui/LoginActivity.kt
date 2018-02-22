@@ -3,14 +3,11 @@ package co.devpartners.devhub.ui
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.transition.Visibility
-import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
-import android.widget.Toast
 import co.devpartners.devhub.R
 import co.devpartners.devhub.R.layout.activity_userlogin
-import co.devpartners.devhub.api.events.MapsActivity
+import co.devpartners.devhub.api.service.Maps
 import kotlinx.android.synthetic.main.activity_userlogin.*
 import org.jetbrains.anko.startActivity
 
@@ -27,7 +24,7 @@ class LoginActivity : AppCompatActivity() {
         fade_in = AnimationUtils.loadAnimation(this,R.anim.fade_in)
 
         locationButton.setOnClickListener {
-            startActivity<MapsActivity>()
+            startActivity<Maps>()
         }
         devHubLogo.animation = uptodown
         loginLayout.animation = fade_in
