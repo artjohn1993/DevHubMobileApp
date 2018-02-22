@@ -49,7 +49,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent">
         <Spinner
-            android:id="@+id/spinnerView"
+            android:id="@+id/privateSchedule"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:spinnerMode="dialog"
@@ -61,7 +61,7 @@
     </RelativeLayout>
 
     <Button
-        android:id="@+id/datePickerButton"
+        android:id="@+id/privateDatePickerButton"
         android:layout_width="match_parent"
         android:background="@color/colorEditText"
         android:layout_marginTop="8dp"
@@ -78,7 +78,7 @@
         />
 
     <TextView
-        android:id="@+id/checkinDatePickerButton"
+        android:id="@+id/privateCheckinDatePickerButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -90,10 +90,10 @@
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/datePickerButton" />
+        app:layout_constraintTop_toBottomOf="@id/privateDatePickerButton" />
 
     <TextView
-        android:id="@+id/checkoutDatePickerButton"
+        android:id="@+id/privateCheckoutDatePickerButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -105,11 +105,11 @@
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/checkinDatePickerButton" />
+        app:layout_constraintTop_toBottomOf="@id/privateCheckinDatePickerButton" />
 
 
     <EditText
-        android:id="@+id/messageEditText"
+        android:id="@+id/privateMessageEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
@@ -123,15 +123,15 @@
         android:lines="4"
         android:padding="10dp"
         android:scrollHorizontally="false"
-        app:layout_constraintBottom_toTopOf="@id/nextButton"
+        app:layout_constraintBottom_toTopOf="@id/privateNextButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/checkoutDatePickerButton"
+        app:layout_constraintTop_toBottomOf="@id/privateCheckoutDatePickerButton"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/nextButton"
+        android:id="@+id/privateNextButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
