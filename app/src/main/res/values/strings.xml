@@ -4,7 +4,6 @@
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_devhub_space">DevhubSpaceActivity</string>
     <string name="title_activity_user_booking">UserBookingActivity</string>
@@ -33,6 +32,7 @@
     <string name="register_acount">Register Now!</string>
     <string name="register_button">Register</string>
     <string name="password_register">Password</string>
+    <string name="dev_location"><u>Find Us.</u></string>
 
 
     <!---->
@@ -55,7 +55,7 @@
     <string name="conference_hour_rate">Php 300/ hour</string>
     <string name="conference_capacity">(Up to 10-40 members)</string>
     <string name="title_activity_type_space">TypeSpaceActivity</string>
-    <string name="select">Select</string>
+    <string name="select"><u><font fgcolor="#0000ff">Find Us.</font></u></string>
     <string name="title_activity_summary">SummaryActivity</string>
 
     <string name="confirm_summary">Confirm</string>

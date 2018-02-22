@@ -111,7 +111,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
-        android:text="Find Us"
+        android:text="@string/select"
         app:layout_constraintStart_toStartOf="@id/submitButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/submitButton"
