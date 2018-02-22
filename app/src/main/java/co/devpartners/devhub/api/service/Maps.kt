@@ -27,7 +27,7 @@ class Maps : AppCompatActivity(), OnMapReadyCallback {
         mMap = googleMap
 
 
-        val devpartners = LatLng(7.0838977, 125.612753)
+        val devpartners = LatLng(7.0840482, 125.6125157)
         mMap.addMarker(MarkerOptions().position(devpartners).title("Dev Partners"))
         mMap.moveCamera(CameraUpdateFactory.newLatLng(devpartners))
     }
