@@ -61,7 +61,7 @@ class BookingActivity : AppCompatActivity() {
         snackbar.show()
     }
     fun backToMain(){
-        startActivity<MainActivity>()
+        startActivity<SpaceTypeActivity>()
         finish()
     }
 }
