@@ -9,7 +9,6 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 
 
-
 class Maps : AppCompatActivity(), OnMapReadyCallback {
 
     private lateinit var mMap: GoogleMap
@@ -35,5 +34,6 @@ class Maps : AppCompatActivity(), OnMapReadyCallback {
         mMap.moveCamera(CameraUpdateFactory.newLatLng(devpartners))
         mMap.animateCamera(CameraUpdateFactory.zoomIn())
         mMap.animateCamera(CameraUpdateFactory.zoomTo(10F), 2000, null)
+
     }
 }
