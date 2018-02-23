@@ -28,31 +28,22 @@
         <activity
             android:name=".ui.SpaceTypeActivity"
             android:label="Space Type"
-            android:launchMode="singleTop">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ui.AccountRegisterActivity" />
-        </activity>
+            android:launchMode="singleTop"/>
+
         <activity
             android:name=".ui.OpenSpaceActivity"
             android:label="Open Space"
-            android:launchMode="singleTop">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ui.SpaceTypeActivity" />
-        </activity>
+            android:launchMode="singleTop"/>
+
         <activity
             android:name=".ui.ConferenceActivity"
             android:label="Conference"
-            android:parentActivityName=".ui.SpaceTypeActivity" />
+             />
+
         <activity
             android:name=".ui.PrivateSpaceActivity"
-            android:label="Private Space"
-            android:launchMode="singleTop">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ui.SpaceTypeActivity" />
-        </activity>
+            android:label="Private Space"/>
+
         <activity
             android:name=".ui.BookingActivity"
             android:label="Booking Summary"

@@ -59,12 +59,11 @@
             android:textColorHint="@android:color/white"
             >
             <EditText
-                android:id="@+id/firstnameEditText"
+                android:id="@+id/usernameEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
                 android:hint="Username or Email"
-
                 android:textColor="@android:color/white"
                 android:theme="@style/EditTextThemeDark"
                 />
@@ -85,10 +84,10 @@
             android:hint="Password"
             >
             <EditText
-                android:id="@+id/lastnameEditText"
+                android:id="@+id/passwrodEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
+                android:inputType="textPassword"
                 android:textColor="@android:color/white"
                 android:theme="@style/EditTextThemeDark"
                 />
