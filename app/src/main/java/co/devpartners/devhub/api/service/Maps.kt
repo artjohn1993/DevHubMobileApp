@@ -1,5 +1,6 @@
 package co.devpartners.devhub.api.service
 
+import android.annotation.SuppressLint
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import co.devpartners.devhub.R
@@ -20,9 +21,12 @@ class Maps : AppCompatActivity(), OnMapReadyCallback {
                 .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
     }
+
+    @SuppressLint("MissingPermission")
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
-
+        mMap.setMinZoomPreference(6.0f)
+        mMap.setMaxZoomPreference(14.0f)
 
         val devpartners = LatLng(7.0840482, 125.6125157)
         mMap.addMarker(MarkerOptions().position(devpartners).title("Dev Partners"))

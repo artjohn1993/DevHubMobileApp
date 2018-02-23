@@ -108,19 +108,21 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/passwordLayout" />
 
-    <TextView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         android:text="Forgot Password?"
         android:textColor="#fff"
+        android:background="@android:color/transparent"
         app:layout_constraintEnd_toEndOf="@id/submitButton"
         app:layout_constraintTop_toBottomOf="@id/submitButton"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
-    <TextView
+    <Button
         android:id="@+id/locationButton"
+        android:background="@android:color/transparent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
