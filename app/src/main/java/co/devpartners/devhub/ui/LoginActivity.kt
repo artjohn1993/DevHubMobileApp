@@ -12,21 +12,20 @@ import org.jetbrains.anko.startActivity
 
 class LoginActivity : AppCompatActivity() {
 
-    var uptodown : Animation? = null
+
     var fade_in : Animation? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_userlogin)
         supportActionBar?.hide()
 
-        uptodown = AnimationUtils.loadAnimation(this,R.anim.uptodown)
         fade_in = AnimationUtils.loadAnimation(this,R.anim.fade_in)
 
         locationButton.setOnClickListener {
             startActivity<Maps>()
         }
-        devHubLogo.animation = uptodown
-        loginLayout.animation = fade_in
+        devHubLogo.animation = fade_in
+
 
         submitButton.setOnClickListener {
                 startActivity<SpaceTypeActivity>()
