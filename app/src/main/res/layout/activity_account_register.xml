@@ -11,7 +11,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_background"
-    tools:context="co.devpartners.devhub.ui.AccountRegisterActivity">
+    tools:context="co.devpartners.devhub.ui.AccountRegisterActivity"
+    android:id="@+id/registerLayout"
+    >
     <ImageView
         android:id="@+id/devHubLogo"
         android:layout_width="wrap_content"
