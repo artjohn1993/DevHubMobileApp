@@ -22,7 +22,7 @@ class AccountRegisterActivity : AppCompatActivity() {
         setContentView(R.layout.activity_account_register)
         this.window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
 
-        Sequent.origin(registerLayout).duration(400).anim(this,com.fujiyuu75.sequent.Animation.FADE_IN_LEFT).start()
+
 
         registerButton.setOnClickListener({
 
