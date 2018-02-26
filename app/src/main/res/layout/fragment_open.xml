@@ -56,7 +56,8 @@
             app:layout_constraintLeft_toLeftOf="parent"
             tools:textAlignment="textStart"
             android:entries="@array/schedule2"
-            android:padding="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             />
     </RelativeLayout>
 
@@ -136,7 +137,7 @@
         android:gravity="top|left"
         android:inputType="textMultiLine"
         android:lines="4"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="8dp"
         android:scrollHorizontally="false"
        />
     </android.support.design.widget.TextInputLayout>

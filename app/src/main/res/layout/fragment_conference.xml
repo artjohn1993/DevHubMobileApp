@@ -59,7 +59,8 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 tools:textAlignment="textStart"
                 android:entries="@array/roomType"
-                android:padding="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
                 />
         </RelativeLayout>
 
@@ -86,7 +87,7 @@
                 app:layout_constraintTop_toBottomOf="@id/roomTypeSpinnerContainer"
                 android:background="@color/colorPrimary"
                 android:textSize="16sp"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="8dp"
                 android:inputType="number"
                 />
         </android.support.design.widget.TextInputLayout>
@@ -110,7 +111,8 @@
                 android:layout_height="wrap_content"
                 android:spinnerMode="dialog"
                 android:entries="@array/schedule"
-                android:padding="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
                 />
         </RelativeLayout>
         <Button
@@ -153,7 +155,7 @@
                 android:gravity="top|left"
                 android:inputType="textMultiLine"
                 android:lines="4"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="8dp"
                 android:scrollHorizontally="false" />
         </android.support.design.widget.TextInputLayout>
 

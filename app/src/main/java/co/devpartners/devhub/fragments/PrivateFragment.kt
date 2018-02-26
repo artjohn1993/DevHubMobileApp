@@ -35,8 +35,8 @@ class PrivateFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val view  = inflater.inflate(R.layout.fragment_private, container, false)
-        val privateNextButton = view.findViewById<TextView>(R.id.privateNextButton)
-        val privateSchedule = view.findViewById<Button>(R.id.privateDatePickerButton)
+        val privateNextButton = view.findViewById<Button>(R.id.privateNextButton)
+        val privateSchedule = view.findViewById<TextView>(R.id.privateDatePickerButton)
 
         privateSchedule.setOnClickListener {
             checkRoomType()
