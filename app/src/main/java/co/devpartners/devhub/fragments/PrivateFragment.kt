@@ -17,7 +17,6 @@ import co.devpartners.devhub.api.events.CheckInTimeDialog
 import co.devpartners.devhub.api.events.CustomDatePickerDialog
 import co.devpartners.devhub.api.model.DatePickerType
 import co.devpartners.devhub.ui.BookingActivity
-import kotlinx.android.synthetic.main.activity_private_space.*
 import kotlinx.android.synthetic.main.fragment_private.*
 import org.jetbrains.anko.support.v4.startActivity
 import org.jetbrains.anko.textColor
@@ -48,18 +47,32 @@ class PrivateFragment : Fragment() {
         return view
     }
     fun checkRoomType() {
+        val checkinText = view!!.findViewById<TextView>(R.id.checkinTimeTextView)
+        val checkoutText = view!!.findViewById<TextView>(R.id.checkoutTimeTextView)
         when (privateSchedule.selectedItem.toString()) {
             "Pick a Schedule" -> Toast.makeText(this!!.activity!!, "Please identify your length of stay.", Toast.LENGTH_SHORT).show()
             "Length of Stay" -> Toast.makeText(this!!.activity!!, "Please identify your length of stay.", Toast.LENGTH_SHORT).show()
             "Hourly" -> timepicker.show(this!!.activity!!)
-            "Day" -> datepicker.show(this!!.activity!!, DatePickerType.SINGLE)
-            "Week" -> datepicker.show(this!!.activity!!, DatePickerType.RANGE)
+            "Daily" -> datepicker.show(this!!.activity!!, DatePickerType.SINGLE)
+            "Weekly" -> datepicker.show(this!!.activity!!, DatePickerType.RANGE)
         }
         when(privateSchedule.selectedItem.toString()){
             "Pick a Schedule" -> privateDatePickerButton.textColor = Color.RED
-            "Day" ->  privateDatePickerButton.textColor = Color.BLACK
-            "Week" -> privateDatePickerButton.textColor = Color.BLACK
+            "Daily" ->  privateDatePickerButton.textColor = Color.RED
+            "Weekly" -> privateDatePickerButton.textColor = Color.RED
             "Hourly" -> privateDatePickerButton.textColor = Color.BLACK
+        }
+        when(privateSchedule.selectedItem.toString()){
+            "Pick a Schedule" ->   checkinText.visibility = View.GONE
+            "Daily" ->  checkinText.visibility = View.GONE
+            "Weekly" -> checkinText.visibility = View.GONE
+            "Hourly" -> checkinText.visibility = View.VISIBLE
+        }
+        when(privateSchedule.selectedItem.toString()){
+            "Pick a Schedule" ->   checkoutText.visibility = View.GONE
+            "Daily" ->  checkoutText.visibility = View.GONE
+            "Weekly" -> checkoutText.visibility = View.GONE
+            "Hourly" -> checkoutText.visibility = View.VISIBLE
         }
     }
 }
