@@ -2,6 +2,7 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
@@ -61,38 +62,54 @@
     </RelativeLayout>
 
 
-    <EditText
-        android:id="@+id/numberPersonEdit"
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/numberPersonEditLayout"
+        android:background="@color/colorPrimary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Number of person"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
-        android:background="@color/colorEditText"
-        android:layout_marginTop="8dp"
-        android:inputType="number"
-        android:padding="10dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textColorHint="#000"
+        android:hint="chalala"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/roomTypeSpinnerContainer" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/roomTypeSpinnerContainer">
+        <EditText
+            android:id="@+id/numberPersonEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/roomTypeSpinnerContainer"
+            android:background="@color/colorPrimary"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:inputType="number"
+            android:textColor="@android:color/white"
+            />
+    </android.support.design.widget.TextInputLayout>
 
     <RelativeLayout
+        android:id="@+id/scheduleSpinnerContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/scheduleSpinnerContainer"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@id/numberPersonEdit"
         android:background="@color/colorPrimary"
-        >
-    <Spinner
-        android:id="@+id/scheduleSpinner"
-        android:text ="Pick a schedule"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:spinnerMode="dialog"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.843"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numberPersonEditLayout">
+
+        <Spinner
+            android:id="@+id/scheduleSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dialog"
+            android:text="Pick a schedule" />
     </RelativeLayout>
     <Button
         android:id="@+id/datePickerButton"
@@ -110,14 +127,24 @@
         android:background="@color/colorEditText"
         />
 
-    <EditText
-        android:id="@+id/messageEditText"
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/messageEditTextLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/conferenceNextButtton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/datePickerButton"
+        app:layout_constraintVertical_bias="0.0">
+    <EditText
+        android:id="@+id/messageEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@color/colorEditText"
         android:gravity="top|left"
         android:hint="Your message here"
@@ -125,13 +152,8 @@
         android:lines="4"
         android:padding="10dp"
         android:scrollHorizontally="false"
-        app:layout_constraintBottom_toTopOf="@+id/conferenceNextButtton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/datePickerButton"
-        app:layout_constraintVertical_bias="0.0" />
-
+       />
+    </android.support.design.widget.TextInputLayout>
     <Button
         android:id="@+id/conferenceNextButtton"
         android:layout_width="match_parent"

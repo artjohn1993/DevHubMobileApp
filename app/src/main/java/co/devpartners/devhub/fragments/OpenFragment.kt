@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 
 import co.devpartners.devhub.R
@@ -30,7 +31,7 @@ class OpenFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_open, container, false)
-        val openDatePicker = view.findViewById<Button>(R.id.openDatePickerButton)
+        val openDatePicker = view.findViewById<TextView>(R.id.openDatePickerButton)
         val openNext = view.findViewById<Button>(R.id.openNextButton)
         openDatePicker.setOnClickListener {
             checkRoomType()
@@ -44,14 +45,13 @@ class OpenFragment : Fragment() {
     }
     fun checkRoomType() {
         when (openSpinnerSchedule.selectedItem.toString()) {
-            "Length of Stay" -> Toast.makeText(this!!.activity!!, "Please identify your length of stay.", Toast.LENGTH_SHORT).show()
+            "Pick a Schedule" -> Toast.makeText(this!!.activity!!, "Please identify your length of stay.", Toast.LENGTH_SHORT).show()
             "Hourly" -> timepicker.show(this!!.activity!!)
             "Day" -> datepicker.show(this!!.activity!!, DatePickerType.SINGLE)
             "Week" -> datepicker.show(this!!.activity!!, DatePickerType.RANGE)
-            else -> datepicker.show(this!!.activity!!, DatePickerType.MULTIPLE)
         }
         when(openSpinnerSchedule.selectedItem.toString()){
-            "Length of Stay" -> openDatePickerButton.textColor = Color.RED
+            "Pick a Schedule" -> openDatePickerButton.textColor = Color.RED
             "Day" ->  openDatePickerButton.textColor = Color.BLACK
             "Week" -> openDatePickerButton.textColor = Color.BLACK
             "Hourly" -> openDatePickerButton.textColor = Color.BLACK

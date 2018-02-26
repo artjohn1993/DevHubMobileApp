@@ -75,7 +75,7 @@
         <item>Week</item>
     </string-array>
     <string-array name="schedule2">
-        <item>Pick a schedule</item>
+        <item>Pick a Schedule</item>
         <item>Hourly</item>
         <item>Daily</item>
         <item>Weekly</item>

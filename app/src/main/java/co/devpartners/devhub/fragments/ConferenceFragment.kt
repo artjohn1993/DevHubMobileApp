@@ -33,6 +33,7 @@ class ConferenceFragment : Fragment() {
        val btn = view.findViewById<Button>(R.id.datePickerButton1)
         val next = view.findViewById<Button>(R.id.conferenceNextButtton1)
 
+
         btn.setOnClickListener {
             checkRoomType()
         }

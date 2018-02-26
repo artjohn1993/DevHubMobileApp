@@ -69,7 +69,7 @@
         app:layout_constraintStart_toStartOf="@id/lengthStayText"
         app:layout_constraintTop_toBottomOf="@id/spinnerLayout"
         app:layout_constraintEnd_toEndOf="parent"/>
-    <Button
+    <TextView
         android:id="@+id/datePickerButton"
         android:layout_width="match_parent"
         android:background="@color/colorEditText"
