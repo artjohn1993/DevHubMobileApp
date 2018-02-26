@@ -81,7 +81,7 @@
         />
 
     <TextView
-        android:id="@+id/openCheckinDatePickerButton"
+        android:id="@+id/checkinTimeTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -97,49 +97,46 @@
         app:layout_constraintTop_toBottomOf="@id/openDatePickerButton" />
 
     <TextView
-        android:id="@+id/openCheckoutDatePickerButton"
+        android:id="@+id/checkoutTimeTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
         android:layout_marginTop="8dp"
-        android:padding="10dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
         android:background="@color/colorEditText"
         android:hint="Check-out Time"
-        android:textColorHint="@android:color/black"
+        android:padding="10dp"
         android:textAllCaps="false"
+        android:textColorHint="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/openCheckinDatePickerButton" />
+        app:layout_constraintTop_toBottomOf="@+id/checkinTimeTextView" />
+
 
     <android.support.design.widget.TextInputLayout
         android:id="@id/messageEditTextLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Your Message:"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="16dp"
         android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toTopOf="@id/openNextButton"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorEditText"
+        android:hint="Your Message:"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/openCheckoutDatePickerButton"
-        app:layout_constraintVertical_bias="0.0"
-        android:background="@color/colorEditText">
+        app:layout_constraintTop_toBottomOf="@+id/checkoutTimeTextView">
 
-    <EditText
-        android:id="@+id/openMessageEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorEditText"
-        android:gravity="top|left"
-        android:inputType="textMultiLine"
-        android:lines="4"
-        android:layout_marginStart="8dp"
-        android:scrollHorizontally="false"
-       />
+        <EditText
+            android:id="@+id/openMessageEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@color/colorEditText"
+            android:gravity="top|left"
+            android:inputType="textMultiLine"
+            android:lines="4"
+            android:scrollHorizontally="false" />
     </android.support.design.widget.TextInputLayout>
     <Button
         android:id="@+id/openNextButton"
