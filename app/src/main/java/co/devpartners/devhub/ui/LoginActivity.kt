@@ -25,9 +25,9 @@ class LoginActivity : AppCompatActivity() {
         locationText.setOnClickListener {
             startActivity<Maps>()
         }
-        
+
         submitButton.setOnClickListener {
-                startActivity<SpaceTypeActivity>()
+                startActivity<MainActivity>()
                 finish()
         }
         createAccountTextView.setOnClickListener {

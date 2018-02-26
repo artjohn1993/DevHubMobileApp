@@ -1,6 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="8dp"
+    >
+
+    <ImageView
+        android:id="@+id/reservedLogoImage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:background="@drawable/profile_image"
+        android:padding="8dp"
+        android:src="@drawable/meetinglogo"
+        android:tint="#000" />
+
+    <TextView
+    android:id="@+id/reservedTitleText"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:text="Conference Space"
+    android:textColor="#000"
+    android:textSize="16sp"
+    app:layout_constraintStart_toEndOf="@id/reservedLogoImage"
+    app:layout_constraintTop_toTopOf="@id/reservedLogoImage" />
+
+    <TextView
+        android:id="@+id/reservedScheduleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weekly"
+        android:textSize="12sp"
+        android:textColor="#000"
+        app:layout_constraintTop_toBottomOf="@id/reservedTitleText"
+        app:layout_constraintStart_toStartOf="@id/reservedTitleText"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Feb 15 2018 - Feb 26 2018"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/reservedScheduleText"
+        app:layout_constraintStart_toStartOf="@id/reservedScheduleText"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10:45 AM"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
 
 </android.support.constraint.ConstraintLayout>

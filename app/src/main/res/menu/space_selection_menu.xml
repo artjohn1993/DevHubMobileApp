@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
+    <item
+        android:id="@+id/navigationOpen"
+        android:icon="@drawable/openspace"
+        android:title="Open" />
+    <item
+        android:id="@+id/navigationPrivate"
+        android:icon="@drawable/privatespace"
+        android:title="Private" />
+    <item
+        android:id="@+id/navigationConference"
+        android:icon="@drawable/conference"
+        android:title="Conference" />
 </menu>

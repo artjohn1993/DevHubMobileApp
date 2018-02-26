@@ -27,7 +27,7 @@ class AccountRegisterActivity : AppCompatActivity() {
         registerButton.setOnClickListener({
 
                 Handler().postDelayed({
-                    startActivity<SpaceTypeActivity>()
+                    startActivity<MainActivity>()
                     finish()
                 }, 1400)
         })
