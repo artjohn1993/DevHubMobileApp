@@ -11,6 +11,8 @@ import android.widget.BaseAdapter
 import android.widget.ListView
 
 import co.devpartners.devhub.R
+import co.devpartners.devhub.ui.InformationActivity
+import org.jetbrains.anko.support.v4.startActivity
 
 
 /**
@@ -24,6 +26,10 @@ class PendingFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_pending, container, false)
         val listview = view.findViewById<ListView>(R.id.pendingListView)
         listview.adapter = PendingFragment.ReservedCustomAdapter(this.activity!!)
+        listview.setOnItemClickListener { adapterView, view, i, l ->
+
+            startActivity<InformationActivity>()
+        }
 
         return view
     }
