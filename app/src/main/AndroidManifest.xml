@@ -28,17 +28,20 @@
         <activity
             android:name=".ui.SpaceTypeActivity"
             android:label="Space Type"
-            android:launchMode="singleTop" />
+            android:launchMode="singleTop">
+        <meta-data
+        android:name="android.support.PARENT_ACTIVITY"
+        android:value=".ui.MainActivity" />
+        </activity>
         <activity
             android:name=".ui.OpenSpaceActivity"
-            android:label="Open Space"
             android:launchMode="singleTop" />
         <activity
             android:name=".ui.ConferenceActivity"
-            android:label="Conference" />
+         />
         <activity
             android:name=".ui.PrivateSpaceActivity"
-            android:label="Private Space" />
+         />
         <activity
             android:name=".ui.BookingActivity"
             android:label="Booking Summary"
