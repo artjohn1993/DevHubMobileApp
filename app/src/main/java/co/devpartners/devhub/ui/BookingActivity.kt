@@ -62,7 +62,7 @@ class BookingActivity : AppCompatActivity() {
         snackbar.show()
     }
     fun backToMain(){
-        startActivity<SpaceTypeActivity>()
+        startActivity<MainActivity>()
         Toast.makeText(this,"Reserved Successful!",Toast.LENGTH_LONG).show()
         finish()
     }

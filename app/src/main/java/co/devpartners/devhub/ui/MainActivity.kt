@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity(),SheetLayout.OnFabAnimationEndListener {
                     return true
                 }
                 R.id.navigationPending -> {
+
                     val fragment2 = PendingFragment()
                     val fragmentTransaction2 = supportFragmentManager.beginTransaction()
                     fragmentTransaction2.replace(R.id.mainFrame, fragment2, "FragmentName")
@@ -44,6 +45,7 @@ class MainActivity : AppCompatActivity(),SheetLayout.OnFabAnimationEndListener {
         setContentView(R.layout.activity_main)
 
         mainMenu.setOnNavigationItemSelectedListener(selectedItem)
+        title = "Home"
         val fragment1 = ReservedFragment()
         val fragmentTransaction1 = supportFragmentManager.beginTransaction()
         fragmentTransaction1.replace(R.id.mainFrame, fragment1, "FragmentName")
@@ -61,7 +63,7 @@ class MainActivity : AppCompatActivity(),SheetLayout.OnFabAnimationEndListener {
 
     override fun onFabAnimationEnd() {
         val intent = Intent(this, SpaceTypeActivity::class.java)
-        startActivityForResult(intent, REQUEST_CODE);
+        startActivityForResult(intent, REQUEST_CODE)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

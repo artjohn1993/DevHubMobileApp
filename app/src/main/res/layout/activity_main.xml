@@ -40,14 +40,14 @@
         android:layout_alignParentRight="true"
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="16dp"
-        android:src="@drawable/openlogo"
+        android:src="@drawable/add"
         android:tint="#fff"
         app:borderWidth="0dp"
         app:fabSize="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:rippleColor="@color/colorPrimary"
-        app:backgroundTint="@color/colorPrimaryDark"
+        app:backgroundTint="@color/colorPrimary"
 
         />
 </android.support.constraint.ConstraintLayout>

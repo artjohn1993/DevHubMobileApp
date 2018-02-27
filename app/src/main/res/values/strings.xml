@@ -80,4 +80,5 @@
         <item>Daily</item>
         <item>Weekly</item>
     </string-array>
+    <string name="title_activity_information">InformationActivity</string>
 </resources>
