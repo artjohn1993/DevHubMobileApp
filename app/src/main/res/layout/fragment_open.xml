@@ -115,15 +115,17 @@
     <android.support.design.widget.TextInputLayout
         android:id="@id/messageEditTextLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:hint="Your Message:"
+        app:layout_constraintBottom_toTopOf="@id/openNextButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkoutTimeTextView">
+        app:layout_constraintTop_toBottomOf="@+id/checkoutTimeTextView"
+        app:layout_constraintVertical_bias="0.0">
 
         <EditText
             android:id="@+id/openMessageEditText"
@@ -133,7 +135,8 @@
             android:gravity="top|left"
             android:inputType="textMultiLine"
             android:lines="4"
-            android:scrollHorizontally="false" />
+            android:scrollHorizontally="false"
+            android:theme="@style/EditTextThemeDark" />
     </android.support.design.widget.TextInputLayout>
     <Button
         android:id="@+id/openNextButton"
@@ -145,8 +148,8 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/ripple_effect"
         android:text="next"
+        android:theme="@style/EditTextThemeDark"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/messageEditTextLayout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         />

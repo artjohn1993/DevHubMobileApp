@@ -12,8 +12,6 @@
     android:layout_height="match_parent"
     tools:context="co.devpartners.devhub.ui.PrivateSpaceActivity"
     >
-
-
     <ImageView
         android:id="@+id/openSpaceLogo"
         android:layout_width="90dp"
@@ -31,6 +29,7 @@
         android:layout_height="wrap_content"
         android:text="@string/privatespace_title"
         android:textColor="@android:color/black"
+        android:layout_gravity="center"
         android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/openSpaceLogo"
@@ -113,13 +112,13 @@
     <android.support.design.widget.TextInputLayout
         android:id="@id/messageEditTextLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_height="80dp"
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:hint="Your Message:"
-        app:layout_constraintBottom_toTopOf="@id/openNextButton"
+        app:layout_constraintBottom_toTopOf="@id/privateNextButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -134,9 +133,9 @@
             android:gravity="top|left"
             android:inputType="textMultiLine"
             android:lines="4"
-            android:scrollHorizontally="false" />
+            android:scrollHorizontally="false"
+            android:theme="@style/EditTextThemeDark" />
     </android.support.design.widget.TextInputLayout>
-
     <Button
         android:id="@+id/privateNextButton"
         android:layout_width="match_parent"
@@ -145,11 +144,12 @@
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
+        android:layout_gravity="bottom|center"
         android:background="@drawable/ripple_effect"
         android:text="next"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/messageEditTextLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
 </android.support.constraint.ConstraintLayout>
 </ScrollView>
