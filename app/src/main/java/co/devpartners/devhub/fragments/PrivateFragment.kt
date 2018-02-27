@@ -36,8 +36,8 @@ class PrivateFragment : Fragment() {
         val view  = inflater.inflate(R.layout.fragment_private, container, false)
         val privateNextButton = view.findViewById<Button>(R.id.privateNextButton)
         val privateSchedule = view.findViewById<TextView>(R.id.privateDatePickerButton)
-        val checkinText = view!!.findViewById<TextView>(R.id.checkinTimeTextView)
-        val checkoutText = view!!.findViewById<TextView>(R.id.checkoutTimeTextView)
+        val checkinText = view.findViewById<TextView>(R.id.checkinTimeTextView)
+        val checkoutText = view.findViewById<TextView>(R.id.checkoutTimeTextView)
         checkinText.visibility = View.GONE
         checkoutText.visibility = View.GONE
 
@@ -52,8 +52,6 @@ class PrivateFragment : Fragment() {
         return view
     }
     fun checkRoomType() {
-        val checkinText = view!!.findViewById<TextView>(R.id.checkinTimeTextView)
-        val checkoutText = view!!.findViewById<TextView>(R.id.checkoutTimeTextView)
         when (privateSchedule.selectedItem.toString()) {
             "Pick a Schedule" -> Toast.makeText(this!!.activity!!, "Please identify your length of stay.", Toast.LENGTH_SHORT).show()
             "Length of Stay" -> Toast.makeText(this!!.activity!!, "Please identify your length of stay.", Toast.LENGTH_SHORT).show()
