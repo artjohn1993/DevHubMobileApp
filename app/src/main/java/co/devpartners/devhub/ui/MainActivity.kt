@@ -16,35 +16,11 @@ import android.graphics.Color
 class MainActivity : AppCompatActivity(),SheetLayout.OnFabAnimationEndListener {
     private val REQUEST_CODE = 1
 
-    private val selectedItem = object : BottomNavigationView.OnNavigationItemSelectedListener {
-        override fun onNavigationItemSelected(item: MenuItem): Boolean {
-            when (item.getItemId()) {
-                R.id.navigationReserved -> {
 
-                    val fragment1 = ReservedFragment()
-                    val fragmentTransaction1 = supportFragmentManager.beginTransaction()
-                    fragmentTransaction1.replace(R.id.mainFrame, fragment1, "FragmentName")
-                    fragmentTransaction1.commit()
-                    return true
-                }
-                R.id.navigationPending -> {
-
-                    val fragment2 = PendingFragment()
-                    val fragmentTransaction2 = supportFragmentManager.beginTransaction()
-                    fragmentTransaction2.replace(R.id.mainFrame, fragment2, "FragmentName")
-                    fragmentTransaction2.commit()
-                    return true
-                }
-
-            }
-            return false
-        }
-    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        mainMenu.setOnNavigationItemSelectedListener(selectedItem)
         title = "Home"
         val fragment1 = ReservedFragment()
         val fragmentTransaction1 = supportFragmentManager.beginTransaction()

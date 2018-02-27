@@ -14,20 +14,11 @@
         app:ft_color="@color/colorPrimary"
         android:elevation="2dp"/>
 
-    <android.support.design.widget.BottomNavigationView
-        android:id="@+id/mainMenu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:menu="@menu/main_menu"
-        android:background="#F0F0F0"
-        />
+
     <FrameLayout
         android:id="@+id/mainFrame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintTop_toBottomOf="@id/mainMenu"
-        android:layout_marginTop="55dp"
         >
 
     </FrameLayout>
