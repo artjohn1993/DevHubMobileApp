@@ -5,6 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="co.devpartners.devhub.ui.MainActivity">
+    <com.github.fabtransitionactivity.SheetLayout
+        android:id="@+id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        app:ft_container_gravity="center"
+        app:ft_color="@color/colorPrimary"
+        android:elevation="2dp"/>
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/mainMenu"
@@ -20,6 +28,29 @@
         android:layout_height="match_parent"
         app:layout_constraintTop_toBottomOf="@id/mainMenu"
         android:layout_marginTop="55dp"
+        >
+
+    </FrameLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/openlogo"
+        android:tint="#fff"
+        app:borderWidth="0dp"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:rippleColor="@color/colorPrimary"
+        app:backgroundTint="@color/colorPrimaryDark"
+
         />
+
+
 
 </android.support.constraint.ConstraintLayout>
