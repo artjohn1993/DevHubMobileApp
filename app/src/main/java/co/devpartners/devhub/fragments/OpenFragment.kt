@@ -28,15 +28,23 @@ import org.jetbrains.anko.textColor
 class OpenFragment : Fragment() {
     val datepicker = CustomDatePickerDialog()
     val timepicker = CheckInTimeDialog()
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_open, container, false)
         val openDatePicker = view.findViewById<TextView>(R.id.openDatePickerButton)
         val openNext = view.findViewById<Button>(R.id.openNextButton)
 
+        val checkinText = view!!.findViewById<TextView>(R.id.checkinTimeTextView)
+        val checkoutText = view!!.findViewById<TextView>(R.id.checkoutTimeTextView)
+
+        checkinText.visibility = GONE
+        checkoutText.visibility = GONE
+
         openDatePicker.setOnClickListener {
             checkRoomType()
-            hidetext()
+            showtext()
+
         }
         openNext.setOnClickListener {
             startActivity<BookingActivity>()
@@ -45,6 +53,7 @@ class OpenFragment : Fragment() {
 
         return view
     }
+
     fun checkRoomType() {
 
         when (openSpinnerSchedule.selectedItem.toString()) {
@@ -52,28 +61,26 @@ class OpenFragment : Fragment() {
             "Hourly" -> timepicker.show(this!!.activity!!)
             "Daily" -> datepicker.show(this!!.activity!!, DatePickerType.SINGLE)
             "Weekly" -> datepicker.show(this!!.activity!!, DatePickerType.RANGE)
-            else -> datepicker.show(this.activity!!,DatePickerType.SINGLE)
+            else -> datepicker.show(this.activity!!, DatePickerType.SINGLE)
         }
-    }
-    fun hidetext(){
-        val checkinText = view!!.findViewById<TextView>(R.id.checkinTimeTextView)
-        val checkoutText = view!!.findViewById<TextView>(R.id.checkoutTimeTextView)
-        when(openSpinnerSchedule.selectedItem.toString()){
+
+        when (openSpinnerSchedule.selectedItem.toString()) {
             "Pick a Schedule" -> openDatePickerButton.textColor = Color.RED
-            "Daily" ->  openDatePickerButton.textColor = Color.RED
+            "Daily" -> openDatePickerButton.textColor = Color.RED
             "Weekly" -> openDatePickerButton.textColor = Color.RED
             "Hourly" -> openDatePickerButton.textColor = Color.BLACK
+
         }
-        when(openSpinnerSchedule.selectedItem.toString()){
-            "Pick a Schedule" -> checkinText.visibility = GONE
-            "Daily" -> checkinText.visibility = GONE
-            "Weekly" -> checkinText.visibility = GONE
+    }
+
+    fun showtext() {
+        val checkinText = view!!.findViewById<TextView>(R.id.checkinTimeTextView)
+        val checkoutText = view!!.findViewById<TextView>(R.id.checkoutTimeTextView)
+
+        when (openSpinnerSchedule.selectedItem.toString()) {
             "Hourly" -> checkinText.visibility = VISIBLE
         }
-        when(openSpinnerSchedule.selectedItem.toString()){
-            "Pick a Schedule" -> checkoutText.visibility = GONE
-            "Daily" -> checkoutText.visibility = GONE
-            "Weekly" -> checkoutText.visibility = GONE
+        when (openSpinnerSchedule.selectedItem.toString()) {
             "Hourly" -> checkoutText.visibility = VISIBLE
         }
     }

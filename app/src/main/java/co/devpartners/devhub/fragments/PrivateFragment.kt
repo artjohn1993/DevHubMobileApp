@@ -36,9 +36,14 @@ class PrivateFragment : Fragment() {
         val view  = inflater.inflate(R.layout.fragment_private, container, false)
         val privateNextButton = view.findViewById<Button>(R.id.privateNextButton)
         val privateSchedule = view.findViewById<TextView>(R.id.privateDatePickerButton)
+        val checkinText = view!!.findViewById<TextView>(R.id.checkinTimeTextView)
+        val checkoutText = view!!.findViewById<TextView>(R.id.checkoutTimeTextView)
+        checkinText.visibility = View.GONE
+        checkoutText.visibility = View.GONE
 
         privateSchedule.setOnClickListener {
             checkRoomType()
+            showText()
         }
         privateNextButton.setOnClickListener {
             startActivity<BookingActivity>()
@@ -62,17 +67,16 @@ class PrivateFragment : Fragment() {
             "Weekly" -> privateDatePickerButton.textColor = Color.RED
             "Hourly" -> privateDatePickerButton.textColor = Color.BLACK
         }
+    }
+    fun showText(){
+        val checkinText = view!!.findViewById<TextView>(R.id.checkinTimeTextView)
+        val checkoutText = view!!.findViewById<TextView>(R.id.checkoutTimeTextView)
         when(privateSchedule.selectedItem.toString()){
-            "Pick a Schedule" ->   checkinText.visibility = View.GONE
-            "Daily" ->  checkinText.visibility = View.GONE
-            "Weekly" -> checkinText.visibility = View.GONE
             "Hourly" -> checkinText.visibility = View.VISIBLE
         }
         when(privateSchedule.selectedItem.toString()){
-            "Pick a Schedule" ->   checkoutText.visibility = View.GONE
-            "Daily" ->  checkoutText.visibility = View.GONE
-            "Weekly" -> checkoutText.visibility = View.GONE
             "Hourly" -> checkoutText.visibility = View.VISIBLE
         }
+
     }
 }

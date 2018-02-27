@@ -8,6 +8,7 @@ import android.support.design.widget.Snackbar
 import android.view.Gravity
 import android.view.View
 import android.widget.TextView
+import android.widget.Toast
 import co.devpartners.devhub.R
 import co.devpartners.devhub.api.events.ConfirmationDialog
 import kotlinx.android.synthetic.main.activity_booking.*
@@ -62,6 +63,7 @@ class BookingActivity : AppCompatActivity() {
     }
     fun backToMain(){
         startActivity<SpaceTypeActivity>()
+        Toast.makeText(this,"Reserved Successful!",Toast.LENGTH_LONG).show()
         finish()
     }
 }
