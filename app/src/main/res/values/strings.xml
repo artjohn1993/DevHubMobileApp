@@ -58,6 +58,7 @@
     <string name="title_activity_type_space">TypeSpaceActivity</string>
     <string name="select"><u>Find Us.</u></string>
     <string name="title_activity_summary">SummaryActivity</string>
+    <string name="terms_and_condition"><b>Terms and Conditions</b>:\n\nagreement is the agreement that includes the terms, the rules and the guidelines of acceptable behavior, plus other useful sections, to which users must agree in order to use or access your website and mobile app.</string>
 
     <string name="confirm_summary">Confirm</string>
 

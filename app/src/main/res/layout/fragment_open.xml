@@ -47,7 +47,6 @@
         app:layout_constraintStart_toStartOf="@id/openSpaceLogo"
         app:layout_constraintTop_toBottomOf="@id/openSpaceLogo" />
 
-
     <RelativeLayout
         android:id="@+id/spinnerLayout"
         android:layout_width="match_parent"
