@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+     >
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="co.devpartners.devhub.ui.InformationActivity"
-    android:background="#DCDCDC"
-
-    >
+    tools:context="co.devpartners.devhub.ui.InformationActivity">
 <ImageView
     android:id="@+id/backgroundImage"
     android:layout_width="match_parent"
@@ -78,6 +81,30 @@
             app:layout_constraintStart_toStartOf="@id/backgroundLayout"
             />
     </android.support.constraint.ConstraintLayout>
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/statusLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ccc67c00"
+        app:layout_constraintBottom_toBottomOf="@id/backgroundLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="10dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reserved"
+            app:layout_constraintTop_toTopOf="@id/statusLayout"
+            app:layout_constraintBottom_toBottomOf="@id/statusLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="#FFF"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            />
+
+    </android.support.constraint.ConstraintLayout>
 
     <TextView
         android:id="@+id/billInfoText"
@@ -97,7 +124,7 @@
         android:id="@+id/billInfoLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#fff"
+
         android:orientation="vertical"
         android:padding="8dp"
         app:layout_constraintTop_toBottomOf="@id/billInfoText"
@@ -111,74 +138,109 @@
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Space Type:"
-                app:layout_constraintStart_toStartOf="parent"
+                android:textSize="16sp"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Open Space"
                 app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="16sp"
                 />
         </android.support.constraint.ConstraintLayout>
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:padding="5dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Rate:"
                 app:layout_constraintStart_toStartOf="parent"
+                android:textSize="16sp"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="₱ 100.00"
                 app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="16sp"
                 />
         </android.support.constraint.ConstraintLayout>
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Number of Guests:"
-                app:layout_constraintStart_toStartOf="parent"
-                />
+                android:text="No. of Guests:"
+                android:textSize="16sp"
+                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="30"
                 app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="16sp"
                 />
         </android.support.constraint.ConstraintLayout>
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            >
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Period:"
+                android:textSize="16sp"
+                android:text="From:"
                 app:layout_constraintStart_toStartOf="parent"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Feb 23, 2018 - March 23 - 2018"
+                android:text="Jan 25, 2018"
                 app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="16sp"
                 />
         </android.support.constraint.ConstraintLayout>
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            >
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="To:"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Feb 25, 2018"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="16sp"
+                />
+        </android.support.constraint.ConstraintLayout>
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
                 android:text="Bill :"
                 app:layout_constraintStart_toStartOf="parent"
                 />
@@ -187,11 +249,14 @@
                 android:layout_height="wrap_content"
                 android:text="₱ 2000.00"
                 app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="16sp"
+                android:textColor="@color/colorPrimaryDark"
                 />
         </android.support.constraint.ConstraintLayout>
 
     </LinearLayout>
-    
+
 
 
 </android.support.constraint.ConstraintLayout>
+</ScrollView>
