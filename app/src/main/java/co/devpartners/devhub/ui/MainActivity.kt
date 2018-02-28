@@ -11,6 +11,11 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_space_type.*
 import android.content.Intent
 import android.graphics.Color
+import android.support.v7.widget.LinearLayoutManager
+import android.widget.LinearLayout
+import co.devpartners.devhub.api.model.CustomAdapter
+import co.devpartners.devhub.api.model.CustomListAdapter
+import org.jetbrains.anko.startActivity
 
 
 class MainActivity : AppCompatActivity(),SheetLayout.OnFabAnimationEndListener {
@@ -21,11 +26,15 @@ class MainActivity : AppCompatActivity(),SheetLayout.OnFabAnimationEndListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        title = "Home"
-        val fragment1 = ReservedFragment()
-        val fragmentTransaction1 = supportFragmentManager.beginTransaction()
-        fragmentTransaction1.replace(R.id.mainFrame, fragment1, "FragmentName")
-        fragmentTransaction1.commit()
+//        mainRecycleView.layoutManager = LinearLayoutManager(this)
+//        mainRecycleView.adapter = CustomAdapter()
+
+        mainListView.adapter = CustomListAdapter(this)
+        mainListView.setOnItemClickListener { adapterView, view, i, l ->
+
+            startActivity<InformationActivity>()
+        }
+
 
         bottom_sheet.setFab(fab)
         bottom_sheet.setFabAnimationEndListener(this)

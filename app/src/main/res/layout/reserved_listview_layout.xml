@@ -2,9 +2,11 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="8dp"
+
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
     >
 
     <ImageView
@@ -15,6 +17,8 @@
         android:layout_margin="10dp"
         android:background="@drawable/profile_image"
         android:padding="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toStartOf="parent"
         android:src="@drawable/meetinglogo"
         android:tint="#000" />
 
@@ -30,31 +34,38 @@
     app:layout_constraintTop_toTopOf="@id/reservedLogoImage" />
 
     <TextView
-        android:id="@+id/reservedScheduleText"
+        android:id="@+id/reservedTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Weekly"
-        android:textSize="12sp"
+        android:text="10:30 PM"
+        android:textSize="10sp"
         android:textColor="#000"
         app:layout_constraintTop_toBottomOf="@id/reservedTitleText"
         app:layout_constraintStart_toStartOf="@id/reservedTitleText"
         />
 
     <TextView
+        android:id="@+id/periodText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Feb 15 2018 - Feb 26 2018"
+        android:text="Weekly"
         android:textSize="12sp"
-        app:layout_constraintTop_toBottomOf="@id/reservedScheduleText"
-        app:layout_constraintStart_toStartOf="@id/reservedScheduleText"
+        app:layout_constraintTop_toBottomOf="@id/reservedTime"
+        app:layout_constraintStart_toStartOf="@id/reservedTime"
         />
 
     <TextView
+        android:id="@+id/statusText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="10:45 AM"
-        android:textSize="10sp"
+        android:text="Reserved"
+        android:textSize="14sp"
+        android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
+
+        android:textColor="#006600"
+
         />
+
 
 </android.support.constraint.ConstraintLayout>
