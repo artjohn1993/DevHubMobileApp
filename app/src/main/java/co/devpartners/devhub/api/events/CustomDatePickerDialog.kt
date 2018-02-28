@@ -11,7 +11,6 @@ import android.widget.CalendarView
 import co.devpartners.devhub.R
 import android.widget.TextView
 import android.widget.Toast
-import co.devpartners.devhub.R.id.checkinDatePickerButton
 import co.devpartners.devhub.api.model.DatePickerType
 import co.devpartners.devhub.ui.OpenSpaceActivity
 import com.applikeysolutions.cosmocalendar.utils.SelectionType
