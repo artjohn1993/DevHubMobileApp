@@ -43,6 +43,7 @@ class PrivateSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListe
 
         privateDatePickerButton.setOnClickListener{
             checkRoomType()
+            showText()
         }
         privateNextButton.setOnClickListener {
             Handler().postDelayed({

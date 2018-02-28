@@ -141,11 +141,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:gravity="top|left"
                     android:inputType="textMultiLine"
                     android:lines="4"
                     android:scrollHorizontally="false"
-                    android:theme="@style/EditTextThemeDark" />
+                 />
             </android.support.design.widget.TextInputLayout>
 
             <View

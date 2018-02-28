@@ -94,6 +94,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="top|left"
+                    android:focusedByDefault="false"
                     android:inputType="number"
                     android:lines="4"
                     android:layout_marginStart="8dp"
@@ -160,6 +161,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:gravity="top|left"
+                    android:focusedByDefault="false"
                     android:inputType="textMultiLine"
                     android:lines="4"
                     android:scrollHorizontally="false" />
