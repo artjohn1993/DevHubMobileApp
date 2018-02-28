@@ -32,8 +32,8 @@ class OpenFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_open, container, false)
-        val openDatePicker = view.findViewById<TextView>(R.id.openDatePickerButton)
-        val openNext = view.findViewById<Button>(R.id.openNextButton)
+        val openDatePicker = view.findViewById<TextView>(R.id.fixedDeskDatePickerButton)
+        val openNext = view.findViewById<Button>(R.id.fixedDeskNextButton)
 
         val checkinText = view!!.findViewById<TextView>(R.id.checkinTimeTextView)
         val checkoutText = view!!.findViewById<TextView>(R.id.checkoutTimeTextView)
@@ -56,7 +56,7 @@ class OpenFragment : Fragment() {
 
     fun checkRoomType() {
 
-        when (openSpinnerSchedule.selectedItem.toString()) {
+        when (fixedDeskDateSpinnerSchedule.selectedItem.toString()) {
             "Pick a Schedule" -> Toast.makeText(this!!.activity!!, "Please identify your length of stay.", Toast.LENGTH_SHORT).show()
             "Hourly" -> timepicker.show(this!!.activity!!)
             "Daily" -> datepicker.show(this!!.activity!!, DatePickerType.SINGLE)
@@ -64,11 +64,11 @@ class OpenFragment : Fragment() {
             else -> datepicker.show(this.activity!!, DatePickerType.SINGLE)
         }
 
-        when (openSpinnerSchedule.selectedItem.toString()) {
-            "Pick a Schedule" -> openDatePickerButton.textColor = Color.RED
-            "Daily" -> openDatePickerButton.textColor = Color.RED
-            "Weekly" -> openDatePickerButton.textColor = Color.RED
-            "Hourly" -> openDatePickerButton.textColor = Color.BLACK
+        when (fixedDeskDateSpinnerSchedule.selectedItem.toString()) {
+            "Pick a Schedule" -> fixedDeskDatePickerButton.textColor = Color.RED
+            "Daily" -> fixedDeskDatePickerButton.textColor = Color.RED
+            "Weekly" -> fixedDeskDatePickerButton.textColor = Color.RED
+            "Hourly" -> fixedDeskDatePickerButton.textColor = Color.BLACK
 
         }
     }
@@ -77,10 +77,10 @@ class OpenFragment : Fragment() {
         val checkinText = view!!.findViewById<TextView>(R.id.checkinTimeTextView)
         val checkoutText = view!!.findViewById<TextView>(R.id.checkoutTimeTextView)
 
-        when (openSpinnerSchedule.selectedItem.toString()) {
+        when (fixedDeskDateSpinnerSchedule.selectedItem.toString()) {
             "Hourly" -> checkinText.visibility = VISIBLE
         }
-        when (openSpinnerSchedule.selectedItem.toString()) {
+        when (fixedDeskDateSpinnerSchedule.selectedItem.toString()) {
             "Hourly" -> checkoutText.visibility = VISIBLE
         }
     }

@@ -35,26 +35,21 @@
         </activity>
         <activity
             android:name=".ui.OpenSpaceActivity"
-            android:launchMode="singleTop" >
+            android:launchMode="singleTop">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ui.SpaceServices"
-                />
+                android:value=".ui.SpaceServices" />
         </activity>
-
         <activity android:name=".ui.ConferenceActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ui.SpaceServices"
-                />
+                android:value=".ui.SpaceServices" />
         </activity>
-        <activity android:name=".ui.PrivateSpaceActivity" >
+        <activity android:name=".ui.PrivateSpaceActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ui.SpaceServices"
-                />
+                android:value=".ui.SpaceServices" />
         </activity>
-
         <activity
             android:name=".ui.BookingActivity"
             android:label="Booking Summary"
@@ -93,7 +88,13 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.MainActivity" />
         </activity>
-        <activity android:name=".ui.SpaceServices"></activity>
+        <activity android:name=".ui.SpaceServices" />
+        <activity android:name=".ui.FixedDeskActivity"
+            android:launchMode="singleTop">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.SpaceServices" />
+        </activity>
     </application>
 
 </manifest>

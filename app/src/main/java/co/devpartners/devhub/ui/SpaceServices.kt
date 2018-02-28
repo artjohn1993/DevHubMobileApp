@@ -21,7 +21,7 @@ class SpaceServices : AppCompatActivity() {
             startActivity<PrivateSpaceActivity>()
         }
         fixedDeskCardView.setOnClickListener {
-            Toast.makeText(this,"Under construction",Toast.LENGTH_SHORT).show()
+            startActivity<FixedDeskActivity>()
         }
         conferenceCardView.setOnClickListener {
             startActivity<ConferenceActivity>()

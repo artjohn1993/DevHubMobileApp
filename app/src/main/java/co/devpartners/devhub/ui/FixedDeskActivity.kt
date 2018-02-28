@@ -1,24 +1,24 @@
 package co.devpartners.devhub.ui
 
-
 import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
 import android.view.WindowManager
-import android.widget.*
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import android.widget.Spinner
+import android.widget.Toast
 import co.devpartners.devhub.R
 import co.devpartners.devhub.api.events.CheckInTimeDialog
 import co.devpartners.devhub.api.events.CustomDatePickerDialog
 import co.devpartners.devhub.api.model.DatePickerType
-import kotlinx.android.synthetic.main.activity_open_space.*
+import kotlinx.android.synthetic.main.activity_fixed_desk.*
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.textColor
 
-
-class OpenSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener {
-
+class FixedDeskActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener {
     val datepicker = CustomDatePickerDialog()
     var timepick = arrayOf("Length of Stay","Hourly", "Daily", "Weekly")
     var spinner: Spinner? = null
@@ -27,7 +27,7 @@ class OpenSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_open_space)
+        setContentView(R.layout.activity_fixed_desk)
         this.window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
         this.overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left)
         spinner = this.fixedDeskDateSpinnerSchedule
@@ -59,7 +59,7 @@ class OpenSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener
     }
     fun checkRoomType() {
         when (fixedDeskDateSpinnerSchedule.selectedItem.toString()) {
-            "Length of Stay" -> Toast.makeText(this, "Please identify your length of stay.",Toast.LENGTH_SHORT).show()
+            "Length of Stay" -> Toast.makeText(this, "Please identify your length of stay.", Toast.LENGTH_SHORT).show()
             "Hourly" -> timepicker.show(this)
             "Day" -> datepicker.show(this, DatePickerType.SINGLE)
             "Week" -> datepicker.show(this, DatePickerType.RANGE)

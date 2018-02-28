@@ -13,7 +13,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/openNextButton"
+        app:layout_constraintBottom_toTopOf="@id/fixedDeskNextButton"
         >
 <LinearLayout
     android:id="@+id/linearLayout"
@@ -59,7 +59,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent">
         <Spinner
-            android:id="@+id/openSpinnerSchedule"
+            android:id="@+id/fixedDeskDateSpinnerSchedule"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:spinnerMode="dialog"
@@ -72,7 +72,7 @@
     </RelativeLayout>
 
     <TextView
-        android:id="@+id/openDatePickerButton"
+        android:id="@+id/fixedDeskDatePickerButton"
         android:clickable="true"
         android:layout_width="match_parent"
         android:background="#d3d3d3"
@@ -103,7 +103,7 @@
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/openDatePickerButton" />
+        app:layout_constraintTop_toBottomOf="@id/fixedDeskDatePickerButton" />
 
     <TextView
         android:id="@+id/checkoutTimeTextView"
@@ -129,7 +129,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:hint="Your Message:"
-        app:layout_constraintBottom_toTopOf="@id/openNextButton"
+        app:layout_constraintBottom_toTopOf="@id/fixedDeskNextButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -162,7 +162,7 @@
 </LinearLayout>
     </ScrollView>
     <Button
-        android:id="@+id/openNextButton"
+        android:id="@+id/fixedDeskNextButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
