@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import co.devpartners.devhub.R
 import kotlinx.android.synthetic.main.reserved_listview_layout.view.*
+import org.jetbrains.anko.backgroundColor
 import org.jetbrains.anko.textColor
 
 /**
@@ -32,8 +33,9 @@ class CustomListAdapter(context : Context) : BaseAdapter(){
         layout.statusText.text = status[p0]
         layout.statusText.textColor = Color.parseColor(checkColor(status[p0]))
         layout.reservedTitleText.text = spaceType[p0]
-        layout.reservedLogoImage.setImageResource(checkLogo(spaceType[p0]))
+        layout.reservedLogoImage.setImageResource(checkStatusLogo(status[p0]))
         layout.periodText.text = period[p0]
+        layout.reservedLogoImage.setColorFilter(Color.parseColor(checkColor(status[p0])))
 
         return layout
     }
@@ -50,7 +52,7 @@ class CustomListAdapter(context : Context) : BaseAdapter(){
         return status.size
     }
 
-    fun checkColor(status : String) : String{
+    fun checkColor(status : String) : String {
         val result = when (status) {
             "Reserved" -> "#006600"
             "Cancel" -> "#7f0000"
@@ -60,14 +62,22 @@ class CustomListAdapter(context : Context) : BaseAdapter(){
         }
         return result
     }
-
+    fun checkStatusLogo(status : String) : Int {
+        val result = when (status) {
+            "Reserved" -> R.drawable.reserved
+            "Cancel" -> R.drawable.cancel
+            "Denied" -> R.drawable.denied
+            "Pending" -> R.drawable.pending
+            else -> R.drawable.add
+        }
+        return result
+    }
     fun checkLogo(space : String) : Int{
         val result = when (space) {
             "Conference Space" -> R.drawable.conference
             "Open Space" -> R.drawable.openspace
             else -> R.drawable.privatespace
         }
-
         return result
     }
 

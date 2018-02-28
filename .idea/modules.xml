@@ -4,7 +4,9 @@
     <modules>
       <module fileurl="file://C:\Users\Dev_03\Documents\android\DevHubMobileApp\DevHub.iml" filepath="C:\Users\Dev_03\Documents\android\DevHubMobileApp\DevHub.iml" />
       <module fileurl="file://$PROJECT_DIR$/DevHubMobileApp.iml" filepath="$PROJECT_DIR$/DevHubMobileApp.iml" />
+      <module fileurl="file://D:\dev partners\android\DevHubMobileApp3\DevHubMobileApp\DevHubMobileApp.iml" filepath="D:\dev partners\android\DevHubMobileApp3\DevHubMobileApp\DevHubMobileApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://D:\dev partners\android\DevHubMobileApp3\DevHubMobileApp\app\app.iml" filepath="D:\dev partners\android\DevHubMobileApp3\DevHubMobileApp\app\app.iml" />
     </modules>
   </component>
 </project>

@@ -4,8 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:paddingTop="16dp"
-    android:paddingBottom="16dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
     >
 
     <ImageView
@@ -14,21 +14,19 @@
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:layout_margin="10dp"
-        android:background="@drawable/profile_image"
         android:padding="8dp"
-        android:layout_marginStart="8dp"
         app:layout_constraintStart_toStartOf="parent"
-        android:src="@drawable/meetinglogo"
+        android:src="@drawable/reserved"
         android:tint="#000" />
 
     <TextView
     android:id="@+id/reservedTitleText"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginStart="8dp"
+    android:layout_marginStart="16dp"
     android:text="Conference Space"
     android:textColor="#000"
-    android:textSize="16sp"
+    android:textSize="18sp"
     app:layout_constraintStart_toEndOf="@id/reservedLogoImage"
     app:layout_constraintTop_toTopOf="@id/reservedLogoImage" />
 
@@ -39,8 +37,9 @@
         android:text="10:30 PM"
         android:textSize="10sp"
         android:textColor="#000"
-        app:layout_constraintTop_toBottomOf="@id/reservedTitleText"
-        app:layout_constraintStart_toStartOf="@id/reservedTitleText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="10dp"
         />
 
     <TextView
@@ -49,9 +48,10 @@
         android:layout_height="wrap_content"
         android:text="Weekly"
         android:textSize="12sp"
-        app:layout_constraintTop_toBottomOf="@id/reservedTime"
-        app:layout_constraintStart_toStartOf="@id/reservedTime"
+        app:layout_constraintTop_toBottomOf="@id/reservedTitleText"
+        app:layout_constraintStart_toStartOf="@id/reservedTitleText"
         />
+
 
     <TextView
         android:id="@+id/statusText"
@@ -60,9 +60,12 @@
         android:text="Reserved"
         android:textSize="14sp"
         android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/reservedLogoImage"
+        app:layout_constraintStart_toStartOf="@id/reservedLogoImage"
+        app:layout_constraintTop_toBottomOf="@id/reservedLogoImage"
         android:textColor="#006600"
-
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
         />
 
 
