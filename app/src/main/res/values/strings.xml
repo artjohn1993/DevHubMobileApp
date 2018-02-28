@@ -36,7 +36,8 @@
     <string name="devhub_title">DEV HUB</string>
 
 
-    <!---->
+    <!--fixed-->
+    <string name="fixed_title">Fixed Desk</string>
 
     <!-- open space rates -->
     <string name="openspace_title">Open Space</string>
