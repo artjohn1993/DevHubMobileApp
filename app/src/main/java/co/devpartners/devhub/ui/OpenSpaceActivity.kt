@@ -32,18 +32,22 @@ class OpenSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener
         setContentView(R.layout.activity_open_space)
         this.window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
         this.overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left)
-        spinner = this.spinnerView
-        spinnerView.onItemSelectedListener = this
+        spinner = this.openSpinnerSchedule
+        openSpinnerSchedule.onItemSelectedListener = this
 
         val adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, timepick)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        spinnerView!!.adapter = adapter
+        openSpinnerSchedule!!.adapter = adapter
 
-        datePickerButton.setOnClickListener{
+        checkinTimeTextView.visibility = View.GONE
+        checkoutTimeTextView.visibility = View.GONE
+
+        openDatePickerButton.setOnClickListener{
             checkRoomType()
+            showtext()
 
         }
-        nextButton.setOnClickListener {
+        openNextButton.setOnClickListener {
             Handler().postDelayed({
                 startActivity<BookingActivity>()
                 finish()
@@ -56,18 +60,26 @@ class OpenSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener
 
     }
     fun checkRoomType() {
-        when (spinnerView.selectedItem.toString()) {
+        when (openSpinnerSchedule.selectedItem.toString()) {
             "Length of Stay" -> Toast.makeText(this, "Please identify your length of stay.",Toast.LENGTH_SHORT).show()
             "Hourly" -> timepicker.show(this)
             "Day" -> datepicker.show(this, DatePickerType.SINGLE)
             "Week" -> datepicker.show(this, DatePickerType.RANGE)
             else -> datepicker.show(this, DatePickerType.MULTIPLE)
         }
-        when(spinnerView.selectedItem.toString()){
-            "Length of Stay" -> datePickerButton.textColor = Color.RED
-            "Day" ->  datePickerButton.textColor = Color.BLACK
-            "Week" -> datePickerButton.textColor = Color.BLACK
-            "Hourly" -> datePickerButton.textColor = Color.BLACK
+        when(openSpinnerSchedule.selectedItem.toString()){
+            "Length of Stay" -> openDatePickerButton.textColor = Color.RED
+            "Day" ->  openDatePickerButton.textColor = Color.BLACK
+            "Week" -> openDatePickerButton.textColor = Color.BLACK
+            "Hourly" -> openDatePickerButton.textColor = Color.BLACK
+        }
+    }
+    fun showtext() {
+        when (openSpinnerSchedule.selectedItem.toString()) {
+            "Hourly" -> checkinTimeTextView.visibility = View.VISIBLE
+        }
+        when (openSpinnerSchedule.selectedItem.toString()) {
+            "Hourly" -> checkoutTimeTextView.visibility = View.VISIBLE
         }
     }
 }

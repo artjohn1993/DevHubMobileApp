@@ -31,17 +31,20 @@ class PrivateSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListe
         setContentView(R.layout.activity_private_space)
         this.window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
         this.overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left)
-        spinner = this.spinnerView
-        spinnerView.onItemSelectedListener = this
+        spinner = this.privateSchedule
+        privateSchedule.onItemSelectedListener = this
 
         val adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, timepick)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        spinnerView!!.adapter = adapter
+        privateSchedule!!.adapter = adapter
 
-        datePickerButton.setOnClickListener{
+        checkinTimeTextView.visibility = View.GONE
+        checkoutTimeTextView.visibility = View.GONE
+
+        privateDatePickerButton.setOnClickListener{
             checkRoomType()
         }
-        nextButton.setOnClickListener {
+        privateNextButton.setOnClickListener {
             Handler().postDelayed({
                 startActivity<BookingActivity>()
                 finish()
@@ -58,7 +61,7 @@ class PrivateSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListe
     }
 
     fun checkRoomType() {
-        when (spinnerView.selectedItem.toString()) {
+        when (privateSchedule.selectedItem.toString()) {
 
             "Pick a Schedule" -> Toast.makeText(this, "Please identify your length of stay.",Toast.LENGTH_SHORT).show()
             "Hourly" -> timepicker.show(this)
@@ -66,11 +69,20 @@ class PrivateSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListe
             "Week" -> datepicker.show(this, DatePickerType.RANGE)
             else -> datepicker.show(this, DatePickerType.MULTIPLE)
         }
-        when(spinnerView.selectedItem.toString()){
-            "Pick a Schedule" -> datePickerButton.textColor = Color.RED
-            "Day" ->  datePickerButton.textColor = Color.BLACK
-            "Week" -> datePickerButton.textColor = Color.BLACK
-            "Hourly" -> datePickerButton.textColor = Color.BLACK
+        when(privateSchedule.selectedItem.toString()){
+            "Pick a Schedule" -> privateDatePickerButton.textColor = Color.RED
+            "Day" ->  privateDatePickerButton.textColor = Color.BLACK
+            "Week" -> privateDatePickerButton.textColor = Color.BLACK
+            "Hourly" -> privateDatePickerButton.textColor = Color.BLACK
         }
+    }
+    fun showText(){
+        when(privateSchedule.selectedItem.toString()){
+            "Hourly" -> checkinTimeTextView.visibility = View.VISIBLE
+        }
+        when(privateSchedule.selectedItem.toString()){
+            "Hourly" -> checkoutTimeTextView.visibility = View.VISIBLE
+        }
+
     }
 }

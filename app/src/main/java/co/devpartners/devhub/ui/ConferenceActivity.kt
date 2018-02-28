@@ -37,14 +37,14 @@ class ConferenceActivity : AppCompatActivity() {
         supportActionBar?.setDisplayShowHomeEnabled(true)
         val adapterRoomType : ArrayAdapter<String> = ArrayAdapter(this, android.R.layout.simple_list_item_1,roomType)
         val adapterSchedule : ArrayAdapter<String> = ArrayAdapter(this, android.R.layout.simple_list_item_1,schedule)
-        roomTypeSpinner.adapter = adapterRoomType
-        scheduleSpinner.adapter = adapterSchedule
+        roomTypeSpinner1.adapter = adapterRoomType
+        scheduleSpinner1.adapter = adapterSchedule
 
-        datePickerButton.setOnClickListener {
+        datePickerButton1.setOnClickListener {
             checkRoomType()
         }
 
-        conferenceNextButtton.setOnClickListener {
+        conferenceButton1.setOnClickListener {
             Handler().postDelayed({
                 startActivity<BookingActivity>()
                 finish()
@@ -54,16 +54,21 @@ class ConferenceActivity : AppCompatActivity() {
 
     @SuppressLint("ResourceAsColor")
     fun checkRoomType(){
-        when(scheduleSpinner.selectedItem.toString()){
-            "Pick a schedule" -> Toast.makeText(this,"Please pick date schedule or week.",Toast.LENGTH_SHORT).show()
-            "Day" -> datepicker.show(this,DatePickerType.SINGLE)
-            "Week" -> datepicker.show(this,DatePickerType.RANGE)
+        when(scheduleSpinner1.selectedItem.toString()){
+            "Pick a schedule" -> {
+                Toast.makeText(this,"Please pick date schedule or week.", Toast.LENGTH_SHORT).show()
+                datePickerButton1.textColor = Color.RED
+            }
+            "Day" ->{
+                datepicker.show(this,DatePickerType.SINGLE)
+                datePickerButton1.textColor = Color.BLACK
+            }
+            "Week" ->{
+                datepicker.show(this,DatePickerType.RANGE)
+                datePickerButton1.textColor = Color.BLACK
+            }
             else -> datepicker.show(this,DatePickerType.MULTIPLE)
         }
-        when(scheduleSpinner.selectedItem.toString()){
-            "Pick a schedule" -> datePickerButton.textColor = Color.RED
-            "Day" ->  datePickerButton.textColor = Color.BLACK
-            "Week" -> datePickerButton.textColor = Color.BLACK
-        }
+
     }
 }
