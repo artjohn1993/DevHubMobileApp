@@ -10,6 +10,7 @@
     android:id="@+id/scrollViewLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ccd3d3d3"
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
@@ -57,7 +58,14 @@
                 android:textSize="18sp" />
 
         </LinearLayout>
-
+<android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="16dp"
+    app:layout_constraintTop_toBottomOf="@id/headerLayout"
+    >
         <LinearLayout
             android:id="@+id/reserveInfoLayout"
             android:layout_width="match_parent"
@@ -66,6 +74,15 @@
             android:orientation="vertical"
             android:padding="20dp"
             app:layout_constraintTop_toBottomOf="@id/headerLayout">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="#d3d3d3"
+                android:paddingLeft="8dp"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                />
 
             <TextView
                 android:id="@+id/nameReservedText"
@@ -140,7 +157,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
         </LinearLayout>
-
+</android.support.v7.widget.CardView>
     </android.support.constraint.ConstraintLayout>
 
 </ScrollView>
