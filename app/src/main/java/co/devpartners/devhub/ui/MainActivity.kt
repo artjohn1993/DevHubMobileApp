@@ -2,18 +2,11 @@ package co.devpartners.devhub.ui
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.design.widget.BottomNavigationView
-import android.view.MenuItem
 import co.devpartners.devhub.R
-import co.devpartners.devhub.fragments.*
 import com.github.fabtransitionactivity.SheetLayout
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_space_type.*
 import android.content.Intent
 import android.graphics.Color
-import android.support.v7.widget.LinearLayoutManager
-import android.widget.LinearLayout
-import co.devpartners.devhub.api.model.CustomAdapter
 import co.devpartners.devhub.api.model.CustomListAdapter
 import org.jetbrains.anko.startActivity
 
@@ -47,7 +40,7 @@ class MainActivity : AppCompatActivity(),SheetLayout.OnFabAnimationEndListener {
 
 
     override fun onFabAnimationEnd() {
-        val intent = Intent(this, SpaceTypeActivity::class.java)
+        val intent = Intent(this, SpaceServices::class.java)
         startActivityForResult(intent, REQUEST_CODE)
     }
 
