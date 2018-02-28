@@ -11,14 +11,10 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.Toast
 import co.devpartners.devhub.R
-import co.devpartners.devhub.api.events.CheckInTimeDialog
 import co.devpartners.devhub.api.events.CustomDatePickerDialog
 import co.devpartners.devhub.api.model.DatePickerType
 import co.devpartners.devhub.ui.BookingActivity
-import kotlinx.android.synthetic.main.activity_conference.*
 import kotlinx.android.synthetic.main.fragment_conference.*
-import org.jetbrains.anko.startActivity
-import org.jetbrains.anko.support.v4.alert
 import org.jetbrains.anko.support.v4.startActivity
 import org.jetbrains.anko.textColor
 
@@ -31,7 +27,7 @@ class ConferenceFragment : Fragment() {
                               savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_conference, container, false)
        val btn = view.findViewById<Button>(R.id.datePickerButton1)
-        val next = view.findViewById<Button>(R.id.conferenceNextButtton1)
+        val next = view.findViewById<Button>(R.id.viewHolder)
 
 
         btn.setOnClickListener {
