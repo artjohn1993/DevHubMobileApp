@@ -15,16 +15,16 @@ class SpaceServices : AppCompatActivity() {
         setContentView(R.layout.activity_space_services)
         supportActionBar?.hide()
         openSpaceCardView.setOnClickListener {
-            startActivity<OpenSpaceActivity>()
+            startActivity<SpaceTypeActivity>()
         }
         privateSpaceCardView.setOnClickListener {
-            startActivity<PrivateSpaceActivity>()
+            startActivity<SpaceTypeActivity>()
         }
         fixedDeskCardView.setOnClickListener {
             Toast.makeText(this,"no design yet",Toast.LENGTH_SHORT).show()
         }
         conferenceCardView.setOnClickListener {
-            startActivity<ConferenceActivity>()
+            startActivity<SpaceTypeActivity>()
         }
     }
 }
