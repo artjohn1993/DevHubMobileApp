@@ -27,7 +27,7 @@ class ConferenceFragment : Fragment() {
                               savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_conference, container, false)
        val btn = view.findViewById<Button>(R.id.datePickerButton1)
-        val next = view.findViewById<Button>(R.id.viewHolder)
+        val next = view.findViewById<Button>(R.id.conferenceButton1)
 
 
         btn.setOnClickListener {

@@ -1,11 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    >
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
@@ -13,7 +6,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context="co.devpartners.devhub.ui.BookingActivity">
-
+<ScrollView
+    android:id="@+id/scrollViewLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toTopOf="@id/reserveButton"
+    >
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
         <LinearLayout
             android:id="@+id/headerLayout"
             android:layout_width="match_parent"
@@ -54,7 +58,6 @@
 
         </LinearLayout>
 
-
         <LinearLayout
             android:id="@+id/reserveInfoLayout"
             android:layout_width="match_parent"
@@ -78,14 +81,12 @@
                 android:layout_margin="5dp"
                 android:text="Contact Number:" />
 
-
             <TextView
                 android:id="@+id/emailReservedText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:text="Email:" />
-
 
             <TextView
                 android:id="@+id/spaceTypeReservedText"
@@ -94,14 +95,12 @@
                 android:layout_margin="5dp"
                 android:text="Space:" />
 
-
             <TextView
                 android:id="@+id/rateReservedText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:text="Rate:" />
-
 
             <TextView
                 android:id="@+id/numberGuestReservedText"
@@ -110,14 +109,12 @@
                 android:layout_margin="5dp"
                 android:text="Number of Guests:" />
 
-
             <TextView
                 android:id="@+id/periodReservedText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:text="Period:" />
-
 
             <TextView
                 android:id="@+id/billReservedText"
@@ -126,17 +123,27 @@
                 android:layout_margin="5dp"
                 android:text="Bill:" />
 
-
             <TextView
                 android:id="@+id/messageReservedText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:text="Message :" />
-
-
+            <View
+                android:id="@+id/viewContainer"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="16dp"
+                android:background="@android:color/transparent"
+                android:text="Reserve"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
         </LinearLayout>
 
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>
         <Button
             android:id="@+id/reserveButton"
             android:layout_width="match_parent"
@@ -149,8 +156,6 @@
             android:text="Reserve"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/reserveInfoLayout" />
+            app:layout_constraintStart_toStartOf="parent" />
 
     </android.support.constraint.ConstraintLayout>
-    </ScrollView>
