@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<ScrollView
-    android:layout_height="match_parent"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-     >
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -43,7 +43,7 @@
             app:layout_constraintTop_toTopOf="@id/backgroundLayout"
             app:layout_constraintEnd_toEndOf="@id/backgroundLayout"
             app:layout_constraintStart_toStartOf="@id/backgroundLayout"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="15dp"
             />
         <TextView
             android:id="@+id/userNameText"
@@ -53,7 +53,7 @@
             android:textSize="20dp"
             android:textStyle="bold"
             android:textColor="#fff"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="5dp"
             app:layout_constraintTop_toBottomOf="@id/userImage"
             app:layout_constraintEnd_toEndOf="@id/backgroundLayout"
             app:layout_constraintStart_toStartOf="@id/backgroundLayout"
@@ -69,192 +69,66 @@
             app:layout_constraintEnd_toEndOf="@id/backgroundLayout"
             app:layout_constraintStart_toStartOf="@id/backgroundLayout"
             />
+
         <TextView
             android:id="@+id/userNumberText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
             android:text="09103456445"
             android:textColor="#fff"
             android:textSize="14dp"
-            app:layout_constraintTop_toBottomOf="@id/userEmailText"
             app:layout_constraintEnd_toEndOf="@id/backgroundLayout"
             app:layout_constraintStart_toStartOf="@id/backgroundLayout"
-            />
-    </android.support.constraint.ConstraintLayout>
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/statusLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#ccc67c00"
-        app:layout_constraintBottom_toBottomOf="@id/backgroundLayout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:padding="10dp"
-        >
+            app:layout_constraintTop_toBottomOf="@id/userEmailText" />
         <TextView
+            android:id="@+id/userStatus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Reserved"
-            app:layout_constraintTop_toTopOf="@id/statusLayout"
-            app:layout_constraintBottom_toBottomOf="@id/statusLayout"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Pending"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/userNumberText"
             app:layout_constraintStart_toStartOf="parent"
-            android:textColor="#FFF"
-            android:textSize="20dp"
-            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
             />
-
+        <ImageView
+            android:id="@+id/userStatusIcon"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/pending"
+            android:tint="#FFF"
+            android:layout_marginEnd="2dp"
+            app:layout_constraintEnd_toStartOf="@id/userStatus"
+            app:layout_constraintTop_toTopOf="@id/userStatus"
+            app:layout_constraintBottom_toBottomOf="@id/userStatus"
+            />
     </android.support.constraint.ConstraintLayout>
 
-    <TextView
-        android:id="@+id/billInfoText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="#000"
-        android:textSize="16dp"
-        android:text="Billing Information"
-        app:layout_constraintTop_toBottomOf="@id/backgroundImage"
-        app:layout_constraintStart_toStartOf="@id/backgroundImage"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
 
-        />
-
-    <LinearLayout
-        android:id="@+id/billInfoLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:orientation="vertical"
-        android:padding="8dp"
-        app:layout_constraintTop_toBottomOf="@id/billInfoText"
-        app:layout_constraintStart_toStartOf="@id/billInfoText"
-        app:layout_constraintEnd_toEndOf="@id/billInfoText"
-        tools:layout_editor_absoluteX="57dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-
-        >
-
-        <android.support.constraint.ConstraintLayout
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="5dp">
+            app:layout_constraintBottom_toBottomOf="@id/backgroundImage"
+            app:tabSelectedTextColor="#fff"
+            app:tabIndicatorColor="#fff"
+            android:background="#ccc67c00"
+            />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Space Type:"
-                android:textSize="16sp"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Open Space"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:textSize="16sp"
-                />
-        </android.support.constraint.ConstraintLayout>
-        <android.support.constraint.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="5dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Rate:"
-                app:layout_constraintStart_toStartOf="parent"
-                android:textSize="16sp"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="₱ 100.00"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:textSize="16sp"
-                />
-        </android.support.constraint.ConstraintLayout>
-        <android.support.constraint.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="5dp">
+    <android.support.v4.view.ViewPager
+        android:id="@+id/containerFeedback"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/tabs"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="#F0F0F0">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="No. of Guests:"
-                android:textSize="16sp"
-                 />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="30"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:textSize="16sp"
-                />
-        </android.support.constraint.ConstraintLayout>
-        <android.support.constraint.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="5dp"
-            >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:text="From:"
-                app:layout_constraintStart_toStartOf="parent"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Jan 25, 2018"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:textSize="16sp"
-                />
-        </android.support.constraint.ConstraintLayout>
-        <android.support.constraint.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="5dp"
-            >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:text="To:"
-                app:layout_constraintStart_toStartOf="parent"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Feb 25, 2018"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:textSize="16sp"
-                />
-        </android.support.constraint.ConstraintLayout>
-        <android.support.constraint.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="5dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:text="Bill :"
-                app:layout_constraintStart_toStartOf="parent"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="₱ 2000.00"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:textSize="16sp"
-                android:textColor="@color/colorPrimaryDark"
-                />
-        </android.support.constraint.ConstraintLayout>
+    </android.support.v4.view.ViewPager>
 
-    </LinearLayout>
+
 
 
 
