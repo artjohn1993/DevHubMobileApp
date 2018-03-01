@@ -18,9 +18,10 @@
             <android.support.v7.widget.CardView
                 android:id="@+id/openSpaceCardView"
                 android:clickable="true"
+                android:stateListAnimator="@anim/cardview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                >
+                tools:targetApi="lollipop">
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="180dp"
@@ -33,7 +34,8 @@
 
                 <RatingBar
                     android:rating="4"
-                    android:style="@style/Base.Widget.AppCompat.RatingBar.Small"
+                    style="@style/Base.Widget.AppCompat.RatingBar.Small"
+                    android:layout_marginStart="8dp"
                     android:stepSize="1.5"
                     android:numStars="5"
                     android:progressTint="@color/colorPrimary"
@@ -67,7 +69,8 @@
 
                 <RatingBar
                     android:rating="4"
-                    android:style="@style/Base.Widget.AppCompat.RatingBar.Small"
+                    style="@style/Base.Widget.AppCompat.RatingBar.Small"
+                    android:layout_marginStart="8dp"
                     android:stepSize="0.5"
                     android:numStars="5"
                     android:progressTint="@color/colorPrimary"
@@ -100,18 +103,21 @@
                     android:background="@color/colorBgTransparent"/>
 
                 <RatingBar
+                    android:layout_gravity="bottom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
                     android:rating="5"
-                    android:style="@style/Base.Widget.AppCompat.RatingBar.Small"
+                    style="@style/Base.Widget.AppCompat.RatingBar.Small"
                     android:stepSize="0.5"
                     android:numStars="5"
                     android:progressTint="@color/colorPrimary"
-                    android:layout_gravity="bottom"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
                     android:gravity="center"
                     android:text="Fixed Desk"
                     android:textColor="@color/colorTextTransparent"
@@ -134,14 +140,16 @@
                     android:background="@color/colorBgTransparent"/>
 
                 <RatingBar
+                    android:layout_gravity="bottom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
                     android:rating="5"
-                    android:style="@style/Base.Widget.AppCompat.RatingBar.Small"
+                    style="@style/Base.Widget.AppCompat.RatingBar.Small"
                     android:stepSize="0.5"
                     android:numStars="5"
                     android:progressTint="@color/colorPrimary"
-                    android:layout_gravity="bottom"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    />
 
                 <TextView
                     android:layout_width="match_parent"
