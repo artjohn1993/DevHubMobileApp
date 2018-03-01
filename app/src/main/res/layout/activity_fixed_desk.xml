@@ -146,23 +146,33 @@
                     />
             </android.support.design.widget.TextInputLayout>
 
-            <Button
-                android:id="@+id/fixedDeskNextButton"
+            <View
+                android:id="@+id/viewContainer"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
+                android:layout_height="80dp"
                 android:layout_marginBottom="16dp"
+                android:layout_marginEnd="16dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/ripple_effect"
-                android:text="next"
-                android:theme="@style/EditTextThemeDark"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                android:background="@android:color/transparent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
         </LinearLayout>
     </ScrollView>
-
+    <Button
+        android:id="@+id/fixedDeskNextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ripple_effect"
+        android:text="next"
+        android:theme="@style/EditTextThemeDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 
 </android.support.constraint.ConstraintLayout>
