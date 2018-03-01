@@ -31,8 +31,7 @@
                 android:layout_marginTop="16dp"
                 android:tint="@color/colorPrimary"
                 android:src="@drawable/openlogo"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+               />
 
             <TextView
                 android:id="@+id/openSpaceText"
@@ -43,9 +42,7 @@
                 android:textColor="@android:color/black"
                 android:textSize="20dp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="@id/openSpaceLogo"
-                app:layout_constraintStart_toStartOf="@id/openSpaceLogo"
-                app:layout_constraintTop_toBottomOf="@id/openSpaceLogo" />
+                 />
 
             <RelativeLayout
                 android:id="@+id/spinnerLayout"
@@ -55,9 +52,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:background="#d3d3d3"
-                app:layout_constraintTop_toBottomOf="@id/openSpaceText"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent">
+                >
                 <Spinner
                     android:id="@+id/fixedDeskDateSpinnerSchedule"
                     android:layout_width="match_parent"
@@ -81,12 +76,10 @@
                 android:layout_height="wrap_content"
                 android:textAllCaps="false"
                 android:textAlignment="textStart"
-                android:paddingLeft="dp"
+                android:paddingLeft="8dp"
                 android:text="Pick Schedule"
                 android:textColor="@android:color/black"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/spinnerLayout"
+
                 />
 
             <TextView
@@ -99,9 +92,7 @@
                 android:text="Check-in Time: 12:13 am"
                 android:textColor="@android:color/black"
                 android:textAllCaps="false"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/fixedDeskDatePickerButton" />
+               />
 
             <TextView
                 android:id="@+id/checkoutTimeTextView"
@@ -113,9 +104,7 @@
                 android:text="Check-out Time: 12:13 pm"
                 android:textAllCaps="false"
                 android:textColor="@android:color/black"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/checkinTimeTextView" />
+                 />
 
 
             <android.support.design.widget.TextInputLayout
@@ -126,12 +115,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:hint="Your Message:"
-                app:layout_constraintBottom_toTopOf="@id/fixedDeskNextButton"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/checkoutTimeTextView"
-                app:layout_constraintVertical_bias="0.0">
+                >
 
                 <EditText
                     android:id="@+id/openMessageEditText"
@@ -143,31 +127,19 @@
                     android:scrollHorizontally="false"
                  />
             </android.support.design.widget.TextInputLayout>
-
-            <View
-                android:id="@+id/viewContainer"
+            <Button
+                android:id="@+id/fixedDeskNextButton"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginStart="16dp"
-                android:background="@android:color/transparent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                android:background="@drawable/ripple_effect"
+                android:text="next"
+                />
+
         </LinearLayout>
     </ScrollView>
 
-    <Button
-        android:id="@+id/fixedDeskNextButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:background="@drawable/ripple_effect"
-        android:text="next"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+
 </android.support.constraint.ConstraintLayout>
