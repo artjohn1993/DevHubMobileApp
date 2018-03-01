@@ -66,8 +66,7 @@
                     app:layout_constraintLeft_toLeftOf="parent"
                     tools:textAlignment="textStart"
                     android:entries="@array/schedule2"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+
                     />
             </RelativeLayout>
 
@@ -81,8 +80,8 @@
                 android:layout_marginEnd="16dp"
                 android:layout_height="wrap_content"
                 android:textAllCaps="false"
-                android:padding="10dp"
                 android:textAlignment="textStart"
+                android:paddingLeft="7dp"
                 android:text="Pick Schedule"
                 android:textColor="@android:color/black"
                 app:layout_constraintStart_toStartOf="parent"
@@ -97,7 +96,6 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                android:padding="10dp"
                 android:text="Check-in Time: 12:13 am"
                 android:textColor="@android:color/black"
                 android:textAllCaps="false"
@@ -113,7 +111,6 @@
                 android:layout_marginEnd="16dp"
                 android:layout_marginStart="16dp"
                 android:text="Check-out Time: 12:13 pm"
-                android:padding="10dp"
                 android:textAllCaps="false"
                 android:textColor="@android:color/black"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -147,30 +144,22 @@
                  />
             </android.support.design.widget.TextInputLayout>
 
-            <View
-                android:id="@+id/viewContainer"
+            <Button
+                android:id="@+id/fixedDeskNextButton"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginStart="16dp"
-                android:background="@android:color/transparent"
+                android:background="@drawable/ripple_effect"
+                android:text="next"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
+
         </LinearLayout>
     </ScrollView>
 
-    <Button
-        android:id="@+id/fixedDeskNextButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:background="@drawable/ripple_effect"
-        android:text="next"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+
 </android.support.constraint.ConstraintLayout>

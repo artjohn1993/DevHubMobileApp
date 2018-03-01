@@ -63,8 +63,7 @@
                     app:layout_constraintLeft_toLeftOf="parent"
                     tools:textAlignment="textStart"
                     android:entries="@array/schedule2"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+
                     />
             </RelativeLayout>
 
@@ -77,7 +76,6 @@
                 android:layout_marginEnd="16dp"
                 android:layout_height="wrap_content"
                 android:textAllCaps="false"
-                android:padding="10dp"
                 android:textAlignment="textStart"
                 android:text="Pick Schedule"
                 android:textColor="@android:color/black"
@@ -145,31 +143,21 @@
 
             </android.support.design.widget.TextInputLayout>
             <Button
-                android:id="@+id/viewContainer"
+                android:id="@+id/privateNextButton"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginStart="16dp"
-                android:background="@android:color/transparent"
+                android:layout_gravity="bottom|center"
+                android:background="@drawable/ripple_effect"
+                android:text="next"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"/>
+                app:layout_constraintStart_toStartOf="parent" />
+
         </LinearLayout>
     </ScrollView>
-    <Button
-        android:id="@+id/privateNextButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_gravity="bottom|center"
-        android:background="@drawable/ripple_effect"
-        android:text="next"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

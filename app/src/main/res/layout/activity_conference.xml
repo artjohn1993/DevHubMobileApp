@@ -70,8 +70,6 @@
                     app:layout_constraintLeft_toLeftOf="parent"
                     tools:textAlignment="textStart"
                     android:entries="@array/roomType"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
                     />
             </RelativeLayout>
 
@@ -120,12 +118,11 @@
                     android:layout_height="wrap_content"
                     android:spinnerMode="dialog"
                     android:entries="@array/schedule"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
                     />
             </RelativeLayout>
             <Button
                 android:id="@+id/datePickerButton1"
+                android:clickable="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -135,7 +132,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/scheduleSpinnerContainer"
                 android:text="Open Calendar"
-                android:padding="10dp"
+                android:paddingLeft="5dp"
                 android:textAlignment="textStart"
                 android:background="#d3d3d3"
                 />
@@ -169,32 +166,24 @@
 
             </android.support.design.widget.TextInputLayout>
 
-            <View
-                android:id="@+id/viewContainer"
+            <Button
+                android:id="@+id/conferenceButton1"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginStart="16dp"
-                android:background="@android:color/transparent"
+                android:background="@drawable/ripple_effect"
+                android:text="Next"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
+
         </LinearLayout>
     </ScrollView>
 
-    <Button
-        android:id="@+id/conferenceButton1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:background="@drawable/ripple_effect"
-        android:text="Next"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+
 
 
 </android.support.constraint.ConstraintLayout>
