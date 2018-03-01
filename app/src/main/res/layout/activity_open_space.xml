@@ -13,7 +13,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/fixedDeskNextButton"
+        app:layout_constraintBottom_toBottomOf="parent"
         >
         <LinearLayout
             android:id="@+id/linearLayout"
@@ -170,7 +170,6 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/ripple_effect"
         android:text="next"
-        android:theme="@style/EditTextThemeDark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
