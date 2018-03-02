@@ -59,8 +59,7 @@ class BookingActivity : AppCompatActivity() {
         reservedSucces()
     }
     @SuppressLint("WrongConstant")
-    fun reservedSucces(){
-//        confirm.show(this)
+    fun reservedSucces() {
         alert {
             title = "Are you sure you want to be book in this space?"
             positiveButton("Confirm") {
@@ -69,6 +68,17 @@ class BookingActivity : AppCompatActivity() {
             negativeButton("Go back") { }
         }.show()
     }
+    fun backToMain(){
+    startActivity<MainActivity>()
+    Toast.makeText(this,"Reserved Successful!", Toast.LENGTH_LONG).show()
+    finish()
+    }
+}
+
+
+
+
+
 //    fun showSuccess(){
 //        val snackbar : Snackbar = Snackbar.make(findViewById(android.R.id.content),"Reserved",Snackbar.LENGTH_LONG)
 //        snackbar.setAction(R.string.confirm_summary,View.OnClickListener { backToMain() })
@@ -76,9 +86,3 @@ class BookingActivity : AppCompatActivity() {
 //        snackView.setBackgroundColor(this.resources.getColor(R.color.colorSuccess))
 //        snackbar.show()
 //    }
-    fun backToMain(){
-    startActivity<MainActivity>()
-    Toast.makeText(this,"Reserved Successful!", Toast.LENGTH_LONG).show()
-    finish()
-    }
-}

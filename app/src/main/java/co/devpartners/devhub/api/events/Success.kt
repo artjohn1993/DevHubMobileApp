@@ -6,6 +6,8 @@ import android.os.Handler
 import android.support.v7.app.AppCompatActivity
 import android.view.Window
 import co.devpartners.devhub.R
+import co.devpartners.devhub.ui.MainActivity
+import org.jetbrains.anko.startActivity
 
 
 /**
@@ -23,6 +25,7 @@ class Success: AppCompatActivity() {
 
         Handler().postDelayed({
             dialog.hide()
+            startActivity<MainActivity>()
             finish()
         }, 2500)
     }
