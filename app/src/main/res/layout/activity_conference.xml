@@ -70,28 +70,7 @@
             </RelativeLayout>
 
 
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/numberPersonEditTextLayout"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:hint="Number of Person:"
-                android:layout_marginBottom="8dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                >
 
-                <EditText
-                    android:id="@+id/numberPersonEdit"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="top|left"
-                    android:focusedByDefault="false"
-                    android:inputType="number"
-                    android:lines="4"
-                    android:layout_marginStart="8dp"
-                    android:scrollHorizontally="false" />
-            </android.support.design.widget.TextInputLayout>
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -124,7 +103,28 @@
                 android:textAlignment="textStart"
                 android:background="#d3d3d3"
                 />
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/numberPersonEditTextLayout"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:hint="Number of Person:"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                >
 
+                <EditText
+                    android:id="@+id/numberPersonEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top|left"
+                    android:focusedByDefault="false"
+                    android:inputType="number"
+                    android:lines="4"
+                    android:layout_marginStart="8dp"
+                    android:scrollHorizontally="false" />
+            </android.support.design.widget.TextInputLayout>
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/messageEditTextLayout"
                 android:layout_width="match_parent"
