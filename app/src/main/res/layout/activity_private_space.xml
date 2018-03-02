@@ -59,7 +59,6 @@
                     app:layout_constraintLeft_toLeftOf="parent"
                     tools:textAlignment="textStart"
                     android:entries="@array/schedule2"
-
                     />
             </RelativeLayout>
 

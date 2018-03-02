@@ -63,7 +63,7 @@
                     />
             </RelativeLayout>
 
-            <TextView
+            <Button
                 android:id="@+id/fixedDeskDatePickerButton"
                 android:clickable="true"
                 android:layout_width="match_parent"
