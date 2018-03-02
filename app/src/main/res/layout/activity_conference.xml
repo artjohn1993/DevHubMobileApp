@@ -13,6 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
+        android:isScrollContainer="false"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -119,7 +120,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
                 android:text="Open Calendar"
-                android:paddingLeft="5dp"
+                android:paddingLeft="8dp"
                 android:textAlignment="textStart"
                 android:background="#d3d3d3"
                 />

@@ -35,17 +35,23 @@
         </activity>
         <activity
             android:name=".ui.OpenSpaceActivity"
+            android:windowSoftInputMode="adjustPan"
             android:launchMode="singleTop">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.SpaceServices" />
         </activity>
-        <activity android:name=".ui.ConferenceActivity">
+        <activity android:name=".ui.ConferenceActivity"
+                  android:windowSoftInputMode="adjustPan"
+            >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.SpaceServices" />
         </activity>
-        <activity android:name=".ui.PrivateSpaceActivity">
+        <activity
+            android:name=".ui.PrivateSpaceActivity"
+            android:windowSoftInputMode="adjustPan"
+            >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.SpaceServices" />

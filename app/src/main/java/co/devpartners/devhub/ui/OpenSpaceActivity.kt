@@ -5,7 +5,10 @@ import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.view.MotionEvent
 import android.view.View
+import android.view.View.GONE
+import android.view.View.VISIBLE
 import android.view.WindowManager
 import android.widget.*
 import co.devpartners.devhub.R
@@ -40,12 +43,18 @@ class OpenSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener
         checkinTimeTextView.visibility = View.GONE
         checkoutTimeTextView.visibility = View.GONE
 
+//        if(openMessageEditText.hasFocusable() == true){
+//            openNextButton.visibility = GONE
+//        }else{
+//            openNextButton.visibility = VISIBLE
+//        }
+
         fixedDeskDatePickerButton.setOnClickListener{
             checkRoomType()
             showtext()
 
         }
-        fixedDeskNextButton.setOnClickListener {
+        openNextButton.setOnClickListener {
             Handler().postDelayed({
                 startActivity<BookingActivity>()
                 finish()
