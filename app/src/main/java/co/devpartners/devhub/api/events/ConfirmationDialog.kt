@@ -25,7 +25,7 @@ class ConfirmationDialog: AppCompatActivity(){
         back = dialog.findViewById(R.id.backButton)
         confirm = dialog.findViewById(R.id.continueButton)
 
-ssda
+
         back.setOnClickListener {
             dialog.hide()
 
