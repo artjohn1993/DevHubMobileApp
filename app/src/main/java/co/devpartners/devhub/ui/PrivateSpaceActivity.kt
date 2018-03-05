@@ -64,14 +64,14 @@ class PrivateSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListe
     fun checkRoomType() {
         when (privateSchedule.selectedItem.toString()) {
 
-            "Pick a Schedule" -> Toast.makeText(this, "Please identify your length of stay.",Toast.LENGTH_SHORT).show()
+            "Length of Stay" -> Toast.makeText(this, "Please identify your length of stay.",Toast.LENGTH_SHORT).show()
             "Hourly" -> timepicker.show(this)
             "Day" -> datepicker.show(this, DatePickerType.SINGLE)
             "Week" -> datepicker.show(this, DatePickerType.RANGE)
             else -> datepicker.show(this, DatePickerType.MULTIPLE)
         }
         when(privateSchedule.selectedItem.toString()){
-            "Pick a Schedule" -> privateDatePickerButton.textColor = Color.RED
+            "Length of Stay" -> privateDatePickerButton.textColor = Color.RED
             "Day" ->  privateDatePickerButton.textColor = Color.BLACK
             "Week" -> privateDatePickerButton.textColor = Color.BLACK
             "Hourly" -> privateDatePickerButton.textColor = Color.BLACK

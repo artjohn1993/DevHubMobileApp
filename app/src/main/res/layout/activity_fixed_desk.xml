@@ -53,7 +53,7 @@
                 android:background="#d3d3d3"
                >
                 <Spinner
-                    android:id="@+id/fixedDeskDateSpinnerSchedule"
+                    android:id="@+id/openSpaceDateSpinnerSchedule"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:spinnerMode="dialog"
@@ -64,7 +64,7 @@
             </RelativeLayout>
 
             <Button
-                android:id="@+id/fixedDeskDatePickerButton"
+                android:id="@+id/openSpaceDatePickerButton"
                 android:clickable="true"
                 android:layout_width="match_parent"
                 android:background="#d3d3d3"

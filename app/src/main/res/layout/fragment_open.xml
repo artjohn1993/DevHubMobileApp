@@ -59,7 +59,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent">
         <Spinner
-            android:id="@+id/fixedDeskDateSpinnerSchedule"
+            android:id="@+id/openSpaceDateSpinnerSchedule"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:spinnerMode="dialog"
@@ -72,7 +72,7 @@
     </RelativeLayout>
 
     <TextView
-        android:id="@+id/fixedDeskDatePickerButton"
+        android:id="@+id/openSpaceDatePickerButton"
         android:clickable="true"
         android:layout_width="match_parent"
         android:background="#d3d3d3"
@@ -103,7 +103,7 @@
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/fixedDeskDatePickerButton" />
+        app:layout_constraintTop_toBottomOf="@id/openSpaceDatePickerButton" />
 
     <TextView
         android:id="@+id/checkoutTimeTextView"

@@ -30,17 +30,17 @@ class FixedDeskActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener
         setContentView(R.layout.activity_fixed_desk)
         this.window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
         this.overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left)
-        spinner = this.fixedDeskDateSpinnerSchedule
-        fixedDeskDateSpinnerSchedule.onItemSelectedListener = this
+        spinner = this.openSpaceDateSpinnerSchedule
+        openSpaceDateSpinnerSchedule.onItemSelectedListener = this
 
         val adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, timepick)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        fixedDeskDateSpinnerSchedule!!.adapter = adapter
+        openSpaceDateSpinnerSchedule!!.adapter = adapter
 
         checkinTimeTextView.visibility = View.GONE
         checkoutTimeTextView.visibility = View.GONE
 
-        fixedDeskDatePickerButton.setOnClickListener{
+        openSpaceDatePickerButton.setOnClickListener{
             checkRoomType()
             showtext()
 
@@ -58,25 +58,25 @@ class FixedDeskActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener
 
     }
     fun checkRoomType() {
-        when (fixedDeskDateSpinnerSchedule.selectedItem.toString()) {
+        when (openSpaceDateSpinnerSchedule.selectedItem.toString()) {
             "Length of Stay" -> Toast.makeText(this, "Please identify your length of stay.", Toast.LENGTH_SHORT).show()
             "Hourly" -> timepicker.show(this)
             "Day" -> datepicker.show(this, DatePickerType.SINGLE)
             "Week" -> datepicker.show(this, DatePickerType.RANGE)
             else -> datepicker.show(this, DatePickerType.MULTIPLE)
         }
-        when(fixedDeskDateSpinnerSchedule.selectedItem.toString()){
-            "Length of Stay" -> fixedDeskDatePickerButton.textColor = Color.RED
-            "Day" ->  fixedDeskDatePickerButton.textColor = Color.BLACK
-            "Week" -> fixedDeskDatePickerButton.textColor = Color.BLACK
-            "Hourly" -> fixedDeskDatePickerButton.textColor = Color.BLACK
+        when(openSpaceDateSpinnerSchedule.selectedItem.toString()){
+            "Length of Stay" -> openSpaceDatePickerButton.textColor = Color.RED
+            "Day" ->  openSpaceDatePickerButton.textColor = Color.BLACK
+            "Week" -> openSpaceDatePickerButton.textColor = Color.BLACK
+            "Hourly" -> openSpaceDatePickerButton.textColor = Color.BLACK
         }
     }
     fun showtext() {
-        when (fixedDeskDateSpinnerSchedule.selectedItem.toString()) {
+        when (openSpaceDateSpinnerSchedule.selectedItem.toString()) {
             "Hourly" -> checkinTimeTextView.visibility = View.VISIBLE
         }
-        when (fixedDeskDateSpinnerSchedule.selectedItem.toString()) {
+        when (openSpaceDateSpinnerSchedule.selectedItem.toString()) {
             "Hourly" -> checkoutTimeTextView.visibility = View.VISIBLE
         }
     }
