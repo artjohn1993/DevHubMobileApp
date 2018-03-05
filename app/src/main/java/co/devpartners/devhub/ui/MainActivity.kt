@@ -7,8 +7,10 @@ import com.github.fabtransitionactivity.SheetLayout
 import kotlinx.android.synthetic.main.activity_main.*
 import android.content.Intent
 import android.graphics.Color
+import android.support.v4.content.ContextCompat
 import co.devpartners.devhub.api.model.CustomListAdapter
 import org.jetbrains.anko.startActivity
+import org.jetbrains.anko.toolbar
 
 
 class MainActivity : AppCompatActivity(),SheetLayout.OnFabAnimationEndListener {
@@ -19,8 +21,7 @@ class MainActivity : AppCompatActivity(),SheetLayout.OnFabAnimationEndListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-//        mainRecycleView.layoutManager = LinearLayoutManager(this)
-//        mainRecycleView.adapter = CustomAdapter()
+
 
         mainListView.adapter = CustomListAdapter(this)
         mainListView.setOnItemClickListener { adapterView, view, i, l ->
