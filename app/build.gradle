@@ -48,5 +48,6 @@ dependencies {
     compile 'com.fujiyuu75:sequent:0.2.1'   
     compile 'com.github.BaselHorany:DualButton:1.1.1'
     compile 'com.github.coyarzun89:fabtransitionactivity:0.2.0'
+    compile 'com.gdacciaro:iosdialog:1.0.3'
 
 }

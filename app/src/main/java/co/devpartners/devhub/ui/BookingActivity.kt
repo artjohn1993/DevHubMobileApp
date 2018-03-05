@@ -17,6 +17,12 @@ import co.devpartners.devhub.api.events.ConfirmationDialog
 import kotlinx.android.synthetic.main.activity_booking.*
 import org.jetbrains.anko.*
 import kotlin.system.exitProcess
+import com.gdacciaro.iOSDialog.iOSDialog
+import com.gdacciaro.iOSDialog.iOSDialogClickListener
+import android.R.string.ok
+import com.gdacciaro.iOSDialog.iOSDialogBuilder
+
+
 
 class BookingActivity : AppCompatActivity() {
 
@@ -60,13 +66,30 @@ class BookingActivity : AppCompatActivity() {
     }
     @SuppressLint("WrongConstant")
     fun reservedSucces() {
-        alert {
-            title = "Are you sure you want to be book in this space?"
-            positiveButton("Confirm") {
-                backToMain()
-            }
-            negativeButton("Go back") { }
-        }.show()
+        iOSDialogBuilder(this@BookingActivity)
+                .setTitle("Booking Confirmation")
+                .setSubtitle("Are you sure you want to be book in this space?")
+                .setBoldPositiveLabel(true)
+                .setCancelable(true)
+                .setPositiveListener("CONFIRM") { dialog ->
+                    dialog.dismiss()
+                    startActivity<MainActivity>()
+                    finish()
+                    Toast.makeText(this@BookingActivity, "Reserved Successful!", Toast.LENGTH_LONG).show()
+                }
+                .setNegativeListener("GO BACK") { dialog ->
+                    dialog.dismiss() }
+                .build().show()
+
+
+
+//        alert {
+//            title = "Are you sure you want to be book in this space?"
+//            positiveButton("Confirm") {
+//                backToMain()
+//            }
+//            negativeButton("Go back") { }
+//        }.show()
     }
     fun backToMain(){
     startActivity<MainActivity>()
