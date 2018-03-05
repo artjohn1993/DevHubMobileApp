@@ -1,5 +1,6 @@
 package co.devpartners.devhub.api
 
+import co.devpartners.devhub.api.model.DevHubResponse
 import co.devpartners.devhub.api.service.DevHubBookingServices
 import retrofit2.Call
 import retrofit2.Retrofit
@@ -21,8 +22,8 @@ class DevHubApi {
 
         devhubService = retrofit.create(DevHubBookingServices::class.java)
     }
-//    fun getBooking() : Call<DevHubBookingServices> {
-//        return devhubService.getUsers(DevHubApi)
-//    }
+    fun getUser() : Call<DevHubResponse> {
+        return devhubService.getUsers("")
+    }
 
 }
