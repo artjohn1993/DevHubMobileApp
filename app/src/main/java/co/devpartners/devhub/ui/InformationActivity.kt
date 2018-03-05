@@ -4,11 +4,10 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.view.ViewPager
 import co.devpartners.devhub.R
-import co.devpartners.devhub.api.model.FeedbackPageAdapter
+import co.devpartners.devhub.api.model.Adapter.FeedbackPageAdapter
 import co.devpartners.devhub.fragments.BillingFragment
 import co.devpartners.devhub.fragments.FeedbackFragment
 import kotlinx.android.synthetic.main.activity_information.*
-import org.jetbrains.anko.wrapContent
 
 
 class InformationActivity : AppCompatActivity() {

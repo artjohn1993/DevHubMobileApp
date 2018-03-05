@@ -1,4 +1,4 @@
-package co.devpartners.devhub.api.model
+package co.devpartners.devhub.api.model.Adapter
 
 import android.content.Context
 import android.graphics.Color
