@@ -49,7 +49,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:gravity="center"
-                    android:text="Open Space"
+                    android:text="Virtual Office"
                     android:textColor="@color/colorTextTransparent"
                     android:textSize="25sp" />
             </android.support.v7.widget.CardView>
@@ -85,7 +85,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:gravity="center"
-                    android:text="Private Space"
+                    android:text="Walk-in Coworking"
                     android:textColor="@color/colorTextTransparent"
                     android:textSize="25sp" />
             </android.support.v7.widget.CardView>
@@ -159,6 +159,42 @@
                     android:layout_gravity="center_vertical"
                     android:gravity="center"
                     android:text="Conference Room"
+                    android:textColor="@color/colorTextTransparent"
+                    android:textSize="25sp" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/meetingRoomCardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:background="@drawable/room" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:background="@color/colorBgTransparent" />
+
+                <RatingBar
+                    style="@style/Base.Widget.AppCompat.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="8dp"
+                    android:numStars="5"
+                    android:theme="@style/RatingBar"
+                    android:rating="5"
+                    android:stepSize="0.5" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:text="Meeting Room"
                     android:textColor="@color/colorTextTransparent"
                     android:textSize="25sp" />
             </android.support.v7.widget.CardView>

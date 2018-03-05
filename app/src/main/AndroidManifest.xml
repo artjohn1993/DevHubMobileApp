@@ -48,6 +48,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.SpaceServices" />
         </activity>
+
+        <activity android:name=".ui.MeetingActivity"
+            android:windowSoftInputMode="adjustPan"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.SpaceServices" />
+        </activity>
+
         <activity
             android:name=".ui.PrivateSpaceActivity"
             android:windowSoftInputMode="adjustPan"

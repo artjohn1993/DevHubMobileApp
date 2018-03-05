@@ -30,7 +30,7 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
-                android:src="@drawable/conferencenew"
+                android:src="@drawable/meetinglogo"
 
 
                 />
@@ -40,7 +40,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Conference Room"
+                android:text="Meeting Room"
                 android:textSize="20dp"
                 android:textStyle="bold"
                 android:layout_marginTop="8dp"

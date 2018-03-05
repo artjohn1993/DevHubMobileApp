@@ -26,5 +26,8 @@ class SpaceServices : AppCompatActivity() {
         conferenceCardView.setOnClickListener {
             startActivity<ConferenceActivity>()
         }
+        meetingRoomCardView.setOnClickListener {
+            startActivity<MeetingActivity>()
+        }
     }
 }
