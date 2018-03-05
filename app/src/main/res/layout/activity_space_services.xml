@@ -171,7 +171,7 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="180dp"
-                    android:background="@drawable/room" />
+                    android:background="@drawable/officessss" />
 
                 <View
                     android:layout_width="match_parent"
