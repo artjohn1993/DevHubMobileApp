@@ -8,8 +8,19 @@
     <string name="title_activity_devhub_space">DevhubSpaceActivity</string>
     <string name="title_activity_user_booking">UserBookingActivity</string>
 
-    <!---->
+    <!--info sampler-->
 
+    <string name="name_sampler">"John Doe Alaska"</string>
+    <string name="email_sampler">"johndoe@gmail.com"</string>
+    <string name="contact_sampler">"09221122333"</string>
+    <string name="space_type_sampler">"Conference</string>
+    <string name="rate_sampler">3/hrs</string>
+    <string name="message_title_sampler">sige sige maglibang., kalimutan mo na yan</string>
+    <string name="period_sampler">Check-in Time</string>
+    <string name="guest_number_sampler">14</string>
+
+
+    <!---->
     <string name="booknow">"Book Now!</string>
     <string name="firstname_hint">"Firstname"</string>
     <string name="lastname_hint">"Lastname"</string>

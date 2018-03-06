@@ -20,19 +20,18 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             />
-
         <android.support.constraint.ConstraintLayout
             android:id="@+id/commentLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:background="#fff"
             app:layout_constraintBottom_toBottomOf="parent">
             <Button
                 android:id="@+id/post"
-                android:layout_width="50dp"
+                android:layout_width="80dp"
                 android:layout_height="40dp"
-                android:text="Post"
+                android:text="send"
+                android:backgroundTint="@color/colorPrimary"
                 android:textSize="8sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:textAlignment="center"/>
@@ -43,11 +42,8 @@
                 app:layout_constraintStart_toStartOf="parent"
                 android:lines="1"
                 android:hint="Write your feedback"
-
                 />
         </android.support.constraint.ConstraintLayout>
-
-
     </android.support.constraint.ConstraintLayout>
 
 </FrameLayout>

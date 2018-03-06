@@ -36,26 +36,26 @@ class BookingActivity : AppCompatActivity() {
 
         val intentObject = intent
 
-        val firstname = intentObject.getStringExtra("FIRSTNAME")
-        val lastname = intentObject.getStringExtra("LASTNAME")
-        val emailadd = intentObject.getStringExtra("EMAIL")
-        val contact = intentObject.getStringExtra("CONTACT")
-        val spaceType = intentObject.getStringExtra("SPACE")
-        val rate = intentObject.getStringExtra("RATE")
-        val guests = intentObject.getStringExtra("GUESTS")
-        val period = intentObject.getStringExtra("PERIOD")
-        val bill = intentObject.getStringExtra("BILL")
-        val message = intentObject.getStringExtra("MESSAGE")
+//        val firstname = intentObject.getStringExtra("FIRSTNAME")
+//        val lastname = intentObject.getStringExtra("LASTNAME")
+//        val emailadd = intentObject.getStringExtra("EMAIL")
+//        val contact = intentObject.getStringExtra("CONTACT")
+//        val spaceType = intentObject.getStringExtra("SPACE")
+//        val rate = intentObject.getStringExtra("RATE")
+//        val guests = intentObject.getStringExtra("GUESTS")
+//        val period = intentObject.getStringExtra("PERIOD")
+//        val bill = intentObject.getStringExtra("BILL")
+//        val message = intentObject.getStringExtra("MESSAGE")
 
-        nameReservedText.text = "Name : $firstname $lastname"
-        numberReservedText.text = "Contact Number : $contact"
-        emailReservedText.text = "Email : $emailadd"
-        spaceTypeReservedText.text = "Space : $spaceType"
-        rateReservedText.text = "Rate : $rate"
-        numberGuestReservedText.text = "Number of Guests: $guests"
-        periodReservedText.text = "Period : $period"
-        billReservedText.text = "Bill : $bill"
-        messageReservedText.text = "Message : $message"
+//        nameReservedText.text = "Name : $firstname $lastname"
+//        numberReservedText.text = "Contact Number : $contact"
+//        emailReservedText.text = "Email : $emailadd"
+//        spaceTypeReservedText.text = "Space : $spaceType"
+//        rateReservedText.text = "Rate : $rate"
+//        numberGuestReservedText.text = "Number of Guests: $guests"
+//        periodReservedText.text = "Period : $period"
+//        billReservedText.text = "Bill : $bill"
+//        messageReservedText.text = "Message : $message"
 
         reserveButton.setOnClickListener {
             confirmDialog()
@@ -80,8 +80,6 @@ class BookingActivity : AppCompatActivity() {
                 .setNegativeListener("GO BACK") { dialog ->
                     dialog.dismiss() }
                 .build().show()
-
-
 
 //        alert {
 //            title = "Are you sure you want to be book in this space?"
