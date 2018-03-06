@@ -26,7 +26,7 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="180dp"
-                    android:background="@drawable/office" />
+                    android:background="@drawable/opeen" />
 
                 <View
                     android:layout_width="match_parent"
@@ -62,7 +62,7 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="180dp"
-                    android:background="@drawable/officesss" />
+                    android:background="@drawable/opin" />
 
                 <View
                     android:layout_width="match_parent"
@@ -98,7 +98,7 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="180dp"
-                    android:background="@drawable/offices" />
+                    android:background="@drawable/deski" />
 
                 <View
                     android:layout_width="match_parent"
@@ -135,7 +135,7 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="180dp"
-                    android:background="@drawable/room" />
+                    android:background="@drawable/confe" />
 
                 <View
                     android:layout_width="match_parent"
@@ -171,7 +171,7 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="180dp"
-                    android:background="@drawable/officessss" />
+                    android:background="@drawable/confee" />
 
                 <View
                     android:layout_width="match_parent"
