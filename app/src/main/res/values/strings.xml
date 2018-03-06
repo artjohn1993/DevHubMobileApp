@@ -15,7 +15,7 @@
     <string name="contact_sampler">"09221122333"</string>
     <string name="space_type_sampler">"Conference</string>
     <string name="rate_sampler">3/hrs</string>
-    <string name="message_title_sampler">sige sige maglibang., kalimutan mo na yan</string>
+    <string name="message_title_sampler">"Sample Text.. Sample Text.. Sample Text.."</string>
     <string name="period_sampler">Check-in Time</string>
     <string name="guest_number_sampler">14</string>
 
