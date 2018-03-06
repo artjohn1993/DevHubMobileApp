@@ -37,8 +37,8 @@
             android:padding="20dp">
 
             <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:src="@drawable/bulbdevlogo"
                 />
@@ -47,6 +47,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Summary"
+                android:textStyle="bold"
                 android:gravity="center"
                 android:textSize="26sp"
                 />
