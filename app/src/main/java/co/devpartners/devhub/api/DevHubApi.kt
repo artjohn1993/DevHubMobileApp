@@ -14,7 +14,7 @@ class DevHubApi {
 
     private val devhubService: DevHubBookingServices
     val API_KEY = "your_KEY_her"
-    val API_LINK = "kissmang.com"
+    val API_LINK = "kissmanga.com"
     init {
         val retrofit = Retrofit.Builder()
                 .baseUrl(API_LINK)
