@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.WindowManager
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
+import android.widget.Toast
 import co.devpartners.devhub.R
 import co.devpartners.devhub.api.service.Maps
 import kotlinx.android.synthetic.main.activity_userlogin.*
@@ -22,13 +23,19 @@ class LoginActivity : AppCompatActivity() {
         this.window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
 
 
+
+
         locationText.setOnClickListener {
             startActivity<Maps>()
         }
 
         submitButton.setOnClickListener {
+//            if(usernameEditText.text.toString()=="AkoSiMalakas" && passwordEditText.text.toString()=="AkoBudoy"){
                 startActivity<MainActivity>()
                 finish()
+//            }else{
+//                Toast.makeText(this,"Invalid username or password.",Toast.LENGTH_LONG).show()
+//            }
         }
         createAccountTextView.setOnClickListener {
             startActivity<AccountRegisterActivity>()
