@@ -38,7 +38,7 @@ class FixedDeskActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener
         openSpaceDateSpinnerSchedule!!.adapter = adapter
 
         checkinTimeTextView.visibility = View.GONE
-        checkoutTimeTextView.visibility = View.GONE
+//        checkoutTimeTextView.visibility = View.GONE
 
         openSpaceDatePickerButton.setOnClickListener{
             checkRoomType()
@@ -76,9 +76,9 @@ class FixedDeskActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener
             "Hourly Package" -> checkinTimeTextView.visibility = View.VISIBLE
             "3-Hour Package" -> checkinTimeTextView.visibility = View.VISIBLE
         }
-        when (openSpaceDateSpinnerSchedule.selectedItem.toString()) {
-            "Hourly Package" -> checkoutTimeTextView.visibility = View.VISIBLE
-            "3-Hour Package" -> checkoutTimeTextView.visibility = View.VISIBLE
-        }
+//        when (openSpaceDateSpinnerSchedule.selectedItem.toString()) {
+//            "Hourly Package" -> checkoutTimeTextView.visibility = View.VISIBLE
+//            "3-Hour Package" -> checkoutTimeTextView.visibility = View.VISIBLE
+//        }
     }
 }

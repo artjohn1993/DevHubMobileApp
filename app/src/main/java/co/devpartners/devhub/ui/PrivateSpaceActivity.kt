@@ -39,7 +39,7 @@ class PrivateSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListe
         privateSchedule!!.adapter = adapter
 
         checkinTimeTextView.visibility = View.GONE
-        checkoutTimeTextView.visibility = View.GONE
+//        checkoutTimeTextView.visibility = View.GONE
 
         privateDatePickerButton.setOnClickListener{
             checkRoomType()
@@ -82,10 +82,10 @@ class PrivateSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListe
             "Hourly Package" -> checkinTimeTextView.visibility = View.VISIBLE
             "3-Hour Package" -> checkinTimeTextView.visibility = View.VISIBLE
         }
-        when(privateSchedule.selectedItem.toString()){
-            "Hourly Package" -> checkoutTimeTextView.visibility = View.VISIBLE
-            "3-Hour Package" -> checkoutTimeTextView.visibility = View.VISIBLE
-        }
+//        when(privateSchedule.selectedItem.toString()){
+//            "Hourly Package" -> checkoutTimeTextView.visibility = View.VISIBLE
+//            "3-Hour Package" -> checkoutTimeTextView.visibility = View.VISIBLE
+//        }
 
     }
 }
