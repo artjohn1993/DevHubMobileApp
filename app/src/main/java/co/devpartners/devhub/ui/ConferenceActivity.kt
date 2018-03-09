@@ -13,18 +13,21 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import co.devpartners.devhub.R
+import co.devpartners.devhub.api.events.CheckInTimeDialog
 import co.devpartners.devhub.api.events.CustomDatePickerDialog
 import co.devpartners.devhub.api.model.DatePickerType
 import kotlinx.android.synthetic.main.activity_conference.*
 import org.jetbrains.anko.backgroundColor
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.textColor
+import org.jetbrains.anko.timePicker
 
 
 class ConferenceActivity : AppCompatActivity() {
     val datepicker = CustomDatePickerDialog()
+    val timepicker = CheckInTimeDialog()
     var roomType = arrayOf("Room Type","Conference","Meeting")
-    var schedule = arrayOf("Pick a schedule","Day","Week")
+    var schedule = arrayOf("Pick a schedule","Hour")
 
     @SuppressLint("SetTextI18n")
     @RequiresApi(Build.VERSION_CODES.N)
@@ -59,15 +62,10 @@ class ConferenceActivity : AppCompatActivity() {
                 Toast.makeText(this,"Please pick date schedule or week.", Toast.LENGTH_SHORT).show()
                 datePickerButton1.textColor = Color.RED
             }
-            "Day" ->{
+            "Hour" ->{
                 datepicker.show(this,DatePickerType.SINGLE)
                 datePickerButton1.textColor = Color.BLACK
             }
-            "Week" ->{
-                datepicker.show(this,DatePickerType.RANGE)
-                datePickerButton1.textColor = Color.BLACK
-            }
-            else -> datepicker.show(this,DatePickerType.MULTIPLE)
         }
 
     }

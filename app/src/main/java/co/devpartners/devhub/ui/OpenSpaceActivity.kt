@@ -20,7 +20,7 @@ import org.jetbrains.anko.textColor
 class OpenSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener {
 
     val datepicker = CustomDatePickerDialog()
-    var timepick = arrayOf("Length of Stay","Hourly", "Daily", "Weekly")
+    var timepick = arrayOf("Length of Stay","Hourly Package", "3-Hour Package", "Daily Package")
     var spinner: Spinner? = null
     val timepicker = CheckInTimeDialog()
 
@@ -66,24 +66,24 @@ class OpenSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener
     fun checkRoomType() {
         when (openSpaceDateSpinnerSchedule.selectedItem.toString()) {
             "Length of Stay" -> Toast.makeText(this, "Please identify your length of stay.",Toast.LENGTH_SHORT).show()
-            "Hourly" -> timepicker.show(this)
-            "Day" -> datepicker.show(this, DatePickerType.SINGLE)
-            "Week" -> datepicker.show(this, DatePickerType.RANGE)
-            else -> datepicker.show(this, DatePickerType.MULTIPLE)
+            "Hourly Package" -> timepicker.show(this)
+            "3-Hour Package" -> timepicker.show(this)
+            "Daily Package" -> datepicker.show(this, DatePickerType.RANGE)
+
         }
         when(openSpaceDateSpinnerSchedule.selectedItem.toString()){
             "Length of Stay" -> openSpaceDatePickerButton.textColor = Color.RED
-            "Day" ->  openSpaceDatePickerButton.textColor = Color.BLACK
-            "Week" -> openSpaceDatePickerButton.textColor = Color.BLACK
-            "Hourly" -> openSpaceDatePickerButton.textColor = Color.BLACK
+            "3-Hour Package" ->  openSpaceDatePickerButton.textColor = Color.BLACK
+            "Daily Package" -> openSpaceDatePickerButton.textColor = Color.BLACK
+            "Hourly Package" -> openSpaceDatePickerButton.textColor = Color.BLACK
         }
     }
     fun showtext() {
         when (openSpaceDateSpinnerSchedule.selectedItem.toString()) {
-            "Hourly" -> checkinTimeTextView.visibility = View.VISIBLE
+            "Hourly Package" -> checkinTimeTextView.visibility = View.VISIBLE
         }
         when (openSpaceDateSpinnerSchedule.selectedItem.toString()) {
-            "Hourly" -> checkoutTimeTextView.visibility = View.VISIBLE
+            "Hourly Package" -> checkoutTimeTextView.visibility = View.VISIBLE
         }
     }
 }

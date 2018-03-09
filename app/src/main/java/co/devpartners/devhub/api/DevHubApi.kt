@@ -13,11 +13,10 @@ import retrofit2.http.Path
 class DevHubApi {
 
     private val devhubService: DevHubBookingServices
-    val API_KEY = "your_KEY_her"
-    val API_LINK = "kissmanga.com"
+
     init {
         val retrofit = Retrofit.Builder()
-                .baseUrl(API_LINK)
+                .baseUrl("")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
 

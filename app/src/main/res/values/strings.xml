@@ -70,8 +70,7 @@
     <string name="title_activity_type_space">TypeSpaceActivity</string>
     <string name="select"><u>Find Us.</u></string>
     <string name="title_activity_summary">SummaryActivity</string>
-    <string name="terms_and_condition"><b>Terms and Conditions</b>:\n\nagreement is the agreement that includes the terms, the rules and the guidelines of acceptable behavior, plus other useful sections, to which users must agree in order to use or access your website and mobile app.</string>
-
+    <string name="terms_and_condition"><b>NOTE</b>:\n\Rates displayed on this page are indicative only. Actual cost to be determined at Dev Hub upon checkout. </string>
     <string name="confirm_summary">Confirm</string>
 
     <string name="title_activity_maps">Map</string>
@@ -84,8 +83,7 @@
     </string-array>
     <string-array name="schedule">
         <item>Pick a schedule</item>
-        <item>Day</item>
-        <item>Week</item>
+        <item>Hour</item>
     </string-array>
     <string-array name="schedule2">
         <item>Pick a Schedule</item>

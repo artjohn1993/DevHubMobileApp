@@ -22,7 +22,7 @@ import org.jetbrains.anko.textColor
 class PrivateSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener{
 
     val datepicker = CustomDatePickerDialog()
-    var timepick = arrayOf("Length of Stay", "Hourly", "Daily", "Weekly")
+    var timepick = arrayOf("Length of Stay","Hourly Package", "3-Hour Package", "Daily Package")
     var spinner: Spinner? = null
     val timepicker = CheckInTimeDialog()
 
@@ -65,24 +65,26 @@ class PrivateSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListe
         when (privateSchedule.selectedItem.toString()) {
 
             "Length of Stay" -> Toast.makeText(this, "Please identify your length of stay.",Toast.LENGTH_SHORT).show()
-            "Hourly" -> timepicker.show(this)
-            "Day" -> datepicker.show(this, DatePickerType.SINGLE)
-            "Week" -> datepicker.show(this, DatePickerType.RANGE)
-            else -> datepicker.show(this, DatePickerType.MULTIPLE)
+            "Hourly Package" -> timepicker.show(this)
+            "3-Hour Package" -> timepicker.show(this)
+            "Daily Package" -> datepicker.show(this, DatePickerType.RANGE)
+
         }
         when(privateSchedule.selectedItem.toString()){
             "Length of Stay" -> privateDatePickerButton.textColor = Color.RED
-            "Day" ->  privateDatePickerButton.textColor = Color.BLACK
-            "Week" -> privateDatePickerButton.textColor = Color.BLACK
-            "Hourly" -> privateDatePickerButton.textColor = Color.BLACK
+            "Hourly Package" ->  privateDatePickerButton.textColor = Color.BLACK
+            "3-Hour Package" -> privateDatePickerButton.textColor = Color.BLACK
+            "Daily Package" -> privateDatePickerButton.textColor = Color.BLACK
         }
     }
     fun showText(){
         when(privateSchedule.selectedItem.toString()){
-            "Hourly" -> checkinTimeTextView.visibility = View.VISIBLE
+            "Hourly Package" -> checkinTimeTextView.visibility = View.VISIBLE
+            "3-Hour Package" -> checkinTimeTextView.visibility = View.VISIBLE
         }
         when(privateSchedule.selectedItem.toString()){
-            "Hourly" -> checkoutTimeTextView.visibility = View.VISIBLE
+            "Hourly Package" -> checkoutTimeTextView.visibility = View.VISIBLE
+            "3-Hour Package" -> checkoutTimeTextView.visibility = View.VISIBLE
         }
 
     }
