@@ -70,7 +70,7 @@
     <string name="title_activity_type_space">TypeSpaceActivity</string>
     <string name="select"><u>Find Us.</u></string>
     <string name="title_activity_summary">SummaryActivity</string>
-    <string name="terms_and_condition"><b>NOTE</b>:\n\Rates displayed on this page are indicative only. Actual cost to be determined at Dev Hub upon checkout. </string>
+    <string name="terms_and_condition"><b>NOTE</b>:\n\nRates displayed on this page are indicative only. Actual cost to be determined at Dev Hub upon checkout. </string>
     <string name="confirm_summary">Confirm</string>
 
     <string name="title_activity_maps">Map</string>
