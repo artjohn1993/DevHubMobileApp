@@ -12,7 +12,7 @@ import co.devpartners.devhub.R
 class CheckInTimeDialog {
     lateinit var dialog : Dialog
     lateinit var select : Button
-    val checkout = CheckOutTimeDialog()
+//    val checkout = CheckOutTimeDialog()
     fun show(activity: Activity){
         dialog = Dialog(activity)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
