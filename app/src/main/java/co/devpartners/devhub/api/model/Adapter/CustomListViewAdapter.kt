@@ -31,11 +31,11 @@ class CustomListAdapter(context : Context) : BaseAdapter(){
         val layout = layoutInflater.inflate(R.layout.reserved_listview_layout, p2,false)
 
         layout.statusText.text = status[p0]
-        layout.statusText.textColor = Color.parseColor(checkColor(status[p0]))
+//        layout.statusText.textColor = Color.parseColor(checkColor(status[p0]))
         layout.reservedTitleText.text = spaceType[p0]
         layout.reservedLogoImage.setImageResource(checkStatusLogo(status[p0]))
         layout.periodText.text = period[p0]
-        layout.reservedLogoImage.setColorFilter(Color.parseColor(checkColor(status[p0])))
+//        layout.reservedLogoImage.setColorFilter(Color.parseColor(checkColor(status[p0])))
 
         return layout
     }

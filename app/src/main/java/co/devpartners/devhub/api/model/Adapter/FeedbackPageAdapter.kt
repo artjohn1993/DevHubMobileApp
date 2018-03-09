@@ -23,7 +23,7 @@ class FeedbackPageAdapter(fm: FragmentManager?) : FragmentPagerAdapter(fm) {
         return titlelist[position]
     }
     override fun getItem(position: Int): Fragment {
-        return fragmentlist.get(position)
+        return fragmentlist[position]
     }
 
     override fun getCount(): Int {
