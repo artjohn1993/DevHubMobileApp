@@ -81,9 +81,12 @@ class OpenSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener
     fun showtext() {
         when (openSpaceDateSpinnerSchedule.selectedItem.toString()) {
             "Hourly Package" -> checkinTimeTextView.visibility = View.VISIBLE
+            "3-Hour Package" ->  checkinTimeTextView.visibility = View.VISIBLE
         }
         when (openSpaceDateSpinnerSchedule.selectedItem.toString()) {
             "Hourly Package" -> checkoutTimeTextView.visibility = View.VISIBLE
+            "3-Hour Package" ->  checkoutTimeTextView.visibility = View.VISIBLE
+
         }
     }
 }
