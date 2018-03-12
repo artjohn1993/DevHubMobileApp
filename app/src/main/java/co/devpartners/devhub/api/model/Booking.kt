@@ -24,7 +24,7 @@ class Booking (var email:String?=null
                , val rate: String? = null
                , val timeInFormat: String? = null
                , val personCount: Int? = null
-               , val haveBookedBefore: Boolean? = null
+               , val haveBookedBefore: Boolean
                , val bookStatus: Int? = null
                , val bookType: Int? = null
                , val refCode: String? = null

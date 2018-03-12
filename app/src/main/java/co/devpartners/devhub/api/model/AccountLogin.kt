@@ -5,4 +5,4 @@ package co.devpartners.devhub.api.model
  */
 class AccountLogin (var input: String? = null
                     , var password: String? = null
-                    , val rememberMe: Boolean? = null)
+                    , val rememberMe: Boolean)

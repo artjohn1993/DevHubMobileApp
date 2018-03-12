@@ -5,7 +5,7 @@ import java.util.*
 /**
  * Created by Dev_03 on 1/30/2018.
  */
-class User (val isAdmin: Boolean? = null
+class User (val isAdmin: Boolean
             , var firstName: String? = null
             , var lastName: String? = null
             , var middleName: String? = null
