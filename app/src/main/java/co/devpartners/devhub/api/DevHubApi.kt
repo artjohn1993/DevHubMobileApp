@@ -19,7 +19,6 @@ class DevHubApi {
                 .baseUrl("")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
-
         devhubService = retrofit.create(DevHubBookingServices::class.java)
     }
 }
