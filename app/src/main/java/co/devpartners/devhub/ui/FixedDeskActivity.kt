@@ -1,6 +1,7 @@
 package co.devpartners.devhub.ui
 
 import android.annotation.TargetApi
+import android.app.DatePickerDialog
 import android.app.TimePickerDialog
 import android.graphics.Color
 import android.icu.text.SimpleDateFormat
@@ -43,7 +44,8 @@ class FixedDeskActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener
         fixedDeskDateSpinnerSchedule!!.adapter = adapter
 
         checkinTimeTextView.visibility = View.GONE
-//        checkoutTimeTextView.visibility = View.GONE
+
+
 
         fixedDeskDatePickerButton.setOnClickListener{
             checkRoomType()
@@ -52,10 +54,16 @@ class FixedDeskActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener
 
         }
         fixedDeskNextButton.setOnClickListener {
-            Handler().postDelayed({
+            if (fixedDeskDateSpinnerSchedule.selectedItem.toString() == "Length of Stay"){
+                Toast.makeText(this,"Please identify your package plan.",Toast.LENGTH_SHORT).show()
+            }else{
                 startActivity<BookingActivity>()
-                finish()
-            },400)
+            }
+
+//            Handler().postDelayed({
+//                startActivity<BookingActivity>()
+//                finish()
+//            },400)
         }
     }
     override fun onNothingSelected(adapterView: AdapterView<*>?) {
@@ -63,11 +71,10 @@ class FixedDeskActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener
     override fun onItemSelected(adapterView: AdapterView<*>?, view: View?, position: Int, p3: Long) {
 
     }
+    @TargetApi(Build.VERSION_CODES.N)
     fun checkRoomType() {
         when (fixedDeskDateSpinnerSchedule.selectedItem.toString()) {
             "Length of Stay" -> Toast.makeText(this, "Please identify your length of stay.", Toast.LENGTH_SHORT).show()
-//            "Hourly Package" -> timepicker.show(this)
-//            "3-Hour Package" -> timepicker.show(this)
             "Daily Package" -> datepicker.show(this, DatePickerType.RANGE)
         }
         when(fixedDeskDateSpinnerSchedule.selectedItem.toString()){
@@ -82,15 +89,10 @@ class FixedDeskActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener
             "Hourly Package" -> checkinTimeTextView.visibility = View.VISIBLE
             "3-Hour Package" -> checkinTimeTextView.visibility = View.VISIBLE
         }
-//        when (openSpaceDateSpinnerSchedule.selectedItem.toString()) {
-//            "Hourly Package" -> checkoutTimeTextView.visibility = View.VISIBLE
-//            "3-Hour Package" -> checkoutTimeTextView.visibility = View.VISIBLE
-//        }
     }
     @TargetApi(Build.VERSION_CODES.N)
     fun checkintime() {
         val cal = Calendar.getInstance()
-
         val timeSetListener = TimePickerDialog.OnTimeSetListener { timePicker, hour, minute ->
             cal.set(Calendar.HOUR_OF_DAY, hour)
             cal.set(Calendar.MINUTE, minute)
@@ -106,9 +108,16 @@ class FixedDeskActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener
         }
         when (fixedDeskDateSpinnerSchedule.selectedItem.toString()) {
             "Length of Stay" -> Toast.makeText(this, "Please identify your length of stay.",Toast.LENGTH_SHORT).show()
-            "Hourly Package" -> TimePickerDialog(this,R.style.TimePickerTheme, timeSetListener, cal.get(Calendar.HOUR_OF_DAY), cal.get(Calendar.MINUTE), false).show()
-            "3-Hour Package" -> TimePickerDialog(this,R.style.TimePickerTheme, timeSetListener, cal.get(Calendar.HOUR_OF_DAY), cal.get(Calendar.MINUTE), false).show()
+            "Hourly Package" -> TimePickerDialog(this,R.style.TimePickerTheme
+                    , timeSetListener
+                    , cal.get(Calendar.HOUR_OF_DAY)
+                    , cal.get(Calendar.MINUTE)
+                    , false).show()
+            "3-Hour Package" -> TimePickerDialog(this,R.style.TimePickerTheme
+                    , timeSetListener
+                    , cal.get(Calendar.HOUR_OF_DAY)
+                    , cal.get(Calendar.MINUTE)
+                    , false).show()
         }
-
     }
 }

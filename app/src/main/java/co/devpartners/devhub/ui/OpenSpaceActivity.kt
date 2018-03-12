@@ -72,8 +72,6 @@ class OpenSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener
     fun checkRoomType() {
         when (fixedDeskDateSpinnerSchedule.selectedItem.toString()) {
             "Length of Stay" -> Toast.makeText(this, "Please identify your length of stay.",Toast.LENGTH_SHORT).show()
-//            "Hourly Package" -> timepicker.show(this)
-//            "3-Hour Package" -> timepicker.show(this)
             "Daily Package" -> datepicker.show(this, DatePickerType.RANGE)
 
         }
@@ -90,19 +88,13 @@ class OpenSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener
             "Hourly Package" -> checkinTimeTextView.visibility = View.VISIBLE
             "3-Hour Package" ->  checkinTimeTextView.visibility = View.VISIBLE
 
-            }
-
-//        when (openSpaceDateSpinnerSchedule.selectedItem.toString()) {
-//            "Hourly Package" -> checkoutTimeTextView.visibility = View.VISIBLE
-//            "3-Hour Package" ->  checkoutTimeTextView.visibility = View.VISIBLE
-//
-//        }
+        }
     }
 
     @TargetApi(Build.VERSION_CODES.N)
     fun checkintime() {
-        val cal = Calendar.getInstance()
 
+        val cal = Calendar.getInstance()
         val timeSetListener = TimePickerDialog.OnTimeSetListener { timePicker, hour, minute ->
             cal.set(Calendar.HOUR_OF_DAY, hour)
             cal.set(Calendar.MINUTE, minute)

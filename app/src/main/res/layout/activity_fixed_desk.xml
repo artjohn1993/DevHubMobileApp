@@ -77,7 +77,20 @@
                 android:textAlignment="textStart"
                 android:text="Pick Schedule"
                 android:textColor="@android:color/black"
+                />
 
+            <TextView
+                android:id="@+id/checkinDateTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Schedule Date"
+                android:layout_marginBottom="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:padding="10dp"
+                android:textColor="@android:color/black"
+                android:textAllCaps="false"
                 />
 
             <TextView
@@ -85,6 +98,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                android:hint="Time in Schedule"
                 android:layout_marginBottom="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
@@ -102,7 +116,7 @@
                 android:layout_marginEnd="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
-                android:hint="Your Message:"
+                android:hint="Your Message: Optional"
                >
 
                 <EditText

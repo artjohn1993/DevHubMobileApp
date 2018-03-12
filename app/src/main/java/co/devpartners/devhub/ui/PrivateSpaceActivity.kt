@@ -44,7 +44,6 @@ class PrivateSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListe
         privateSchedule!!.adapter = adapter
 
         checkinTimeTextView.visibility = View.GONE
-//        checkoutTimeTextView.visibility = View.GONE
 
         privateDatePickerButton.setOnClickListener{
             checkRoomType()
@@ -67,12 +66,11 @@ class PrivateSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListe
 
     }
 
+    @TargetApi(Build.VERSION_CODES.N)
     fun checkRoomType() {
         when (privateSchedule.selectedItem.toString()) {
 
             "Length of Stay" -> Toast.makeText(this, "Please identify your length of stay.",Toast.LENGTH_SHORT).show()
-//            "Hourly Package" -> timepicker.show(this)
-//            "3-Hour Package" -> timepicker.show(this)
             "Daily Package" -> datepicker.show(this, DatePickerType.RANGE)
 
         }
@@ -88,11 +86,6 @@ class PrivateSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListe
             "Hourly Package" -> checkinTimeTextView.visibility = View.VISIBLE
             "3-Hour Package" -> checkinTimeTextView.visibility = View.VISIBLE
         }
-//        when(privateSchedule.selectedItem.toString()){
-//            "Hourly Package" -> checkoutTimeTextView.visibility = View.VISIBLE
-//            "3-Hour Package" -> checkoutTimeTextView.visibility = View.VISIBLE
-//        }
-
     }
     @TargetApi(Build.VERSION_CODES.N)
     fun checkintime() {
