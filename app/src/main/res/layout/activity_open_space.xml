@@ -50,7 +50,7 @@
                 android:background="#d3d3d3"
                 >
                 <Spinner
-                    android:id="@+id/openSpaceDateSpinnerSchedule"
+                    android:id="@+id/fixedDeskDateSpinnerSchedule"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:spinnerMode="dialog"
@@ -62,7 +62,7 @@
             </RelativeLayout>
 
             <Button
-                android:id="@+id/openSpaceDatePickerButton"
+                android:id="@+id/fixedDeskDatePickerButton"
                 android:clickable="true"
                 android:layout_width="match_parent"
                 android:background="#d3d3d3"
@@ -86,10 +86,10 @@
                 android:layout_marginBottom="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                android:text="Check-in Time: 12:13 am"
+                android:padding="10dp"
                 android:textColor="@android:color/black"
                 android:textAllCaps="false"
-               />
+                />
 
 
 

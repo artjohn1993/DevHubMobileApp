@@ -28,13 +28,69 @@ class BookingActivity : AppCompatActivity() {
 
 
 
-    val confirm = ConfirmationDialog()
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_booking)
 
-        val intentObject = intent
+        reserveButton.setOnClickListener {
+            confirmDialog()
+        }
+    }
+
+    fun confirmDialog() {
+        reservedSucces()
+    }
+
+    @SuppressLint("WrongConstant")
+    fun reservedSucces() {
+        iOSDialogBuilder(this@BookingActivity)
+                .setTitle("Booking Confirmation")
+                .setSubtitle("Are you sure you want to be book in this space?")
+                .setBoldPositiveLabel(true)
+                .setCancelable(true)
+                .setPositiveListener("CONFIRM") { dialog ->
+                    dialog.dismiss()
+                    startActivity<MainActivity>()
+                    finish()
+                    Toast.makeText(this@BookingActivity, "Reserved Successful!", Toast.LENGTH_LONG).show()
+                }
+                .setNegativeListener("GO BACK") { dialog ->
+                    dialog.dismiss()
+                }
+                .build().show()
+    }
+}
+
+//        alert {
+//            title = "Are you sure you want to be book in this space?"
+//            positiveButton("Confirm") {
+//                backToMain()
+//            }
+//            negativeButton("Go back") { }
+//        }.show()
+//    fun backToMain(){
+//    startActivity<MainActivity>()
+//    Toast.makeText(this,"Reserved Successful!", Toast.LENGTH_LONG).show()
+//    finish()
+//    }
+
+
+
+//    fun showSuccess(){
+//        val snackbar : Snackbar = Snackbar.make(findViewById(android.R.id.content),"Reserved",Snackbar.LENGTH_LONG)
+//        snackbar.setAction(R.string.confirm_summary,View.OnClickListener { backToMain() })
+//        val snackView = snackbar.view
+//        snackView.setBackgroundColor(this.resources.getColor(R.color.colorSuccess))
+//        snackbar.show()
+//    }
+
+
+
+
+
+//    val confirm = ConfirmationDialog()
+//        val intentObject = intent
 
 //        val firstname = intentObject.getStringExtra("FIRSTNAME")
 //        val lastname = intentObject.getStringExtra("LASTNAME")
@@ -56,54 +112,3 @@ class BookingActivity : AppCompatActivity() {
 //        periodReservedText.text = "Period : $period"
 //        billReservedText.text = "Bill : $bill"
 //        messageReservedText.text = "Message : $message"
-
-        reserveButton.setOnClickListener {
-            confirmDialog()
-        }
-    }
-    fun confirmDialog() {
-        reservedSucces()
-    }
-    @SuppressLint("WrongConstant")
-    fun reservedSucces() {
-        iOSDialogBuilder(this@BookingActivity)
-                .setTitle("Booking Confirmation")
-                .setSubtitle("Are you sure you want to be book in this space?")
-                .setBoldPositiveLabel(true)
-                .setCancelable(true)
-                .setPositiveListener("CONFIRM") { dialog ->
-                    dialog.dismiss()
-                    startActivity<MainActivity>()
-                    finish()
-                    Toast.makeText(this@BookingActivity, "Reserved Successful!", Toast.LENGTH_LONG).show()
-                }
-                .setNegativeListener("GO BACK") { dialog ->
-                    dialog.dismiss() }
-                .build().show()
-
-//        alert {
-//            title = "Are you sure you want to be book in this space?"
-//            positiveButton("Confirm") {
-//                backToMain()
-//            }
-//            negativeButton("Go back") { }
-//        }.show()
-    }
-    fun backToMain(){
-    startActivity<MainActivity>()
-    Toast.makeText(this,"Reserved Successful!", Toast.LENGTH_LONG).show()
-    finish()
-    }
-}
-
-
-
-
-
-//    fun showSuccess(){
-//        val snackbar : Snackbar = Snackbar.make(findViewById(android.R.id.content),"Reserved",Snackbar.LENGTH_LONG)
-//        snackbar.setAction(R.string.confirm_summary,View.OnClickListener { backToMain() })
-//        val snackView = snackbar.view
-//        snackView.setBackgroundColor(this.resources.getColor(R.color.colorSuccess))
-//        snackbar.show()
-//    }

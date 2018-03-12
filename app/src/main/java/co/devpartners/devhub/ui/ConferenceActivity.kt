@@ -26,7 +26,7 @@ import org.jetbrains.anko.timePicker
 class ConferenceActivity : AppCompatActivity() {
     val datepicker = CustomDatePickerDialog()
     val timepicker = CheckInTimeDialog()
-    var roomType = arrayOf("Room Type","Conference","Meeting")
+//    var roomType = arrayOf("Room Type","Conference","Meeting")
     var schedule = arrayOf("Pick a schedule","Week", "Day")
 
     @SuppressLint("SetTextI18n")
@@ -38,9 +38,9 @@ class ConferenceActivity : AppCompatActivity() {
         this.window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
-        val adapterRoomType : ArrayAdapter<String> = ArrayAdapter(this, android.R.layout.simple_list_item_1,roomType)
+//        val adapterRoomType : ArrayAdapter<String> = ArrayAdapter(this, android.R.layout.simple_list_item_1,roomType)
         val adapterSchedule : ArrayAdapter<String> = ArrayAdapter(this, android.R.layout.simple_list_item_1,schedule)
-        roomTypeSpinner1.adapter = adapterRoomType
+//        roomTypeSpinner1.adapter = adapterRoomType
         scheduleSpinner1.adapter = adapterSchedule
 
         datePickerButton1.setOnClickListener {

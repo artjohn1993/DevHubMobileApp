@@ -1,6 +1,11 @@
 package co.devpartners.devhub.ui
 
+import android.annotation.TargetApi
+import android.app.TimePickerDialog
 import android.graphics.Color
+import android.icu.text.SimpleDateFormat
+import android.icu.util.Calendar
+import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.support.v7.app.AppCompatActivity
@@ -44,6 +49,7 @@ class PrivateSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListe
         privateDatePickerButton.setOnClickListener{
             checkRoomType()
             showText()
+            checkintime()
         }
         privateNextButton.setOnClickListener {
             Handler().postDelayed({
@@ -65,8 +71,8 @@ class PrivateSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListe
         when (privateSchedule.selectedItem.toString()) {
 
             "Length of Stay" -> Toast.makeText(this, "Please identify your length of stay.",Toast.LENGTH_SHORT).show()
-            "Hourly Package" -> timepicker.show(this)
-            "3-Hour Package" -> timepicker.show(this)
+//            "Hourly Package" -> timepicker.show(this)
+//            "3-Hour Package" -> timepicker.show(this)
             "Daily Package" -> datepicker.show(this, DatePickerType.RANGE)
 
         }
@@ -86,6 +92,30 @@ class PrivateSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListe
 //            "Hourly Package" -> checkoutTimeTextView.visibility = View.VISIBLE
 //            "3-Hour Package" -> checkoutTimeTextView.visibility = View.VISIBLE
 //        }
+
+    }
+    @TargetApi(Build.VERSION_CODES.N)
+    fun checkintime() {
+        val cal = Calendar.getInstance()
+
+        val timeSetListener = TimePickerDialog.OnTimeSetListener { timePicker, hour, minute ->
+            cal.set(Calendar.HOUR_OF_DAY, hour)
+            cal.set(Calendar.MINUTE, minute)
+
+            var AM_PM: String
+            if(hour < 12){
+                AM_PM = " AM"
+            }else{
+                AM_PM =" PM"
+            }
+
+            checkinTimeTextView.text = "Check in time "+ SimpleDateFormat("HH:mm").format(cal.time)+AM_PM
+        }
+        when (privateSchedule.selectedItem.toString()) {
+            "Length of Stay" -> Toast.makeText(this, "Please identify your length of stay.",Toast.LENGTH_SHORT).show()
+            "Hourly Package" -> TimePickerDialog(this,R.style.TimePickerTheme, timeSetListener, cal.get(Calendar.HOUR_OF_DAY), cal.get(Calendar.MINUTE), false).show()
+            "3-Hour Package" -> TimePickerDialog(this,R.style.TimePickerTheme, timeSetListener, cal.get(Calendar.HOUR_OF_DAY), cal.get(Calendar.MINUTE), false).show()
+        }
 
     }
 }

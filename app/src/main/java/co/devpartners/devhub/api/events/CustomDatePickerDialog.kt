@@ -3,6 +3,8 @@ package co.devpartners.devhub.api.events
 import android.app.Activity
 import android.app.DatePickerDialog
 import android.app.Dialog
+import android.os.Build
+import android.support.annotation.RequiresApi
 import android.text.Selection
 import android.view.View
 import android.view.Window
@@ -28,7 +30,8 @@ class CustomDatePickerDialog : SelectDatePickerType(){
     lateinit var cancel : Button
     lateinit var confirm : Button
     val checkin = CheckInTimeDialog()
-    fun show(activity: Activity,type : DatePickerType){
+    @RequiresApi(Build.VERSION_CODES.N)
+    fun show(activity: Activity, type : DatePickerType){
         dialog = Dialog(activity)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
         dialog.setCancelable(true)

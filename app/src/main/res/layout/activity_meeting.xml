@@ -51,29 +51,6 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/roomTypeSpinnerContainer"
-                android:background="#d3d3d3"
-                android:layout_marginEnd="16dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-
-                >
-                <Spinner
-                    android:id="@+id/roomTypeSpinner1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:spinnerMode="dialog"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    tools:textAlignment="textStart"
-                    android:entries="@array/roomType"
-                    />
-            </RelativeLayout>
-
-
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:id="@+id/scheduleSpinnerContainer"
                 android:layout_marginEnd="16dp"
                 android:layout_marginStart="16dp"
