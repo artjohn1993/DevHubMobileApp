@@ -103,7 +103,9 @@
         <activity android:name=".ui.SpaceServices" />
         <activity
             android:name=".ui.FixedDeskActivity"
-            android:launchMode="singleTop">
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustPan"
+            >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.SpaceServices" />

@@ -44,6 +44,7 @@ class PrivateSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListe
         privateSchedule!!.adapter = adapter
 
         checkinTimeTextView.visibility = View.GONE
+        checkinDateTextView.visibility = View.GONE
 
         privateDatePickerButton.setOnClickListener{
             checkRoomType()
@@ -102,7 +103,7 @@ class PrivateSpaceActivity : AppCompatActivity(),AdapterView.OnItemSelectedListe
                 AM_PM =" PM"
             }
 
-            checkinTimeTextView.text = "Check in time "+ SimpleDateFormat("HH:mm").format(cal.time)+AM_PM
+            checkinTimeTextView.text = "Check in time: "+ SimpleDateFormat("HH:mm").format(cal.time)+AM_PM
         }
         when (privateSchedule.selectedItem.toString()) {
             "Length of Stay" -> Toast.makeText(this, "Please identify your length of stay.",Toast.LENGTH_SHORT).show()

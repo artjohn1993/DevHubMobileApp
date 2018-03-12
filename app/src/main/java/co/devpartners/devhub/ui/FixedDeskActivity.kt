@@ -44,8 +44,7 @@ class FixedDeskActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener
         fixedDeskDateSpinnerSchedule!!.adapter = adapter
 
         checkinTimeTextView.visibility = View.GONE
-
-
+        checkinDateTextView.visibility = View.GONE
 
         fixedDeskDatePickerButton.setOnClickListener{
             checkRoomType()
@@ -90,6 +89,7 @@ class FixedDeskActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener
             "3-Hour Package" -> checkinTimeTextView.visibility = View.VISIBLE
         }
     }
+
     @TargetApi(Build.VERSION_CODES.N)
     fun checkintime() {
         val cal = Calendar.getInstance()
@@ -104,7 +104,7 @@ class FixedDeskActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener
                 AM_PM =" PM"
             }
 
-            checkinTimeTextView.text = "Check in time "+ SimpleDateFormat("HH:mm").format(cal.time)+AM_PM
+            checkinTimeTextView.text = "Check in time: "+ SimpleDateFormat("HH:mm").format(cal.time)+AM_PM
         }
         when (fixedDeskDateSpinnerSchedule.selectedItem.toString()) {
             "Length of Stay" -> Toast.makeText(this, "Please identify your length of stay.",Toast.LENGTH_SHORT).show()
