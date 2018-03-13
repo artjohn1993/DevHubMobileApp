@@ -1,6 +1,6 @@
-package co.devpartners.devhub.api.events
+package co.devpartners.devhub.events
 
-import co.devpartners.devhub.api.model.DatePickerType
+import co.devpartners.devhub.model.DatePickerType
 import com.applikeysolutions.cosmocalendar.utils.SelectionType
 
 /**

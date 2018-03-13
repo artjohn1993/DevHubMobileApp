@@ -1,4 +1,4 @@
-package co.devpartners.devhub.api.events
+package co.devpartners.devhub.events
 
 
 import android.app.Activity
@@ -7,7 +7,6 @@ import android.view.Window
 import android.widget.Button
 import co.devpartners.devhub.R
 import android.support.v7.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_booking.*
 
 
 /**

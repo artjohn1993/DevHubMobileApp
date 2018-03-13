@@ -10,7 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 
 import co.devpartners.devhub.R
-import co.devpartners.devhub.api.model.Adapter.CustomAdapter
+import co.devpartners.devhub.Adapter.CustomAdapter
 
 
 /**

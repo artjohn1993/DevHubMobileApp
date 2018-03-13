@@ -1,15 +1,12 @@
-package co.devpartners.devhub.api.model.Adapter
+package co.devpartners.devhub.Adapter
 
 import android.content.Context
-import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import co.devpartners.devhub.R
 import kotlinx.android.synthetic.main.reserved_listview_layout.view.*
-import org.jetbrains.anko.backgroundColor
-import org.jetbrains.anko.textColor
 
 /**
  * Created by DEVPARTNERS SOFTWARE on 2/28/2018.

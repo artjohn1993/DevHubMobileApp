@@ -1,4 +1,4 @@
-package co.devpartners.devhub.api.model.Adapter
+package co.devpartners.devhub.Adapter
 
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater

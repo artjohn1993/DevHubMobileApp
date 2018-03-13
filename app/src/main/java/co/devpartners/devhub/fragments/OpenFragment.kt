@@ -13,9 +13,9 @@ import android.widget.TextView
 import android.widget.Toast
 
 import co.devpartners.devhub.R
-import co.devpartners.devhub.api.events.CheckInTimeDialog
-import co.devpartners.devhub.api.events.CustomDatePickerDialog
-import co.devpartners.devhub.api.model.DatePickerType
+import co.devpartners.devhub.events.CheckInTimeDialog
+import co.devpartners.devhub.events.CustomDatePickerDialog
+import co.devpartners.devhub.model.DatePickerType
 import co.devpartners.devhub.ui.BookingActivity
 import kotlinx.android.synthetic.main.fragment_open.*
 import org.jetbrains.anko.support.v4.startActivity

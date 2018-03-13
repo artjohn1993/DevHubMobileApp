@@ -1,6 +1,5 @@
-package co.devpartners.devhub.api.service
+package co.devpartners.devhub.service
 
-import co.devpartners.devhub.api.model.DevHubResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path

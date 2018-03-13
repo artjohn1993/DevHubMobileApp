@@ -5,19 +5,12 @@ import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.view.MenuItem
 import android.view.WindowManager
-import android.widget.Button
-import android.widget.ImageView
 import co.devpartners.devhub.R
-import co.devpartners.devhub.api.events.CustomDatePickerDialog
-import co.devpartners.devhub.api.model.DatePickerType
+import co.devpartners.devhub.events.CustomDatePickerDialog
 import co.devpartners.devhub.fragments.ConferenceFragment
 import co.devpartners.devhub.fragments.OpenFragment
 import co.devpartners.devhub.fragments.PrivateFragment
 import kotlinx.android.synthetic.main.activity_space_type.*
-import org.jetbrains.anko.alert
-import org.jetbrains.anko.startActivity
-import com.basel.DualButton.DualButton
-import kotlinx.android.synthetic.main.fragment_conference.*
 
 
 class SpaceTypeActivity : AppCompatActivity() {

@@ -1,4 +1,4 @@
-package co.devpartners.devhub.api.service
+package co.devpartners.devhub.service
 
 import android.annotation.SuppressLint
 import android.support.v7.app.AppCompatActivity

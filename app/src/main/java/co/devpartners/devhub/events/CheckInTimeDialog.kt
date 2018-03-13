@@ -1,4 +1,4 @@
-package co.devpartners.devhub.api.events
+package co.devpartners.devhub.events
 
 import android.app.Activity
 import android.app.Dialog

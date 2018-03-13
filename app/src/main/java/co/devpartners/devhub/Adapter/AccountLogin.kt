@@ -1,4 +1,4 @@
-package co.devpartners.devhub.api.model
+package co.devpartners.devhub.Adapter
 
 /**
  * Created by Dev_03 on 3/5/2018.

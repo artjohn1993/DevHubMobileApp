@@ -7,7 +7,7 @@ import com.github.fabtransitionactivity.SheetLayout
 import kotlinx.android.synthetic.main.activity_main.*
 import android.content.Intent
 import android.graphics.Color
-import co.devpartners.devhub.api.model.Adapter.CustomListAdapter
+import co.devpartners.devhub.Adapter.CustomListAdapter
 import org.jetbrains.anko.startActivity
 
 

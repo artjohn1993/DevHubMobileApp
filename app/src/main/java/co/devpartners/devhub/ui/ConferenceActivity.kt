@@ -7,20 +7,16 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.support.annotation.RequiresApi
-import android.view.View
 import android.view.WindowManager
-import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import co.devpartners.devhub.R
-import co.devpartners.devhub.api.events.CheckInTimeDialog
-import co.devpartners.devhub.api.events.CustomDatePickerDialog
-import co.devpartners.devhub.api.model.DatePickerType
+import co.devpartners.devhub.events.CheckInTimeDialog
+import co.devpartners.devhub.events.CustomDatePickerDialog
+import co.devpartners.devhub.model.DatePickerType
 import kotlinx.android.synthetic.main.activity_conference.*
-import org.jetbrains.anko.backgroundColor
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.textColor
-import org.jetbrains.anko.timePicker
 
 
 class ConferenceActivity : AppCompatActivity() {
